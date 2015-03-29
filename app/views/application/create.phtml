@@ -1,0 +1,91 @@
+<?php $this->partial('partials/memberHeader'); ?>
+<div id="main-container">
+
+    <h2>create application</h2>
+
+    <div id="inner-container">
+
+        <?php echo Phalcon\Tag::form(array("application/save", "method" => "post", "name" => "save-application")) . "\n"; ?>
+
+        <?php echo $application->label('company') . "\n"; ?>
+        <?php echo $application->render('company') . "\n"; ?>
+
+        <?php echo $application->label('position') . "\n"; ?>
+        <?php echo $application->render('position') . "\n"; ?>
+
+        <?php echo $application->label('recruitment') . "\n"; ?>
+        <?php echo $application->render('recruitment') . "\n"; ?>
+
+        <?php echo $application->label('notes') . "\n"; ?>
+        <?php echo $application->render('notes') . "\n"; ?>
+
+        <?php echo $application->label('applied') . "\n"; ?>
+        <?php echo $application->render('applied') . "\n"; ?>
+
+        <?php echo $application->label('due_date') . "\n"; ?>
+        <?php echo $application->render('due_date') . "\n"; ?>
+
+        <?php echo $application->label('follow_up') . "\n"; ?>
+        <?php echo $application->render('follow_up') . "\n"; ?>
+
+        <div class="">
+            <?php echo $application->render('Save Application') . "\n"; ?>
+            <?php echo Phalcon\Tag::linkTo(array("application/cancelApplication", "Cancel", "class" => "btn btn-danger")) . "\n"; ?>
+        </div>
+
+        <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+
+        <div id="contacts">
+
+            <?php
+
+            $html = '';
+
+            $html .= '<select id="select-contact">' . "\n";
+
+            $html .= '<option>Select a Contact</option>' . "\n";
+            $html .= '<optgroup label="Actions">' . "\n";
+            $html .= '<option value="0">Create New Contact</option>' . "\n";
+            $html .= '</optgroup>' . "\n";
+
+            $attached = '<optgroup label="Attached Contacts">' . "\n";
+            $available = '<optgroup label="Available Contacts">' . "\n";
+
+            foreach($contacts as $contact) {
+
+                if(in_array($contact->id, $stored_ids)) {
+
+                    $attached .= '<option value="' . $contact->id . '">' . $contact->name . '</option>' . "\n";
+
+                } else {
+
+                    $available .= '<option value="' . $contact->id . '">' . $contact->name . '</option>' . "\n";
+
+                }
+
+            }
+
+            $attached .= '</optgroup>' . "\n";
+            $available .= '</optgroup>' . "\n";
+
+            $html .= $attached;
+            $html .= $available;
+
+            $html .= '</select>' . "\n";
+
+            $html .= '<div id="contact-details">' . "\n";
+            $html .= '</div> <!-- end #contact-details -->' . "\n";
+
+            $html .= '<a id="attach-contact" href="#">Attach Contact</a>' . "\n";
+
+            //$html .= '<button class="btn btn-success" id="attach-contact">Attach Contact</button>' . "\n";
+
+            echo $html;
+
+            ?>
+
+        </div> <!-- end #contacts -->
+
+    </div> <!-- end #inner-container -->
+
+</div> <!-- end #main-container -->

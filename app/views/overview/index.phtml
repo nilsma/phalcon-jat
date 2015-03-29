@@ -1,0 +1,36 @@
+<?php $this->partial('partials/memberHeader'); ?>
+<div id="main-container">
+    <h2>overview</h2>
+    <div id="inner-container">
+
+        <?php echo $this->flash->output() . '<br/>'; ?>
+
+        <div id="controllers">
+
+            <div id="create-application">
+                <?php echo Phalcon\Tag::linkTo(array('application/create', "Create New Application", 'class' => 'control')) . "\n"; ?>
+            </div>
+
+            <div id="create-contact">
+                <?php echo Phalcon\Tag::linkTo(array('contact/create', "Create New Contact", 'class' => 'control')) . "\n"; ?>
+            </div>
+
+            <div id="sorting">
+                <a href="#">Details</a>
+                <a href="#">List</a>
+            </div>
+            <div id="filter">
+
+            </div>
+            <div id="menu">
+
+            </div>
+        </div> <!-- end #controllers -->
+        <div id="applications">
+            <p>foreach application</p>
+            <p>render application</p>
+        </div> <!-- end #applications -->
+
+    </div> <!-- end #inner-container -->
+
+</div> <!-- end #main-container -->

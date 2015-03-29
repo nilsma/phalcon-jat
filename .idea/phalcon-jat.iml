@@ -4,6 +4,16 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../phalcon-devtools/ide/2.0.0" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../phalcon-devtools/ide/2.0.0" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
 

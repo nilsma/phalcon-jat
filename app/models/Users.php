@@ -1,9 +1,9 @@
 <?php
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
+use Phalcon\Mvc\Model\Validator\Uniqueness as UniquenessValidator;
 
-class Users extends \Phalcon\Mvc\Model
-{
+class Users extends \Phalcon\Mvc\Model {
 
     /**
      *
@@ -44,17 +44,26 @@ class Users extends \Phalcon\Mvc\Model
     /**
      * Validations and business logic
      */
-    public function validation()
-    {
+    public function validation() {
 
-        $this->validate(
-            new Email(
-                array(
-                    'field'    => 'email',
-                    'required' => true,
-                )
-            )
+        $this->validate(new UniquenessValidator(array(
+                'field' => 'username',
+                'message' => 'That username is already registered'
+            ))
         );
+
+        $this->validate(new UniquenessValidator(array(
+                'field' => 'email',
+                'message' => 'That email is already registered'
+            ))
+        );
+
+        $this->validate(new Email(array(
+                'field'    => 'email',
+                'required' => true,
+            ))
+        );
+
         if ($this->validationHasFailed() == true) {
             return false;
         }

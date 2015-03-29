@@ -1,7 +1,6 @@
 <?php
 
-class Applications extends \Phalcon\Mvc\Model
-{
+class Applications extends \Phalcon\Mvc\Model {
 
     /**
      *

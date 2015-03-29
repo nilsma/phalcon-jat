@@ -2,8 +2,7 @@
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
 
-class Contacts extends \Phalcon\Mvc\Model
-{
+class Contacts extends \Phalcon\Mvc\Model {
 
     /**
      *
@@ -50,8 +49,7 @@ class Contacts extends \Phalcon\Mvc\Model
     /**
      * Validations and business logic
      */
-    public function validation()
-    {
+    public function validation() {
 
         $this->validate(
             new Email(
@@ -64,6 +62,20 @@ class Contacts extends \Phalcon\Mvc\Model
         if ($this->validationHasFailed() == true) {
             return false;
         }
+    }
+
+    /**
+     * @return int
+     */
+    public function getId() {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName() {
+        return $this->name;
     }
 
 }

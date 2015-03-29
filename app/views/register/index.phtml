@@ -1,0 +1,23 @@
+<?php $this->partial('partials/publicHeader'); ?>
+<div id="main-container">
+    <h2>register</h2>
+    <div id="inner-container">
+
+        <?php echo $this->flash->output(); ?>
+
+        <?php echo Phalcon\Tag::form(array("session/register", "method" => "post", "name" => "registerUser")) . "\n"; ?>
+        <?php echo $form->label('username') . "\n"; ?>
+        <?php echo $form->render('username') . "\n"; ?>
+        <?php echo $form->label('email') . "\n"; ?>
+        <?php echo $form->render('email') . "\n"; ?>
+        <?php echo $form->label('password') . "\n"; ?>
+        <?php echo $form->render('password') . "\n"; ?>
+        <?php echo $form->label('repeat') . "\n"; ?>
+        <?php echo $form->render('repeat') . "\n"; ?>
+        <?php echo $form->render('Register') . "\n"; ?>
+        <?php echo Phalcon\Tag::endForm(); ?>
+
+        <?php echo Phalcon\Tag::linkTo('', 'Login'); ?>
+
+    </div>
+</div>

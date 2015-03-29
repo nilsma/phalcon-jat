@@ -1,7 +1,6 @@
 <?php
 
-class ContactAttachments extends \Phalcon\Mvc\Model
-{
+class ContactAttachments extends \Phalcon\Mvc\Model {
 
     /**
      *
