@@ -1,5 +1,8 @@
 <?php
 
+use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
+use Phalcon\Exception;
+
 class ApplicationController extends \Phalcon\Mvc\Controller {
 
     public function indexAction() {
@@ -250,10 +253,86 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
             $user = unserialize($this->session->get('user'));
 
+            $contact_ids = array();
+
+            if($this->session->has('contact_ids')) {
+
+                $contact_ids = $this->session->get('contact_ids');
+
+            }
+
+            $application = new Applications();
+            $application->id = null;
+            $application->owner_id = $user->id;
+            $application->created = date("Y-m-d");
+            $application->company = $this->request->getPost('company');
+            $application->position = $this->request->getPost('position');
+            $application->recruitment_company = $this->request->getPost('recruitment');
+            $application->notes = $this->request->getPost('notes');
+            $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
+            $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
+            $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+
+            $test_id = $this->writeApplication($application, $contact_ids);
+
+            $this->flash->success('Application added!');
+            $this->response->redirect('overview/');
+
+            echo $test_id;
+
         } else {
 
             $this->flash->error('You have to login first');
             $this->response->redirect('');
+
+        }
+
+    }
+
+    private function writeApplication(Applications $application, Array $contact_ids) {
+
+        if(empty($contact_ids) || count($contact_ids) < 1) {
+
+            $application->save();
+            return $application->id;
+
+        } else {
+
+            $transactionManager = new TransactionManager();
+            $transaction = $transactionManager->get();
+
+            try {
+
+                $application_id = null;
+
+                if($application->save() == false) {
+                    $transaction->rollback('Failed to write application');
+                } else {
+                    $application_id = $application->id;
+                }
+
+                foreach($contact_ids as $contact_id) {
+
+                    $attachment = new ContactAttachments();
+                    $attachment->id = null;
+                    $attachment->contact_id = $contact_id;
+                    $attachment->app_id = $application_id;
+
+                    if($attachment->save() == false) {
+                        $transaction->rollback('Failed to write contact attachment');
+                    }
+
+                }
+
+                $transaction->commit();
+
+            } catch(Exception $e) {
+
+                $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
+                $this->flash->error($error_message);
+                $this->response->redirect('overview/');
+
+            }
 
         }
 
