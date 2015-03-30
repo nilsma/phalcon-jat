@@ -5,7 +5,29 @@
 
     <div id="inner-container">
 
-        <?php echo Phalcon\Tag::linkTo('overview/', 'Go Back') . "\n"; ?>
+        <?php echo Phalcon\Tag::form(array("contacts/save", "method" => "post", "name" => "save-contact")) . "\n"; ?>
+
+        <?php echo $form->label('name') . "\n"; ?>
+        <?php echo $form->render('name') . "\n"; ?>
+
+        <?php echo $form->label('position') . "\n"; ?>
+        <?php echo $form->render('position') . "\n"; ?>
+
+        <?php echo $form->label('email') . "\n"; ?>
+        <?php echo $form->render('email') . "\n"; ?>
+
+        <?php echo $form->label('phone') . "\n"; ?>
+        <?php echo $form->render('phone') . "\n"; ?>
+
+        <?php echo $form->label('notes') . "\n"; ?>
+        <?php echo $form->render('notes') . "\n"; ?>
+
+        <div class="form-controls">
+            <?php echo $form->render('Save Contact') . "\n"; ?>
+            <?php echo Phalcon\Tag::linkTo(array("contacts/cancelContact", "Cancel", "class" => "btn btn-danger")) . "\n"; ?>
+        </div>
+
+        <?php echo Phalcon\Tag::endForm() . "\n"; ?>
 
     </div> <!-- end #inner-container -->
 

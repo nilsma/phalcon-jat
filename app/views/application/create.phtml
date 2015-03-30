@@ -1,11 +1,11 @@
 <?php $this->partial('partials/memberHeader'); ?>
 <div id="main-container">
 
-    <h2>create application</h2>
+    <h2>applications/create</h2>
 
     <div id="inner-container">
 
-        <?php echo Phalcon\Tag::form(array("application/save", "method" => "post", "name" => "save-application")) . "\n"; ?>
+        <?php echo Phalcon\Tag::form(array("applications/save", "method" => "post", "name" => "save-application")) . "\n"; ?>
 
         <?php echo $application->label('company') . "\n"; ?>
         <?php echo $application->render('company') . "\n"; ?>
@@ -28,9 +28,9 @@
         <?php echo $application->label('follow_up') . "\n"; ?>
         <?php echo $application->render('follow_up') . "\n"; ?>
 
-        <div class="">
+        <div class="form-controls">
             <?php echo $application->render('Save Application') . "\n"; ?>
-            <?php echo Phalcon\Tag::linkTo(array("application/cancelApplication", "Cancel", "class" => "btn btn-danger")) . "\n"; ?>
+            <?php echo Phalcon\Tag::linkTo(array("applications/cancelApplication", "Cancel", "class" => "btn btn-danger")) . "\n"; ?>
         </div>
 
         <?php echo Phalcon\Tag::endForm() . "\n"; ?>

@@ -120,7 +120,7 @@ class ApplicationCreateForm extends Form {
 
         $this->add($notes);
 
-        // create submit element for the ApplicationForm
+        // create submit element for the form
         $submit = new Submit('Save Application', array(
             'class' => 'btn btn-success'
         ));

@@ -4,6 +4,30 @@ class OverviewController extends \Phalcon\Mvc\Controller {
 
     public function indexAction() {
 
+        $this->view->disable();
+        $this->response->redirect('overview/applications');
+
+    }
+
+    public function contactsAction() {
+
+        //TODO refactor to auth-check method
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $user = unserialize($this->session->get('user'));
+            $this->view->pick('overview/contacts');
+
+        } else {
+
+            $this->flash->error('You have to login first');
+            $this->response->redirect('');
+
+        }
+
+    }
+
+    public function applicationsAction() {
+
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
             $this->assets->addCss('css/main.css');
@@ -16,6 +40,8 @@ class OverviewController extends \Phalcon\Mvc\Controller {
             $this->clearApplicationState();
 
             $cookie = $this->cookies->get('remember-me');
+
+            $this->view->pick('overview/applications');
 
             $this->view->setVar('cookie', $cookie);
             $this->view->setVar('email', $user->email);

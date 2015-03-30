@@ -3,7 +3,7 @@
 use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
 use Phalcon\Exception;
 
-class ApplicationController extends \Phalcon\Mvc\Controller {
+class ApplicationsController extends \Phalcon\Mvc\Controller {
 
     public function indexAction() {
 

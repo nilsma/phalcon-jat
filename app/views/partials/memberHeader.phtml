@@ -2,9 +2,8 @@
     <h1>Job Application Tracker</h1>
     <nav>
         <ul>
-            <li>some</li>
-            <li>restricted</li>
-            <li>nav</li>
+            <li><?php echo Phalcon\Tag::linkTo("overview/applications", "Applications") . "\n"; ?></li>
+            <li><?php echo Phalcon\Tag::linkTo("overview/contacts", "Contacts") . "\n"; ?></li>
             <li><?php echo \Phalcon\Tag::linkTo('session/logout', 'Logout'); ?></li>
         </ul>
     </nav>
