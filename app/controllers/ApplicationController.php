@@ -96,10 +96,10 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $application = new Applications();
             $application->company = $app_state['company'];
             $application->position = $app_state['position'];
-            $application->recruitment_company = $app_state['recruitment_company'];
+            $application->recruitment_company = $app_state['recruitment'];
             $application->notes = $app_state['notes'];
             $application->applied = $app_state['applied'];
-            $application->due = $app_state['due'];
+            $application->due = $app_state['due_date'];
             $application->follow_up = $app_state['follow_up'];
 
         } else {
@@ -164,15 +164,15 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
         //TODO refactor to auth-check method
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $app_state = $this->request->getPost('application');
+            $app_state = $this->request->getPost('app_state');
 
             $application = new Applications();
             $application->company = $app_state['company'];
-            $application->name = $app_state['name'];
+            $application->position = $app_state['position'];
             $application->recruitment_company = $app_state['recruitment'];
             $application->notes = $app_state['notes'];
             $application->applied = $app_state['applied'];
-            $application->due = $app_state['due_date'];
+            $application->due_date = $app_state['due_date'];
             $application->follow_up = $app_state['follow_up'];
 
             $this->session->set('app_state', $app_state);

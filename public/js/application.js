@@ -103,7 +103,7 @@ function storeApplicationState(callback) {
         'follow_up' : document.getElementById('follow_up').value
     }
 
-    $.post("storeApplicationState", {application : object})
+    $.post("storeApplicationState", {app_state : object})
         .done(function() {
             callback();
         });
