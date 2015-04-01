@@ -1,0 +1,20 @@
+/*
+div#inner-container {
+    background-color: #aaa;
+    margin: 0 auto;
+}
+
+div#controllers {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div#controllers div:nth-child(2) div {
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+*/

@@ -31,20 +31,27 @@ class OverviewController extends \Phalcon\Mvc\Controller {
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
             $this->assets->addCss('css/main.css');
-            $this->assets->addCss('css/application.css');
+            $this->assets->addCss('css/applications.css');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/application.js');
 
             $user = unserialize($this->session->get('user'));
+            $applications = Applications::find(array(
+                'conditions' => 'owner_id = ?1',
+                'bind' => array(1 => $user->id)
+            ));
+
+            $contacts = Contacts::find(array(
+                'conditions' => 'owner_id = ?1',
+                'bind' => array(1 => $user->id)
+            ));
 
             $this->clearApplicationState();
 
-            $cookie = $this->cookies->get('remember-me');
-
             $this->view->pick('overview/applications');
-
-            $this->view->setVar('cookie', $cookie);
             $this->view->setVar('email', $user->email);
+            $this->view->setVar('applications', $applications);
+            $this->view->setVar('contacts', $contacts);
 
         } else {
 

@@ -26,7 +26,7 @@ class ApplicationsController extends \Phalcon\Mvc\Controller {
     public function createAction() {
 
         $this->assets->addCss('css/main.css');
-        $this->assets->addCss('css/application.css');
+        $this->assets->addCss('css/applications.css');
         $this->assets->addJs('js/jquery-2.1.3.min.js');
         $this->assets->addJs('js/main.js');
         $this->assets->addJs('js/application.js');
