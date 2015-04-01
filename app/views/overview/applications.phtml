@@ -1,5 +1,6 @@
-<?php $this->partial('partials/memberHeader'); ?>
 <div id="main-container">
+
+    <?php $this->partial('partials/memberHeader'); ?>
 
     <div id="inner-container">
 
@@ -7,19 +8,20 @@
 
         <div id="controllers">
 
-            <div>
+            <div id="controllers-left">
                 <div id="create-application">
                     <?php echo Phalcon\Tag::linkTo(array('applications/create', "Create New Application", 'class' => 'control')) . "\n"; ?>
                 </div>
             </div>
 
-            <div>
+            <div id="controllers-right">
                 <div id="sorting">
                     <a href="#">Details</a>
                     <a href="#">List</a>
                 </div>
                 <div id="filter">
-
+                    <a href="#">Some</a>
+                    <a href="#">Filters</a>
                 </div>
             </div>
         </div> <!-- end #controllers -->

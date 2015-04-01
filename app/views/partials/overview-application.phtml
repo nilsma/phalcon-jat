@@ -1,7 +1,7 @@
 
-<div class="application col-sm-6 col-xs-12">
+<div class="application col-md-6 col-sm-6 col-xs-12">
 
-    <?php echo Phalcon\Tag::form(array("application/edit", "method" => "post", "name" => "application-form", "role" => "form")) . "\n"; ?>
+    <?php echo Phalcon\Tag::form(array("applications/edit", "method" => "post", "name" => "application-form", "role" => "form")) . "\n"; ?>
 
     <div class="application-top">
 
@@ -13,7 +13,7 @@
 
     <div class="application-bottom">
 
-        <div class="application-left col-sm-6 col-xs-12 form-group">
+        <div class="application-left form-group col-md-6 col-sm-12 col-xs-12">
 
             <div class="application-company">
                 <?php echo $form->label('company') . "\n"; ?>
@@ -37,7 +37,7 @@
 
         </div> <!-- end .application-left -->
 
-        <div class="application-right col-sm-6 col-xs-12">
+        <div class="application-right col-md-6 col-sm-12 col-xs-12">
 
             <div class="application-applied">
                 <?php echo $form->label('applied') . "\n"; ?>

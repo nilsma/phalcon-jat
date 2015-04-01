@@ -18,23 +18,7 @@ div.application form {
     padding: 10px;
 }
 
-div.application-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-div.application-bottom {
-    display: flex;
-    flex-direction: row;
-}
-
-div.application-left {
-    margin-right: 10px;
-}
-
 div.application-right {
-    border-left: 1px solid lightgray;
     padding-top: 27px;
 }
 
