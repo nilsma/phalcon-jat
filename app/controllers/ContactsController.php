@@ -72,7 +72,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
                 $contact->save();
                 $this->flash->success('Contact saved');
-                $this->response->redirect('overview/contacts');
+                $this->response->redirect('contacts/overview');
 
             } catch(Exception $e) {
 
@@ -95,11 +95,17 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $user = unserialize($this->session->get('user'));
-            $form = new ContactCreateForm();
+            $this->assets->addCss('css/main.css');
+            $this->assets->addCss('css/contact.css');
+            $this->assets->addCss('css/contact-create.css');
+            $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/main.js');
+            $this->assets->addJs('js/contact.js');
 
-            $this->view->pick('contact/create');
+            $form = new CreateContactForm();
+
             $this->view->form = $form;
+            $this->view->pick('contact/create');
 
         } else {
 
@@ -117,7 +123,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
         //TODO refactor to auth-check method
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $this->response->redirect('overview/contacts');
+            $this->response->redirect('contacts/overview');
 
         } else {
 

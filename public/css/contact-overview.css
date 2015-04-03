@@ -1,0 +1,33 @@
+div.contact {
+    margin-bottom: 20px;
+}
+
+div.contact:last-child {
+    margin-bottom: 0;
+}
+
+div.contact form {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+div.contact label {
+    align-items: center;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+div.contact-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+div.contact div.contact-bottom div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

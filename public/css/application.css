@@ -7,11 +7,8 @@ div.application:last-child {
 }
 
 div.application form {
-    border: 1px solid lightgray;
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
 div.application-right {
@@ -21,11 +18,6 @@ div.application-right {
 div.application-left div,
 div.application-right div {
     margin-bottom: 10px;
-}
-
-div.application-left div label,
-div.application-right div label {
-    font-weight: normal;
 }
 
 div.application-left div label {

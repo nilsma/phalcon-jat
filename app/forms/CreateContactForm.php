@@ -15,7 +15,8 @@ class CreateContactForm extends Form {
         // create text contact_details for contact name
         $name = new Text('name', array(
             'placeholder' => 'Contact Name',
-            'maxlength' => 50
+            'maxlength' => 50,
+            'class' => 'form-control'
         ));
 
         $name->setLabel('Name: ');
@@ -35,6 +36,7 @@ class CreateContactForm extends Form {
         // create new text contact_details for contact position
         $position = new Text('position', array(
             'placeholder' => 'Contact Position',
+            'class' => 'form-control',
             'maxlength' => 50
         ));
 
@@ -52,6 +54,7 @@ class CreateContactForm extends Form {
         // create email contact_details for contact email
         $email = new Email('email', array(
             'placeholder' => 'Contact Email',
+            'class' => 'form-control',
             'maxlength' => 50
         ));
 
@@ -69,6 +72,7 @@ class CreateContactForm extends Form {
         // create text contact_details for contact phone
         $phone = new Text('phone', array(
             'placeholder' => 'Contact Phone',
+            'class' => 'form-control',
             'maxlength' => 20
         ));
 
@@ -86,6 +90,7 @@ class CreateContactForm extends Form {
         // create textArea contact_details for contact notes
         $notes = new TextArea('notes', array(
             'placeholder' => 'Notes',
+            'class' => 'form-control',
             'maxlength' => 500
         ));
 
@@ -101,7 +106,7 @@ class CreateContactForm extends Form {
         $this->add($notes);
 
         // create submit contact_details for the form
-        $submit = new Submit('Save Contact', array(
+        $submit = new Submit('Save', array(
             'class' => 'btn btn-success'
         ));
 

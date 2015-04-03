@@ -10,7 +10,7 @@ use Phalcon\Validation\Validator\StringLength;
 
 class OverviewContactForm extends Form {
 
-    public function initialize(Contacts $contact) {
+    public function initialize(Contacts $contact = null) {
 
         // create text new element for contact name
         $name = new Text('name', array(

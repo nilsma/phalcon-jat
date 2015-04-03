@@ -26,3 +26,13 @@ div#controllers-right {
     justify-content: space-around;
     width: 100%;
 }
+
+form {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+label {
+    font-weight: normal;
+}
