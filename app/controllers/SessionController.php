@@ -7,6 +7,10 @@ class SessionController extends \Phalcon\Mvc\Controller
 
     public function indexAction() {
 
+        $this->view->disable();
+
+        $this->response->redirect('');
+
     }
 
     public function loginAction() {
@@ -26,7 +30,7 @@ class SessionController extends \Phalcon\Mvc\Controller
                 $this->session->set('auth', True);
 
                 $this->flash->success('You have been logged in ...');
-                $this->response->redirect('overview/');
+                $this->response->redirect('application/overview');
 
             } else {
 
@@ -67,7 +71,7 @@ class SessionController extends \Phalcon\Mvc\Controller
             if($user->save()) {
 
                 $this->flash->success('You are registered!');
-                $this->response->redirect('overview/');
+                $this->response->redirect('application/overview');
 
             } else {
 

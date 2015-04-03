@@ -8,15 +8,15 @@ function selectList() {
     } else {
         //TODO fix else-block
         var element = document.getElementById('contact-details');
-        clearElementHTML(element);
+        clearElementHTML(contact_details);
     }
 }
 
 function loadContactDetails(contact_id) {
     getContactDetails(contact_id, function(details) {
         var element = document.getElementById('contact-details');
-        clearElementHTML(element, function() {
-            injectContactDetails(element, details);
+        clearElementHTML(contact_details, function() {
+            injectContactDetails(contact_details, details);
         });
     });
 }
@@ -29,12 +29,12 @@ function getContactDetails(contact_id, callback) {
 }
 
 function clearElementHTML(element, callback) {
-    element.innerHTML = '';
+    contact_details.innerHTML = '';
     callback();
 }
 
 function injectContactDetails(element, contact) {
-    element = document.getElementById('contact-details');
+    contact_details = document.getElementById('contact-details');
     var ul = document.createElement('ul');
 
     var name = document.createElement('li');
@@ -54,7 +54,7 @@ function injectContactDetails(element, contact) {
     ul.appendChild(phone);
     ul.appendChild(email);
 
-    element.appendChild(ul);
+    contact_details.appendChild(ul);
 
 }
 
@@ -63,7 +63,7 @@ function attachContact() {
     storeApplicationState(function() {
 
         var element = document.getElementById('select-contact');
-        var value = parseInt(element.value);
+        var value = parseInt(contact_details.value);
 
         // check if the user has actually selected a contact
         if(value > 0) {
@@ -119,13 +119,13 @@ function storeContact(contact_id, callback) {
 
 function init() {
     var element = document.getElementById('select-contact');
-    if(element !== null) {
-        element.addEventListener('change', selectList);
+    if(contact_details !== null) {
+        contact_details.addEventListener('change', selectList);
     }
 
     var element = document.getElementById('attach-contact');
-    if(element !== null) {
-        element.addEventListener('click', attachContact);
+    if(contact_details !== null) {
+        contact_details.addEventListener('click', attachContact);
     }
 }
 

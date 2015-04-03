@@ -8,7 +8,7 @@ class AttachContactForm extends Form {
 
     public function initialize($contacts) {
 
-        // create select element for contacts
+        // create select contact_details for contacts
         $select = new Select('select', $contacts, array(
             'using' => array('id', 'name'),
             'name' => 'contacts',

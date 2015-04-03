@@ -8,45 +8,41 @@ use Phalcon\Forms\Element\Submit;
 use Phalcon\Validation\Validator\StringLength;
 use Phalcon\Validation\Validator\PresenceOf;
 
-class ApplicationCreateForm extends Form {
+class ApplicationsCreateForm extends Form {
 
-    public function initialize(Applications $app_state) {
+    public function initialize() {
 
-        // create date element for applied date
+        // create date contact_details for applied date
         $applied = new Date("applied", array(
-            'placeholder' => 'Application Date',
-            'value' => $app_state->applied
+            'placeholder' => 'Application Date'
         ));
 
         $applied->setLabel('Applied: ');
 
         $this->add($applied);
 
-        // create date element for due_date
+        // create date contact_details for due_date
         $due_date = new Date("due_date", array(
-            'placeholder' => 'Application Due Date',
-            'value' => $app_state->due
+            'placeholder' => 'Application Due Date'
         ));
 
         $due_date->setLabel('Due Date: ');
 
         $this->add($due_date);
 
-        // create date element for follow-up
+        // create date contact_details for follow-up
         $follow_up = new Date("follow_up", array(
-            'placeholder' => 'Application Follow-Up Date',
-            'value' => $app_state->follow_up
+            'placeholder' => 'Application Follow-Up Date'
         ));
 
         $follow_up->setLabel('Follow-Up Date: ');
 
         $this->add($follow_up);
 
-        // create text element for company name
+        // create text contact_details for company name
         $company = new Text('company', array(
             'placeholder' => 'Company',
-            'maxlength' => 50,
-            'value' => $app_state->company
+            'maxlength' => 50
         ));
 
         $company->setLabel('Company: ');
@@ -63,11 +59,10 @@ class ApplicationCreateForm extends Form {
 
         $this->add($company);
 
-        // create text element for position
+        // create text contact_details for position
         $position = new Text('position', array(
             'placeholder' => 'Position',
-            'maxlength' => 50,
-            'value' => $app_state->position
+            'maxlength' => 50
         ));
 
         $position->setLabel('Position: ');
@@ -84,11 +79,10 @@ class ApplicationCreateForm extends Form {
 
         $this->add($position);
 
-        // create text element for recruitment company name
+        // create text contact_details for recruitment company name
         $recruitment = new Text('recruitment', array(
             'placeholder' => 'Recruitment Company',
-            'maxlength' => 50,
-            'value' => $app_state->recruitment_company
+            'maxlength' => 50
         ));
 
         $recruitment->setLabel('Recruitment Company: ');
@@ -102,11 +96,10 @@ class ApplicationCreateForm extends Form {
 
         $this->add($recruitment);
 
-        // create textArea element for notes
+        // create textArea contact_details for notes
         $notes = new TextArea('notes', array(
             'placeholder' => 'Notes',
-            'maxlength' => 500,
-            'value' => $app_state->notes
+            'maxlength' => 500
         ));
 
         $notes->setLabel('Notes: ');
@@ -120,7 +113,7 @@ class ApplicationCreateForm extends Form {
 
         $this->add($notes);
 
-        // create submit element for the form
+        // create submit contact_details for the form
         $submit = new Submit('Save Application', array(
             'class' => 'btn btn-success'
         ));

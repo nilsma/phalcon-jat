@@ -1,7 +1,7 @@
 
 <div class="application col-md-6 col-sm-6 col-xs-12">
 
-    <?php echo Phalcon\Tag::form(array("applications/edit", "method" => "post", "name" => "application-form", "role" => "form")) . "\n"; ?>
+    <?php echo Phalcon\Tag::form(array("application/edit", "method" => "get", "name" => "application-form", "role" => "form")) . "\n"; ?>
 
     <div class="application-top">
 
@@ -35,6 +35,8 @@
                 <?php echo $form->render('recruitment') . "\n"; ?>
             </div>
 
+            <?php echo $form->render('app_id') . "\n"; ?>
+
         </div> <!-- end .application-left -->
 
         <div class="application-right col-md-6 col-sm-12 col-xs-12">
@@ -52,54 +54,6 @@
             <div class="application-follow-up">
                 <?php echo $form->label('follow_up') . "\n"; ?>
                 <?php echo $form->render('follow_up') . "\n"; ?>
-            </div>
-
-            <div class="application-contacts">
-                <?php
-
-                $html = '';
-
-                $attachments = ContactAttachments::find(array(
-                    'conditions' => 'app_id = ?1',
-                    'bind' => array(1 => $application->id)
-                ));
-
-                if(!count($attachments)) {
-
-                    $html .= '<div>' . "\n";
-                    $html .= '<h4>Contacts</h4>' . "\n";
-                    $html .= '<p>There are no attached contacts ...</p>' . "\n";
-                    $html .= '</div>' . "\n";
-
-                } else {
-
-                    $html .= '<div>' . "\n";
-                    $html .= '<h4>Contacts</h4>' . "\n";
-                    $html .= '<ul>' . "\n";
-
-                    foreach($attachments as $attachment) {
-
-                        $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
-
-                        $html .= '<li>' . "\n";
-                        $html .= '<p>' . "\n";
-                        $html .= $contact->name;
-                        $html .= '<details>' . "\n";
-                        $html .= $contact->email;
-                        $html .= '</details>' . "\n";
-                        $html .= '</p>' . "\n";
-                        $html .= '</li>' . "\n";
-
-                    }
-
-                    $html .= '</ul>' . "\n";
-                    $html .= '</div>' . "\n";
-
-                }
-
-                echo $html;
-
-                ?>
             </div>
 
         </div> <!-- end .application-right -->

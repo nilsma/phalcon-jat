@@ -14,7 +14,7 @@ class IndexController extends ControllerBase {
             $this->session->set("auth", true);
 
             $this->flash->success('Welcome back!');
-            $this->response->redirect('overview/');
+            $this->response->redirect('application/overview');
 
         } else {
 

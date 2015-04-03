@@ -1,11 +1,73 @@
 <?php $this->partial('partials/memberHeader'); ?>
 <div id="main-container">
 
-    <h2>edit application</h2>
-
     <div id="inner-container">
 
-        <?php echo Phalcon\Tag::linkTo('overview/', 'Go Back') . "\n"; ?>
+        <div class="application col-md-12">
+
+            <?php echo Phalcon\Tag::form(array("application/save", "method" => "post", "name" => "application-form", "role" => "form")) . "\n"; ?>
+
+            <div class="application-top">
+
+                <div class="application-edit">
+                    <?php echo Phalcon\Tag::linkTo(array("application/overview", "Cancel", 'class' => 'btn btn-danger')); ?>
+                    <?php echo $form->render('Save') . "\n"; ?>
+                </div>
+
+            </div>
+
+            <div class="application-bottom">
+
+                <div class="application-left form-group col-md-12">
+
+                    <div class="application-company">
+                        <?php echo $form->label('company') . "\n"; ?>
+                        <?php echo $form->render('company') . "\n"; ?>
+                    </div>
+
+                    <div class="application-position">
+                        <?php echo $form->label('position') . "\n"; ?>
+                        <?php echo $form->render('position') . "\n"; ?>
+                    </div>
+
+                    <div class="application-notes">
+                        <?php echo $form->label('notes') . "\n"; ?>
+                        <?php echo $form->render('notes') . "\n"; ?>
+                    </div>
+
+                    <div class="application-recruitment">
+                        <?php echo $form->label('recruitment') . "\n"; ?>
+                        <?php echo $form->render('recruitment') . "\n"; ?>
+                    </div>
+
+                    <?php echo $form->render('app_id') . "\n"; ?>
+
+                </div> <!-- end .application-left -->
+
+                <div class="application-right col-md-12">
+
+                    <div class="application-applied">
+                        <?php echo $form->label('applied') . "\n"; ?>
+                        <?php echo $form->render('applied') . "\n"; ?>
+                    </div>
+
+                    <div class="application-due-date">
+                        <?php echo $form->label('due_date') . "\n"; ?>
+                        <?php echo $form->render('due_date') . "\n"; ?>
+                    </div>
+
+                    <div class="application-follow-up">
+                        <?php echo $form->label('follow_up') . "\n"; ?>
+                        <?php echo $form->render('follow_up') . "\n"; ?>
+                    </div>
+
+                </div> <!-- end .application-right -->
+
+            </div> <!-- end .application-bottom -->
+
+            <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+
+        </div>
 
     </div> <!-- end #inner-container -->
 

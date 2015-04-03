@@ -80,7 +80,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
     }
 
-    public function cancelContactAction() {
+    public function cancelAction() {
 
         $this->view->disable();
 

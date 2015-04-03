@@ -1,0 +1,49 @@
+<div id="application-attachments">
+
+    <?php
+
+    $html = '';
+
+    $html .= '<select id="select-contact">' . "\n";
+
+    $html .= '<option>Select a Contact</option>' . "\n";
+    $html .= '<optgroup label="Actions">' . "\n";
+    $html .= '<option value="0">Create New Contact</option>' . "\n";
+    $html .= '</optgroup>' . "\n";
+
+    $attached = '<optgroup label="Attached Contacts">' . "\n";
+    $available = '<optgroup label="Available Contacts">' . "\n";
+
+    foreach($contacts as $contact) {
+
+        if(in_array($contact->id, $attached_contacts)) {
+
+            $attached .= '<option value="' . $contact->id . '">' . $contact->name . '</option>' . "\n";
+
+        } else {
+
+            $available .= '<option value="' . $contact->id . '">' . $contact->name . '</option>' . "\n";
+
+        }
+
+    }
+
+    $attached .= '</optgroup>' . "\n";
+    $available .= '</optgroup>' . "\n";
+
+    $html .= $attached;
+    $html .= $available;
+
+    $html .= '</select>' . "\n";
+
+    $html .= '<div id="contact-details">' . "\n";
+    $html .= '</div> <!-- end #contact-details -->' . "\n";
+
+    $html .= '<div id="contact-controls">' . "\n";
+    $html .= '</div>' . "\n";
+
+    echo $html;
+
+    ?>
+
+</div> <!-- end #application-attachments -->

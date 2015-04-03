@@ -12,7 +12,7 @@ class ContactCreateForm extends Form {
 
     public function initialize() {
 
-        // create text element for contact name
+        // create text contact_details for contact name
         $name = new Text('name', array(
             'placeholder' => 'Contact Name',
             'maxlength' => 50
@@ -32,7 +32,7 @@ class ContactCreateForm extends Form {
 
         $this->add($name);
 
-        // create new text element for contact position
+        // create new text contact_details for contact position
         $position = new Text('position', array(
             'placeholder' => 'Contact Position',
             'maxlength' => 50
@@ -49,7 +49,7 @@ class ContactCreateForm extends Form {
 
         $this->add($position);
 
-        // create email element for contact email
+        // create email contact_details for contact email
         $email = new Email('email', array(
             'placeholder' => 'Contact Email',
             'maxlength' => 50
@@ -66,7 +66,7 @@ class ContactCreateForm extends Form {
 
         $this->add($email);
 
-        // create text element for contact phone
+        // create text contact_details for contact phone
         $phone = new Text('phone', array(
             'placeholder' => 'Contact Phone',
             'maxlength' => 20
@@ -83,7 +83,7 @@ class ContactCreateForm extends Form {
 
         $this->add($phone);
 
-        // create textArea element for contact notes
+        // create textArea contact_details for contact notes
         $notes = new TextArea('notes', array(
             'placeholder' => 'Notes',
             'maxlength' => 500
@@ -100,7 +100,7 @@ class ContactCreateForm extends Form {
 
         $this->add($notes);
 
-        // create submit element for the form
+        // create submit contact_details for the form
         $submit = new Submit('Save Contact', array(
             'class' => 'btn btn-success'
         ));
