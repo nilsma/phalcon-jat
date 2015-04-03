@@ -1,6 +1,6 @@
 <div class="contact col-md-4 col-sm-4 col-xs-12">
 
-    <?php echo Phalcon\Tag::form(array("contact/edit", "method" => "get", "name" => "contact-form", "role" => "form")) . "\n"; ?>
+    <?php echo Phalcon\Tag::form(array("contacts/edit", "method" => "get", "name" => "contact-form", "role" => "form")) . "\n"; ?>
 
     <div class="contact-top">
         <div class="contact-edit form-group">
@@ -34,6 +34,8 @@
             <?php echo $form->label('notes') . "\n"; ?>
             <?php echo $form->render('notes') . "\n"; ?>
         </div>
+
+        <?php echo $form->render('contact_id') . "\n"; ?>
 
     </div>
 

@@ -59,8 +59,14 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
             $user = unserialize($this->session->get('user'));
 
+            if($this->request->has('contact_id')) {
+                $contact_id = $this->request->get('contact_id');
+            } else {
+                $contact_id = null;
+            }
+
             $contact = new Contacts();
-            $contact->id = null;
+            $contact->id = $contact_id;
             $contact->owner_id = $user->id;
             $contact->name = $this->request->getPost('name');
             $contact->position = $this->request->getPost('position');
@@ -78,7 +84,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
                 $error_message = 'Something went wrong while saving contact: ' . $e->getMessage();
                 $this->flash->error($error_message);
-                $this->response->redirect('overview/contacts');
+                $this->response->redirect('contacts/overview');
 
             }
 
@@ -138,7 +144,12 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $user = unserialize($this->session->get('user'));
+            $contact_id = $this->request->get('contact_id');
+            $contact = Contacts::findFirst('id = "' . $contact_id . '"');
+
+            $form = new EditContactForm($contact);
+
+            $this->view->form = $form;
             $this->view->pick('contact/edit');
 
         } else {

@@ -1,11 +1,56 @@
-<?php $this->partial('partials/memberHeader'); ?>
 <div id="main-container">
 
-    <h2>edit contact</h2>
+    <?php $this->partial('partials/memberHeader'); ?>
 
     <div id="inner-container">
 
-        <?php echo Phalcon\Tag::linkTo('overview/', 'Go Back') . "\n"; ?>
+        <div id="contact" class="container col-md-12 col-sm-12">
+
+            <?php echo Phalcon\Tag::form(array("contacts/save", "method" => "post", "name" => "create-contact", "role" => "form")) . "\n"; ?>
+
+            <div id="contact-top">
+
+                <div class="form-controls form-group">
+                    <?php echo Phalcon\Tag::linkTo(array("contacts/cancel", "Cancel", "class" => "btn btn-danger")) . "\n"; ?>
+                    <?php echo $form->render('Save') . "\n"; ?>
+                </div>
+
+            </div>
+
+            <div class="contact-bottom">
+
+                <div class="contact-name form-group">
+                    <?php echo $form->label('name') . "\n"; ?>
+                    <?php echo $form->render('name') . "\n"; ?>
+                </div>
+
+                <div class="contact-position form-group">
+                    <?php echo $form->label('position') . "\n"; ?>
+                    <?php echo $form->render('position') . "\n"; ?>
+                </div>
+
+                <div class="contact-email form-group">
+                    <?php echo $form->label('email') . "\n"; ?>
+                    <?php echo $form->render('email') . "\n"; ?>
+                </div>
+
+                <div class="contact-phone form-group">
+                    <?php echo $form->label('phone') . "\n"; ?>
+                    <?php echo $form->render('phone') . "\n"; ?>
+                </div>
+
+                <div class="contact-notes form-group">
+                    <?php echo $form->label('notes') . "\n"; ?>
+                    <?php echo $form->render('notes') . "\n"; ?>
+                </div>
+
+                <?php echo $form->render('contact_id') . "\n"; ?>
+
+            </div> <!-- end #contact-bottom -->
+
+            <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+
+        </div> <!-- end #contact -->
 
     </div> <!-- end #inner-container -->
 

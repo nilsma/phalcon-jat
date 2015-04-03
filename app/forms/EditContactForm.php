@@ -2,55 +2,50 @@
 
 use Phalcon\Forms\Form;
 use Phalcon\Forms\Element\Text;
-use Phalcon\Forms\Element\Email;
 use Phalcon\Forms\Element\TextArea;
+use Phalcon\Forms\Element\Email;
 use Phalcon\Forms\Element\Hidden;
 use Phalcon\Forms\Element\Submit;
 use Phalcon\Validation\Validator\PresenceOf;
 use Phalcon\Validation\Validator\StringLength;
 
-class OverviewContactForm extends Form {
+class EditContactForm extends Form {
 
     public function initialize(Contacts $contact) {
 
-        // create text new element for contact name
+        // create text contact_details for contact name
         $name = new Text('name', array(
             'placeholder' => 'Contact Name',
             'maxlength' => 50,
-            'class' => 'form-control',
             'value' => $contact->name,
-            'disabled' => 'disabled'
+            'class' => 'form-control'
         ));
 
         $name->setLabel('Name: ');
 
         $name->addValidators(array(
             new PresenceOf(array(
-                'message' => 'Name is required'
+                'message' => 'Contact name is required'
             )),
             new StringLength(array(
                 'max' => 50,
-                'message' => 'Contact Name may not exceed 50 characters'
+                'message'=> 'Contact name may not exceed 50 characters'
             ))
         ));
 
         $this->add($name);
 
-        // create new text element for contact position
+        // create new text contact_details for contact position
         $position = new Text('position', array(
-            'placeholder' => 'Position',
-            'maxlength' => 50,
+            'placeholder' => 'Contact Position',
             'class' => 'form-control',
             'value' => $contact->position,
-            'disabled' => 'disabled'
+            'maxlength' => 50
         ));
 
         $position->setLabel('Position: ');
 
         $position->addValidators(array(
-            new PresenceOf(array(
-                'message' => 'Contact Position is required'
-            )),
             new StringLength(array(
                 'max' => 50,
                 'message' => 'Contact Position may not exceed 50 characters'
@@ -59,13 +54,12 @@ class OverviewContactForm extends Form {
 
         $this->add($position);
 
-        // create new email element for contact email
+        // create email contact_details for contact email
         $email = new Email('email', array(
-            'placeholder' => 'Email',
-            'maxlength' => 50,
+            'placeholder' => 'Contact Email',
             'class' => 'form-control',
             'value' => $contact->email,
-            'disabled' => 'disabled'
+            'maxlength' => 50
         ));
 
         $email->setLabel('Email: ');
@@ -79,13 +73,12 @@ class OverviewContactForm extends Form {
 
         $this->add($email);
 
-        // create new text element for contact phone
+        // create text contact_details for contact phone
         $phone = new Text('phone', array(
-            'placeholder' => 'Phone',
-            'maxlength' => 20,
+            'placeholder' => 'Contact Phone',
             'class' => 'form-control',
             'value' => $contact->phone,
-            'disabled' => 'disabled'
+            'maxlength' => 20
         ));
 
         $phone->setLabel('Phone: ');
@@ -99,13 +92,12 @@ class OverviewContactForm extends Form {
 
         $this->add($phone);
 
-        // create new textarea element for contact notes
+        // create textArea contact_details for contact notes
         $notes = new TextArea('notes', array(
             'placeholder' => 'Notes',
-            'maxlength' => 20,
             'class' => 'form-control',
             'value' => $contact->notes,
-            'disabled' => 'disabled'
+            'maxlength' => 500
         ));
 
         $notes->setLabel('Notes: ');
@@ -113,21 +105,21 @@ class OverviewContactForm extends Form {
         $notes->addValidators(array(
             new StringLength(array(
                 'max' => 500,
-                'message' => 'Contact Notes may not exceed 500 characters'
+                'message' => 'Notes can not be more than 500 characters'
             ))
         ));
 
         $this->add($notes);
 
-        // create new hidden element for the contact id
+        // create hidden element for contact id
         $contact_id = new Hidden('contact_id', array(
             'value' => $contact->id
         ));
 
         $this->add($contact_id);
 
-        // create new submit element for the form
-        $submit = new Submit('Edit', array(
+        // create submit contact_details for the form
+        $submit = new Submit('Save', array(
             'class' => 'btn btn-success'
         ));
 
