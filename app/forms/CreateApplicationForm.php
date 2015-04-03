@@ -8,7 +8,7 @@ use Phalcon\Forms\Element\Submit;
 use Phalcon\Validation\Validator\StringLength;
 use Phalcon\Validation\Validator\PresenceOf;
 
-class ApplicationsCreateForm extends Form {
+class CreateApplicationForm extends Form {
 
     public function initialize() {
 

@@ -8,7 +8,7 @@ use Phalcon\Forms\Element\Hidden;
 use Phalcon\Forms\Element\Submit;
 use Phalcon\Validation\Validator\StringLength;
 
-class ApplicationsEditForm extends Form {
+class OverviewApplicationForm extends Form {
 
     public function initialize(Applications $application) {
 
@@ -16,6 +16,7 @@ class ApplicationsEditForm extends Form {
         $company = new Text('company', array(
             'placeholder' => 'Company Name',
             'maxlength' => 50,
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->company
         ));
@@ -35,6 +36,7 @@ class ApplicationsEditForm extends Form {
         $position = new Text('position', array(
             'placeholder' => 'Position',
             'maxlength' => 50,
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->position
         ));
@@ -54,6 +56,7 @@ class ApplicationsEditForm extends Form {
         $recruitment = new Text('recruitment', array(
             'placeholder' => 'Recruitment Company',
             'maxlength' => 50,
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->recruitment_company
         ));
@@ -73,6 +76,7 @@ class ApplicationsEditForm extends Form {
         $notes = new TextArea('notes', array(
             'placeholder' => 'Notes ...',
             'maxlength' => 500,
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->notes
         ));
@@ -91,6 +95,7 @@ class ApplicationsEditForm extends Form {
         // create date contact_details for applied date
         $applied = new Date('applied', array(
             'placeholder' => 'Enter a Date',
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->applied
         ));
@@ -102,6 +107,7 @@ class ApplicationsEditForm extends Form {
         // create date contact_details for due date
         $due_date = new Date('due_date', array(
             'placeholder' => 'Enter a Date',
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->due
         ));
@@ -113,6 +119,7 @@ class ApplicationsEditForm extends Form {
         // create date contact_details for due date
         $follow_up = new Date('follow_up', array(
             'placeholder' => 'Enter a Date',
+            'disabled' => 'disabled',
             'class' => 'form-control',
             'value' => $application->follow_up
         ));
@@ -129,7 +136,7 @@ class ApplicationsEditForm extends Form {
         $this->add($app_id);
 
         // create submit contact_details for application edit
-        $submit = new Submit('Save', array(
+        $submit = new Submit('Edit', array(
             'class' => 'btn btn-success'
         ));
 

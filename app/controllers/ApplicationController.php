@@ -68,7 +68,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
         //TODO refactor to auth-check method
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $form = new ApplicationsCreateForm();
+            $form = new CreateApplicationForm();
 
             $this->view->form = $form;
             $this->view->pick('application/create');
@@ -115,7 +115,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             //TODO check if current user owns app_id
             $app_id = $this->request->get('app_id');
 
-            $form = new ApplicationsEditForm(Applications::findFirst('id = "' . $app_id . '"'));
+            $form = new EditApplicationForm(Applications::findFirst('id = "' . $app_id . '"'));
 
             $this->view->pick('application/edit');
             $this->view->form = $form;

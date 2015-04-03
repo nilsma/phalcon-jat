@@ -32,9 +32,9 @@
 
             foreach($applications as $application) {
 
-                $form = new ApplicationsOverviewForm($application);
+                $form = new OverviewApplicationForm($application);
 
-                echo $this->partial('partials/application-template') . "\n";
+                echo $this->partial('partials/overview-application-template') . "\n";
 
             }
 
