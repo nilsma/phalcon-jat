@@ -1,0 +1,47 @@
+<div id="main-container">
+
+    <?php $this->partial('partials/memberHeader'); ?>
+
+    <div id="inner-container">
+
+        <?php echo $this->flash->output() . '<br/>'; ?>
+
+        <div id="controllers">
+
+            <div id="controllers-left">
+                <div id="create-application">
+                    <?php echo Phalcon\Tag::linkTo(array('contact/create', "Create New Contact", 'class' => 'control')) . "\n"; ?>
+                </div>
+            </div>
+
+            <div id="controllers-right">
+                <div id="sorting">
+                    <a href="#">Details</a>
+                    <a href="#">List</a>
+                </div>
+                <div id="filter">
+                    <a href="#">Some</a>
+                    <a href="#">Filters</a>
+                </div>
+            </div>
+        </div> <!-- end #controllers -->
+
+        <div id="contacts" class="container">
+
+            <?php
+
+            foreach($contacts as $contact) {
+
+                $form = new OverviewContactForm($contact);
+
+                echo $this->partial('partials/overview-contact-template') . "\n";
+
+            }
+
+            ?>
+
+        </div> <!-- end #contacts -->
+
+    </div> <!-- end #inner-container -->
+
+</div> <!-- end #main-container -->

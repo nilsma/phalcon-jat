@@ -10,7 +10,37 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $this->response->redirect('contacts/create');
+            $this->response->redirect('contacts/overview');
+
+        } else {
+
+            $this->flash->error('You have to login first');
+            $this->response->redirect('');
+
+        }
+
+    }
+
+    public function overviewAction() {
+
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $this->assets->addCss('css/main.css');
+            $this->assets->addCss('css/contact.css');
+            $this->assets->addCss('css/contact-overview.css');
+            $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/main.js');
+            $this->assets->addJs('js/contact.js');
+
+            $user = unserialize($this->session->get('user'));
+
+            $contacts = Contacts::find(array(
+                'conditions' => 'owner_id = ?1',
+                'bind' => array(1 => $user->id)
+            ));
+
+            $this->view->setVar('contacts', $contacts);
+            $this->view->pick('contact/overview');
 
         } else {
 

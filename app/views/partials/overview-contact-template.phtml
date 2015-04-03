@@ -1,0 +1,42 @@
+<div class="contact col-md-4 col-sm-4 col-xs-12">
+
+    <?php echo Phalcon\Tag::form(array("contact/edit", "method" => "get", "name" => "contact-form", "role" => "form")) . "\n"; ?>
+
+    <div class="contact-top">
+        <div class="contact-edit form-group">
+            <?php echo $form->render('Edit') . "\n"; ?>
+        </div>
+    </div>
+
+    <div class="contact-bottom">
+
+        <div class="contact-name form-group">
+            <?php echo $form->label('name') . "\n"; ?>
+            <?php echo $form->render('name') . "\n"; ?>
+        </div>
+
+        <div class="contact-position form-group">
+            <?php echo $form->label('position') . "\n"; ?>
+            <?php echo $form->render('position') . "\n"; ?>
+        </div>
+
+        <div class="contact-email form-group">
+            <?php echo $form->label('email') . "\n"; ?>
+            <?php echo $form->render('email') . "\n"; ?>
+        </div>
+
+        <div class="contact-phone form-group">
+            <?php echo $form->label('phone') . "\n"; ?>
+            <?php echo $form->render('phone') . "\n"; ?>
+        </div>
+
+        <div class="contact-notes form-group">
+            <?php echo $form->label('notes') . "\n"; ?>
+            <?php echo $form->render('notes') . "\n"; ?>
+        </div>
+
+    </div>
+
+    <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+
+</div> <!-- end .contact -->
