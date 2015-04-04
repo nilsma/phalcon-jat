@@ -1,65 +1,7 @@
-div.application {
-    margin-bottom: 20px;
-}
-
-div.application:last-child {
-    margin-bottom: 0;
-}
-
-div.application form {
-    display: flex;
-    flex-direction: column;
+div.application-left {
+    padding-left: 0;
 }
 
 div.application-right {
-    padding-top: 27px;
-}
-
-div.application-left div,
-div.application-right div {
-    margin-bottom: 10px;
-}
-
-div.application-left div label {
-    margin-left: 10px;
-}
-
-div.application-company,
-div.application-position,
-div.application-notes,
-div.application-recruitment {
-    display: flex;
-    flex-direction: column;
-}
-
-div.application-edit,
-div.application-applied,
-div.application-due-date,
-div.application-follow-up {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-div.application-edit {
-    justify-content: flex-end;
-}
-
-div.application-left input,
-div.application-left textarea,
-div.application-right input {
-    margin-bottom: 18px;
-}
-
-div.application-left textarea {
-    min-height: 100px;
-}
-
-div.application-left div:last-child input {
-    margin-bottom: 0;
-}
-
-div.application-right input[type="date"] {
-    width: 100px;
+    padding-right: 0;
 }

@@ -14,7 +14,8 @@ class CreateApplicationForm extends Form {
 
         // create date contact_details for applied date
         $applied = new Date("applied", array(
-            'placeholder' => 'Application Date'
+            'placeholder' => 'Application Date',
+            'class' => 'form-control'
         ));
 
         $applied->setLabel('Applied: ');
@@ -23,7 +24,8 @@ class CreateApplicationForm extends Form {
 
         // create date contact_details for due_date
         $due_date = new Date("due_date", array(
-            'placeholder' => 'Application Due Date'
+            'placeholder' => 'Application Due Date',
+            'class' => 'form-control'
         ));
 
         $due_date->setLabel('Due Date: ');
@@ -32,17 +34,19 @@ class CreateApplicationForm extends Form {
 
         // create date contact_details for follow-up
         $follow_up = new Date("follow_up", array(
-            'placeholder' => 'Application Follow-Up Date'
+            'placeholder' => 'Application Follow-Up Date',
+            'class' => 'form-control'
         ));
 
-        $follow_up->setLabel('Follow-Up Date: ');
+        $follow_up->setLabel('Follow-Up: ');
 
         $this->add($follow_up);
 
         // create text contact_details for company name
         $company = new Text('company', array(
             'placeholder' => 'Company',
-            'maxlength' => 50
+            'maxlength' => 50,
+            'class' => 'form-control'
         ));
 
         $company->setLabel('Company: ');
@@ -62,7 +66,8 @@ class CreateApplicationForm extends Form {
         // create text contact_details for position
         $position = new Text('position', array(
             'placeholder' => 'Position',
-            'maxlength' => 50
+            'maxlength' => 50,
+            'class' => 'form-control'
         ));
 
         $position->setLabel('Position: ');
@@ -82,7 +87,8 @@ class CreateApplicationForm extends Form {
         // create text contact_details for recruitment company name
         $recruitment = new Text('recruitment', array(
             'placeholder' => 'Recruitment Company',
-            'maxlength' => 50
+            'maxlength' => 50,
+            'class' => 'form-control'
         ));
 
         $recruitment->setLabel('Recruitment Company: ');
@@ -99,7 +105,8 @@ class CreateApplicationForm extends Form {
         // create textArea contact_details for notes
         $notes = new TextArea('notes', array(
             'placeholder' => 'Notes',
-            'maxlength' => 500
+            'maxlength' => 500,
+            'class' => 'form-control'
         ));
 
         $notes->setLabel('Notes: ');
@@ -114,7 +121,7 @@ class CreateApplicationForm extends Form {
         $this->add($notes);
 
         // create submit contact_details for the form
-        $submit = new Submit('Save Application', array(
+        $submit = new Submit('Save', array(
             'class' => 'btn btn-success'
         ));
 

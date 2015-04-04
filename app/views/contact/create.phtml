@@ -12,12 +12,13 @@
 
                 <div class="form-controls form-group">
                     <?php echo $form->render('Save') . "\n"; ?>
-                    <?php echo Phalcon\Tag::linkTo(array("contacts/cancel", "Cancel", "class" => "btn btn-danger")) . "\n"; ?>
+                    <?php echo Phalcon\Tag::linkTo(array("contacts/cancel", "Cancel", "class" => "btn btn-warning")) . "\n"; ?>
+                    <?php echo Phalcon\Tag::linkTo(array("contacts/delete", "Delete", "class" => "btn btn-danger")) . "\n"; ?>
                 </div>
 
-            </div>
+            </div> <!-- end #contact-top -->
 
-            <div class="contact-bottom">
+            <div id="contact-bottom">
 
                 <div class="contact-name form-group">
                     <?php echo $form->label('name') . "\n"; ?>

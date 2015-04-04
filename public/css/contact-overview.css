@@ -2,6 +2,12 @@ div.contact {
     margin-bottom: 20px;
 }
 
+div.contact-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 div.contact:last-child {
     margin-bottom: 0;
 }
@@ -18,12 +24,6 @@ div.contact label {
     align-items: center;
     font-weight: normal;
     margin-left: 10px;
-}
-
-div.contact-edit {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
 
 div.contact div.contact-bottom div {

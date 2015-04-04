@@ -20,7 +20,7 @@ class EditApplicationForm extends Form {
             'value' => $application->company
         ));
 
-        $company->setLabel('Company Name: ');
+        $company->setLabel('Company: ');
 
         $company->addValidators(array(
             new StringLength(array(

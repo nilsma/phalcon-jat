@@ -9,9 +9,10 @@
 
             <div class="application-top">
 
-                <div class="application-edit">
-                    <?php echo Phalcon\Tag::linkTo(array("application/overview", "Cancel", 'class' => 'btn btn-danger')); ?>
+                <div class="application-edit form-group">
                     <?php echo $form->render('Save') . "\n"; ?>
+                    <?php echo Phalcon\Tag::linkTo(array("application/cancel", "Cancel", 'class' => 'btn btn-warning')); ?>
+                    <?php echo Phalcon\Tag::linkTo(array("application/delete", "Delete", 'class' => 'btn btn-danger')); ?>
                 </div>
 
             </div>
@@ -20,24 +21,24 @@
 
                 <div class="application-left form-group col-md-12">
 
-                    <div class="application-company">
+                    <div class="application-company form-group">
                         <?php echo $form->label('company') . "\n"; ?>
                         <?php echo $form->render('company') . "\n"; ?>
                     </div>
 
-                    <div class="application-position">
+                    <div class="application-position form-group">
                         <?php echo $form->label('position') . "\n"; ?>
                         <?php echo $form->render('position') . "\n"; ?>
                     </div>
 
-                    <div class="application-notes">
-                        <?php echo $form->label('notes') . "\n"; ?>
-                        <?php echo $form->render('notes') . "\n"; ?>
-                    </div>
-
-                    <div class="application-recruitment">
+                    <div class="application-recruitment form-group">
                         <?php echo $form->label('recruitment') . "\n"; ?>
                         <?php echo $form->render('recruitment') . "\n"; ?>
+                    </div>
+
+                    <div class="application-notes form-group">
+                        <?php echo $form->label('notes') . "\n"; ?>
+                        <?php echo $form->render('notes') . "\n"; ?>
                     </div>
 
                     <?php echo $form->render('app_id') . "\n"; ?>
@@ -46,17 +47,17 @@
 
                 <div class="application-right col-md-12">
 
-                    <div class="application-applied">
+                    <div class="application-applied form-group">
                         <?php echo $form->label('applied') . "\n"; ?>
                         <?php echo $form->render('applied') . "\n"; ?>
                     </div>
 
-                    <div class="application-due-date">
+                    <div class="application-due-date form-group">
                         <?php echo $form->label('due_date') . "\n"; ?>
                         <?php echo $form->render('due_date') . "\n"; ?>
                     </div>
 
-                    <div class="application-follow-up">
+                    <div class="application-follow-up form-group">
                         <?php echo $form->label('follow_up') . "\n"; ?>
                         <?php echo $form->render('follow_up') . "\n"; ?>
                     </div>

@@ -22,6 +22,12 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
     }
 
+    public function deleteAction() {
+
+
+
+    }
+
     public function overviewAction() {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
@@ -31,7 +37,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/application-overview.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
             $this->assets->addJs('js/main.js');
-            $this->assets->addJs('js/application.js');
+            $this->assets->addJs('js/application-overview.js');
 
             $user = unserialize($this->session->get('user'));
             $applications = Applications::find(array(
@@ -62,6 +68,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
         $this->assets->addCss('css/main.css');
         $this->assets->addCss('css/application.css');
+        $this->assets->addCss('css/application-create.css');
         $this->assets->addJs('js/jquery-2.1.3.min.js');
         $this->assets->addJs('js/main.js');
         $this->assets->addJs('js/application.js');

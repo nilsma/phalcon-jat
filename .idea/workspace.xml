@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/application-create.css" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/index/index.volt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ContactsController.php" afterPath="$PROJECT_DIR$/app/controllers/ContactsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-edit.css" afterPath="$PROJECT_DIR$/public/css/contact-edit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicationController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/EditApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/EditApplicationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-edit.css" afterPath="$PROJECT_DIR$/public/css/application-edit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-overview.css" afterPath="$PROJECT_DIR$/public/css/application-overview.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application.css" afterPath="$PROJECT_DIR$/public/css/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-overview.css" afterPath="$PROJECT_DIR$/public/css/contact-overview.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/create.phtml" afterPath="$PROJECT_DIR$/app/views/application/create.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/create.phtml" afterPath="$PROJECT_DIR$/app/views/contact/create.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/edit.phtml" afterPath="$PROJECT_DIR$/app/views/application/edit.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/edit.phtml" afterPath="$PROJECT_DIR$/app/views/contact/edit.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
@@ -29,48 +40,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ContactsController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
+      <file leaf-file-name="ApplicationController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="45" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-1.8571428" vertical-offset="910" max-vertical-offset="6162">
-              <folding>
-                <element signature="e#7#29#0" expanded="true" />
-              </folding>
+            <state line="50" column="15" selection-start="1401" selection-end="1401" vertical-scroll-proportion="-6.678571" vertical-offset="1113" max-vertical-offset="5278">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact-edit.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/contact-edit.css">
+      <file leaf-file-name="overview-application-template.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+            <state line="41" column="68" selection-start="1473" selection-end="1473" vertical-scroll-proportion="-9.321428" vertical-offset="805" max-vertical-offset="1820">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-create.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/application-create.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="1" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-overview.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/application-overview.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="1" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application-edit.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="edit.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/contact/edit.phtml">
+        <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="41" selection-start="455" selection-end="455" vertical-scroll-proportion="-12.071428" vertical-offset="0" max-vertical-offset="1638">
+            <state line="49" column="49" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-7.0" vertical-offset="1078" max-vertical-offset="2106">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/contact.js">
+      <file leaf-file-name="EditApplicationForm.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/forms/EditApplicationForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="33" selection-start="268" selection-end="268" vertical-scroll-proportion="0.30847457" vertical-offset="0" max-vertical-offset="1092">
+            <state line="22" column="35" selection-start="672" selection-end="672" vertical-scroll-proportion="0.6270872" vertical-offset="78" max-vertical-offset="3614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditContactForm.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/forms/EditContactForm.php">
+      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="33" selection-start="165" selection-end="165" vertical-scroll-proportion="-5.571429" vertical-offset="0" max-vertical-offset="3510">
+            <state line="6" column="1" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312">
               <folding />
             </state>
           </provider>
@@ -89,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/overview/index.phtml" />
         <option value="$PROJECT_DIR$/app/forms/ContactCreateForm.php" />
         <option value="$PROJECT_DIR$/app/views/overview/contacts.phtml" />
         <option value="$PROJECT_DIR$/app/views/index.volt" />
@@ -104,7 +139,6 @@
         <option value="$PROJECT_DIR$/app/controllers/ApplicationsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/public/css/applications-edit.css" />
-        <option value="$PROJECT_DIR$/public/css/application-edit.css" />
         <option value="$PROJECT_DIR$/app/forms/ApplicationsEditForm.php" />
         <option value="$PROJECT_DIR$/public/js/application.js" />
         <option value="$PROJECT_DIR$/app/config/services.php" />
@@ -112,34 +146,36 @@
         <option value="$PROJECT_DIR$/app/forms/ApplicationsCreateForm.php" />
         <option value="$PROJECT_DIR$/app/views/partials/application-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/application-edit.phtml" />
-        <option value="$PROJECT_DIR$/app/views/application/edit.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/application-attachments-form.phtml" />
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
-        <option value="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
-        <option value="$PROJECT_DIR$/app/views/application/create.phtml" />
-        <option value="$PROJECT_DIR$/app/forms/EditApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/views/application/overview.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/memberHeader.phtml" />
-        <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
-        <option value="$PROJECT_DIR$/public/css/application-overview.css" />
         <option value="$PROJECT_DIR$/app/views/contact/overview.phtml" />
         <option value="$PROJECT_DIR$/app/forms/CreateContactForm.php" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
-        <option value="$PROJECT_DIR$/public/css/application.css" />
         <option value="$PROJECT_DIR$/public/css/contact.css" />
-        <option value="$PROJECT_DIR$/public/css/contact-overview.css" />
         <option value="$PROJECT_DIR$/public/css/contact-create.css" />
-        <option value="$PROJECT_DIR$/app/views/contact/create.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
         <option value="$PROJECT_DIR$/app/forms/OverviewContactForm.php" />
-        <option value="$PROJECT_DIR$/app/forms/EditContactForm.php" />
         <option value="$PROJECT_DIR$/public/css/contact-edit.css" />
-        <option value="$PROJECT_DIR$/app/views/contact/edit.phtml" />
         <option value="$PROJECT_DIR$/public/js/contact-edit.js" />
         <option value="$PROJECT_DIR$/app/controllers/ContactsController.php" />
         <option value="$PROJECT_DIR$/public/js/contact.js" />
+        <option value="$PROJECT_DIR$/app/forms/EditContactForm.php" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
+        <option value="$PROJECT_DIR$/app/views/contact/create.phtml" />
+        <option value="$PROJECT_DIR$/app/views/contact/edit.phtml" />
+        <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
+        <option value="$PROJECT_DIR$/public/css/contact-overview.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
+        <option value="$PROJECT_DIR$/public/css/application-create.css" />
+        <option value="$PROJECT_DIR$/public/css/application-overview.css" />
+        <option value="$PROJECT_DIR$/public/css/application.css" />
+        <option value="$PROJECT_DIR$/app/views/application/create.phtml" />
+        <option value="$PROJECT_DIR$/public/css/application-edit.css" />
+        <option value="$PROJECT_DIR$/app/views/application/edit.phtml" />
+        <option value="$PROJECT_DIR$/app/forms/EditApplicationForm.php" />
       </list>
     </option>
   </component>
@@ -180,6 +216,172 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public/css">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="forms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="views">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Changed Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="app">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="forms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -384,172 +586,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Default">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="public/css">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="forms">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="views">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="Changed Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="phalcon-jat">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="forms">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -628,11 +664,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -654,11 +690,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="416" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="37" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="676" />
@@ -726,11 +757,6 @@
         <state line="9" column="28" selection-start="189" selection-end="189" vertical-scroll-proportion="-8.357142" vertical-offset="0" max-vertical-offset="520" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="208" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/forms/AttachContactForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="43" selection-start="331" selection-end="331" vertical-scroll-proportion="0.325" vertical-offset="78" max-vertical-offset="884" />
@@ -739,11 +765,6 @@
     <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="14" selection-start="2681" selection-end="2681" vertical-scroll-proportion="0.8870674" vertical-offset="1307" max-vertical-offset="2080" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/application-attachments-form.phtml">
@@ -768,37 +789,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="59" selection-start="525" selection-end="525" vertical-scroll-proportion="-2.4285715" vertical-offset="348" max-vertical-offset="910">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/CreateApplicationForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="27" selection-start="3200" selection-end="3200" vertical-scroll-proportion="-6.678571" vertical-offset="2595" max-vertical-offset="3224">
-          <folding />
-        </state>
+        <state line="16" column="59" selection-start="525" selection-end="525" vertical-scroll-proportion="-2.4285715" vertical-offset="348" max-vertical-offset="910" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/memberHeader.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="95" selection-start="267" selection-end="267" vertical-scroll-proportion="0.24118738" vertical-offset="0" max-vertical-offset="539">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/EditApplicationForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="40" selection-start="287" selection-end="287" vertical-scroll-proportion="-3.7142856" vertical-offset="0" max-vertical-offset="3614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="59" selection-start="852" selection-end="852" vertical-scroll-proportion="0.3710575" vertical-offset="606" max-vertical-offset="5096">
-          <folding />
-        </state>
+        <state line="5" column="95" selection-start="267" selection-end="267" vertical-scroll-proportion="0.24118738" vertical-offset="0" max-vertical-offset="539" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Contacts.php">
@@ -808,65 +804,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="927" selection-end="927" vertical-scroll-proportion="0.33269963" vertical-offset="631" max-vertical-offset="1352">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="229" selection-end="229" vertical-scroll-proportion="0.284153" vertical-offset="0" max-vertical-offset="1820">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.27758008" vertical-offset="0" max-vertical-offset="562">
+        <state line="6" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.27758008" vertical-offset="0" max-vertical-offset="562" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="48" selection-start="99" selection-end="99" vertical-scroll-proportion="0.09885932" vertical-offset="0" max-vertical-offset="1274" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3796" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/OverviewContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="48" selection-start="383" selection-end="383" vertical-scroll-proportion="0.6014235" vertical-offset="0" max-vertical-offset="3718" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5512" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="11" selection-start="842" selection-end="842" vertical-scroll-proportion="0.5" vertical-offset="407" max-vertical-offset="3614" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/contact-edit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="30" selection-start="92" selection-end="92" vertical-scroll-proportion="0.13220339" vertical-offset="0" max-vertical-offset="590">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/create.phtml">
+    <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="108" selection-end="108" vertical-scroll-proportion="0.1929499" vertical-offset="0" max-vertical-offset="1118">
+        <state line="37" column="45" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.09252669" vertical-offset="910" max-vertical-offset="6162">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/application-overview.css">
+    <entry file="file://$PROJECT_DIR$/public/js/contact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
+        <state line="26" column="26" selection-start="674" selection-end="674" vertical-scroll-proportion="0.83728814" vertical-offset="182" max-vertical-offset="1092">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact-overview.css">
+    <entry file="file://$PROJECT_DIR$/app/forms/EditContactForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="1" selection-start="551" selection-end="551" vertical-scroll-proportion="0.87288135" vertical-offset="317" max-vertical-offset="988">
+        <state line="6" column="33" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="3510">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+    <entry file="file://$PROJECT_DIR$/app/views/contact/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="18" selection-start="529" selection-end="529" vertical-scroll-proportion="0.779661" vertical-offset="372" max-vertical-offset="1118">
+        <state line="12" column="54" selection-start="413" selection-end="413" vertical-scroll-proportion="0.28326997" vertical-offset="163" max-vertical-offset="1638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contact/create.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="126" selection-start="604" selection-end="604" vertical-scroll-proportion="0.35701275" vertical-offset="168" max-vertical-offset="1586">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/contact-create.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="1" selection-start="94" selection-end="94" vertical-scroll-proportion="0.17627119" vertical-offset="0" max-vertical-offset="590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/CreateApplicationForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="34" selection-start="3558" selection-end="3558" vertical-scroll-proportion="0.3558719" vertical-offset="2842" max-vertical-offset="3406">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/CreateContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="507" selection-end="507" vertical-scroll-proportion="0.55516016" vertical-offset="0" max-vertical-offset="3016">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/overview.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.6539924" vertical-offset="722" max-vertical-offset="1352">
+        <state line="41" column="0" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.6265938" vertical-offset="722" max-vertical-offset="1352">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
+    <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="99" selection-end="99" vertical-scroll-proportion="0.09885932" vertical-offset="0" max-vertical-offset="1274">
+        <state line="36" column="0" selection-start="1050" selection-end="1050" vertical-scroll-proportion="-6.535714" vertical-offset="753" max-vertical-offset="1352">
           <folding />
         </state>
       </provider>
@@ -878,97 +918,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="566" selection-end="566" vertical-scroll-proportion="0.6915254" vertical-offset="554" max-vertical-offset="1144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/contact-overview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="24" selection-start="38" selection-end="38" vertical-scroll-proportion="0.044067796" vertical-offset="0" max-vertical-offset="988">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/create.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="76" selection-start="2035" selection-end="2035" vertical-scroll-proportion="0.29657796" vertical-offset="1040" max-vertical-offset="2080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="15" selection-start="1401" selection-end="1401" vertical-scroll-proportion="-6.678571" vertical-offset="1113" max-vertical-offset="5278">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="68" selection-start="1473" selection-end="1473" vertical-scroll-proportion="-9.321428" vertical-offset="805" max-vertical-offset="1820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/application-create.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="1" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/application-overview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="216" selection-end="216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="27" selection-start="169" selection-end="169" vertical-scroll-proportion="0.44067797" vertical-offset="0" max-vertical-offset="1820">
+        <state line="6" column="1" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="312">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact-create.css">
+    <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="92" selection-end="92" vertical-scroll-proportion="0.13220339" vertical-offset="0" max-vertical-offset="590">
+        <state line="11" column="4" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
+    <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3796">
+        <state line="49" column="49" selection-start="2048" selection-end="2048" vertical-scroll-proportion="-7.0" vertical-offset="1078" max-vertical-offset="2106">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/OverviewContactForm.php">
+    <entry file="file://$PROJECT_DIR$/app/forms/EditApplicationForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="383" selection-end="383" vertical-scroll-proportion="0.6014235" vertical-offset="0" max-vertical-offset="3718">
-          <folding>
-            <element signature="e#7#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/CreateContactForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="28" selection-start="3135" selection-end="3135" vertical-scroll-proportion="0.71057516" vertical-offset="2373" max-vertical-offset="3016">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contact/create.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="35" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.715847" vertical-offset="1011" max-vertical-offset="1560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5512">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="11" selection-start="842" selection-end="842" vertical-scroll-proportion="0.5" vertical-offset="407" max-vertical-offset="3614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contact/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="41" selection-start="455" selection-end="455" vertical-scroll-proportion="-12.071428" vertical-offset="0" max-vertical-offset="1638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact-edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="1035" selection-end="1035" vertical-scroll-proportion="-1.8571428" vertical-offset="910" max-vertical-offset="6162">
-          <folding>
-            <element signature="e#7#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/EditContactForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="165" selection-end="165" vertical-scroll-proportion="-5.571429" vertical-offset="0" max-vertical-offset="3510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/contact.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="268" selection-end="268" vertical-scroll-proportion="0.30847457" vertical-offset="0" max-vertical-offset="1092">
+        <state line="22" column="35" selection-start="672" selection-end="672" vertical-scroll-proportion="0.6270872" vertical-offset="78" max-vertical-offset="3614">
           <folding />
         </state>
       </provider>
