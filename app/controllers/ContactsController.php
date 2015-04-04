@@ -28,13 +28,6 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $this->assets->addCss('css/main.css');
-            $this->assets->addCss('css/contact.css');
-            $this->assets->addCss('css/contact-overview.css');
-            $this->assets->addJs('js/jquery-2.1.3.min.js');
-            $this->assets->addJs('js/main.js');
-            $this->assets->addJs('js/contact.js');
-
             $contact_id = $this->request->get('contact_id');
             $contact = Contacts::findFirst('id = "' . $contact_id . '"');
 
@@ -48,11 +41,15 @@ class ContactsController extends \Phalcon\Mvc\Controller {
                 $transactionManager = new TransactionManager();
                 $transaction = $transactionManager->get();
 
-                foreach($contact_attachments as $attachment) {
+                if(count($contact_attachments) > 0) {
 
-                    if($attachment->delete() == false) {
+                    foreach($contact_attachments as $attachment) {
 
-                        $transaction->rollback('Failed to delete attachment');
+                        if($attachment->delete() == false) {
+
+                            $transaction->rollback('Failed to delete attachment');
+
+                        }
 
                     }
 

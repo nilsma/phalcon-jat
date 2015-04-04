@@ -1,6 +1,7 @@
 <?php
 
 use Phalcon\Exception;
+use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
 
 class ApplicationController extends \Phalcon\Mvc\Controller {
 
@@ -24,7 +25,56 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
     public function deleteAction() {
 
+        $this->view->disable();
 
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $application_id = $this->request->get('app_id');
+            $application = Applications::findFirst('id = "' . $application_id . '"');
+
+            $contact_attachments = ContactAttachments::find(array(
+                'conditions' => 'app_id = ?1',
+                'bind' => array(1 => $application_id)
+            ));
+
+            try {
+
+                $transactionManager = new TransactionManager();
+                $transaction = $transactionManager->get();
+
+                if(count($contact_attachments) > 0) {
+
+                    foreach($contact_attachments as $attachment) {
+
+                        if($attachment->delete() == false) {
+
+                            $transaction->rollback('Failed to delete attachment');
+
+                        }
+
+                    }
+
+                }
+
+                $application->delete();
+
+                $this->flash->success('Application deleted!');
+                $this->response->redirect('application/overview');
+
+            } catch(Exception $e) {
+
+                $this->flash->error('Something went wrong while deleting application: ' . $e->getMessage());
+                $this->response->redirect('application/overview');
+
+            }
+
+
+        } else {
+
+            $this->flash->error('You have to login first');
+            $this->response->redirect('');
+
+        }
 
     }
 
@@ -118,7 +168,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/application-edit.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
             $this->assets->addJs('js/main.js');
-            $this->assets->addJs('js/edit.js');
+            $this->assets->addJs('js/application.js');
 
             //TODO check if current user owns app_id
             $app_id = $this->request->get('app_id');
