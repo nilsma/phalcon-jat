@@ -126,8 +126,15 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
         //TODO refactor to auth-check method
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $form = new CreateApplicationForm();
+            $user = unserialize($this->session->get('user'));
 
+            $form = new CreateApplicationForm();
+            $contacts = Contacts::find(array(
+                'conditions' => 'owner_id = ?1',
+                'bind' => array(1 => $user->id)
+            ));
+
+            $this->view->setVar('contacts', $contacts);
             $this->view->form = $form;
             $this->view->pick('application/create');
 
@@ -214,10 +221,12 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
             $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
 
-            $this->writeAction($application);
+            $contacts = $this->request->getPost('contacts');
 
-            $this->flash->success('Application saved!');
-            $this->response->redirect('application/overview');
+            $this->writeAction($application, $contacts);
+
+            //$this->flash->success('Application saved!');
+            //$this->response->redirect('application/overview');
 
         } else {
 
@@ -228,18 +237,76 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
     }
 
-    private function writeAction(Applications $application) {
+    private function writeAction(Applications $application, Array $contacts) {
 
-        try {
+        $transactionManager = new TransactionManager();
+        $transaction = $transactionManager->get();
 
-            $application->save();
+        if(count($contacts) < 1) {
+
+            try {
+
+                $application->save();
 
 
-        } catch(Exception $e) {
+            } catch(Exception $e) {
 
-            $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
-            $this->flash->error($error_message);
-            $this->response->redirect('application/createApplication');
+                $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
+                $this->flash->error($error_message);
+                $this->response->redirect('application/createApplication');
+
+            }
+
+        } else {
+
+            try {
+
+                if($application->save() == false) {
+                    $transaction->rollback('Failed to save application');
+                }
+
+                foreach($contacts as $contact_id) {
+                    $attachment = new ContactAttachments();
+                    $attachment->contact_id = $contact_id;
+                    $attachment->app_id = $application->id;
+
+                    if($attachment->save() == false) {
+                        $transaction->rollback('Failed to save application attachment');
+                    }
+
+                }
+
+                $transaction->commit();
+
+
+            } catch(Exception $e) {
+
+                $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
+                $this->flash->error($error_message);
+                $this->response->redirect('application/createApplication');
+
+            }
+
+        }
+
+    }
+
+    public function getContactDetailsAction() {
+
+        $this->view->disable();
+
+        //TODO refactor to auth-check method
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $contact_id = $this->request->getPost('contact_id');
+            $contact = Contacts::findFirst('id = "' . $contact_id . '"');
+
+            echo json_encode($contact, JSON_FORCE_OBJECT);
+
+        } else {
+
+            $this->flash->error('You have to login first');
+            $this->response->redirect('');
 
         }
 

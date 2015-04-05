@@ -11,7 +11,8 @@
             <div id="application-top">
 
                 <div class="form-controls form-group">
-                    <?php echo $form->render('Save') . "\n"; ?>
+                    <!-- <?php echo $form->render('Save') . "\n"; ?> -->
+                    <button id="application-save" type="button" class="btn btn-success">Save</button>
                     <?php echo Phalcon\Tag::linkTo(array("application/cancel", "Cancel", "class" => "btn btn-warning")) . "\n"; ?>
                 </div>
 
@@ -58,6 +59,36 @@
                     <div class="application-follow-up form-group">
                         <?php echo $form->label('follow_up') . "\n"; ?>
                         <?php echo $form->render('follow_up') . "\n"; ?>
+                    </div>
+
+                    <div class="application-attachments-form form-group">
+                        <label>Add Contact:</label>
+                        <select id="select-contact" class="form-control">
+                            <option value="-1">Select a Contact</option>
+                            <option value="0">Create New Contact</option>
+
+                            <?php
+
+                            $html = '';
+
+                            foreach($contacts as $contact) {
+
+                                $html .= '<option value="' . $contact->id . '">' . $contact->name . '</option>' . "\n";
+
+                            }
+
+                            echo $html;
+
+                            ?>
+
+                        </select>
+                    </div>
+
+                    <div class="application-attachments form-group">
+                        <label>Contacts:</label>
+                        <ul id="contacts-list">
+                            <!-- placeholder for contacts attached to the application -->
+                        </ul>
                     </div>
 
                 </div> <!-- end .application-right -->
