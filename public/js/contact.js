@@ -11,6 +11,17 @@ function deleteContact() {
     }
 }
 
+function deleteOverviewContact() {
+    if(confirm('Please confirm contact deletion')) {
+        var contact_id = this.parentNode.parentNode.parentNode.childNodes[3].childNodes[11].value;
+        deleteContactQuery(contact_id, function(result) {
+            if(result) {
+                location.reload();
+            }
+        });
+    }
+}
+
 function deleteContactQuery(contact_id, callback) {
     $.post("delete", { contact_id: contact_id}).done(function(result) {
         callback(result);
@@ -18,6 +29,13 @@ function deleteContactQuery(contact_id, callback) {
 }
 
 function init() {
+    var elements = document.getElementsByClassName('contact-overview-delete');
+    for(var i = 0; i < elements.length; i++) {
+        if(elements[i] !== null) {
+            elements[i].addEventListener('click', deleteOverviewContact);
+        }
+    }
+
     var element = document.getElementById('contact-delete');
     if(element !== null) {
         element.addEventListener('click', deleteContact);
