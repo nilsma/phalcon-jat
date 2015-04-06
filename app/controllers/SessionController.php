@@ -29,7 +29,6 @@ class SessionController extends \Phalcon\Mvc\Controller
                 $this->session->set('user', serialize($user));
                 $this->session->set('auth', True);
 
-                $this->flash->success('You have been logged in ...');
                 $this->response->redirect('application/overview');
 
             } else {
