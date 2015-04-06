@@ -13,3 +13,16 @@ div.application-bottom {
     display: flex;
     flex-direction: row;
 }
+
+ul#contacts-list li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -27px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+ul#contacts-list li:last-child {
+    margin-bottom: 0;
+}

@@ -37,3 +37,8 @@ label {
     font-weight: normal;
     margin-left: 12px;
 }
+
+ul li a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}

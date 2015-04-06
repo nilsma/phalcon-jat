@@ -87,7 +87,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/application-overview.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
             $this->assets->addJs('js/main.js');
-            $this->assets->addJs('js/application-overview.js');
+            $this->assets->addJs('js/application.js');
 
             $user = unserialize($this->session->get('user'));
             $applications = Applications::find(array(
@@ -177,13 +177,23 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/application.js');
 
+            $user = unserialize($this->session->get('user'));
+
             //TODO check if current user owns app_id
             $app_id = $this->request->get('app_id');
+            $application = Applications::findFirst('id = "' . $app_id . '"');
+
+            $contacts = Contacts::find(array(
+                'conditions' => 'owner_id = ?1',
+                'bind' => array(1 => $user->id)
+            ));
 
             $form = new EditApplicationForm(Applications::findFirst('id = "' . $app_id . '"'));
 
             $this->view->pick('application/edit');
             $this->view->form = $form;
+            $this->view->setVar('application', $application);
+            $this->view->setVar('contacts', $contacts);
 
         } else {
 
@@ -261,12 +271,32 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
             try {
 
+                // try saving the application first, the resulting application->id is needed for the subsequent
+                // contact_attachments entries
                 if($application->save() == false) {
                     $transaction->rollback('Failed to save application');
                 }
 
+                // remove current contact_attachments
+                $current_attachments = ContactAttachments::find(array(
+                    'conditions' => 'app_id = ?1',
+                    'bind' => array(1 => $application->id)
+                ));
+
+                // iterate resultset for current attachments
+                // and remove all
+                foreach($current_attachments as $attachment) {
+                    if($attachment->delete() == false) {
+                        $transaction->rollback('Something went wrong removing current attachments');
+                    }
+                }
+
+                // iterate the array of contact_ids received from the ajax/post
+                // and add all
                 foreach($contacts as $contact_id) {
+
                     $attachment = new ContactAttachments();
+                    $attachment->id = null;
                     $attachment->contact_id = $contact_id;
                     $attachment->app_id = $application->id;
 

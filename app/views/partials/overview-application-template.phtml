@@ -56,6 +56,35 @@
                 <?php echo $form->render('follow_up') . "\n"; ?>
             </div>
 
+            <div class="application-attachments">
+                <label>Contacts:</label>
+                <ul>
+                <?php
+
+                $attachments = ContactAttachments::find(array(
+                    'conditions' => 'app_id = ?1',
+                    'bind' => array(1 => $application->id)
+                ));
+
+                $html = '';
+
+                foreach($attachments as $attachment) {
+
+                    $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
+
+                    $html .= '<li>' . "\n";
+                    $html .= '<input type="hidden" value="' . $contact->id . '">' . "\n";
+                    $html .= '<a class="attachment-details">' . $contact->name . '</a>' . "\n";
+                    $html .= '</li>' . "\n";
+
+                }
+
+                echo $html;
+
+                ?>
+                </ul>
+            </div>
+
         </div> <!-- end .application-right -->
 
     </div> <!-- end .application-bottom -->

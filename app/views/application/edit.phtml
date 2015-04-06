@@ -10,7 +10,8 @@
             <div class="application-top">
 
                 <div class="application-edit form-group">
-                    <?php echo $form->render('Save') . "\n"; ?>
+                    <!-- <?php echo $form->render('Save') . "\n"; ?> -->
+                    <button id="application-save" type="button" class="btn btn-success">Save</button>
                     <?php echo Phalcon\Tag::linkTo(array("application/cancel", "Cancel", 'class' => 'btn btn-warning')) . "\n"; ?>
                     <p id="application-delete" class="btn btn-danger">Delete</p>
                 </div>
@@ -60,6 +61,69 @@
                     <div class="application-follow-up form-group">
                         <?php echo $form->label('follow_up') . "\n"; ?>
                         <?php echo $form->render('follow_up') . "\n"; ?>
+                    </div>
+
+                    <div class="application-attachments-form form-group">
+                        <label>Add Contact:</label>
+                        <select id="select-contact" class="form-control">
+                            <option value="-1">Select a Contact</option>
+                            <option value="0">Create New Contact</option>
+
+                            <?php
+
+                            $html = '';
+
+                            foreach($contacts as $contact) {
+
+                                $html .= '<option value="' . $contact->id . '">' . $contact->name . '</option>' . "\n";
+
+                            }
+
+                            echo $html;
+
+                            ?>
+
+                        </select>
+                    </div>
+
+                    <div class="application-attachments form-group">
+                        <label>Contacts:</label>
+                        <ul id="contacts-list">
+                            <?php
+
+                            $attachments = ContactAttachments::find(array(
+                                'conditions' => 'app_id = ?1',
+                                'bind' => array(1 => $application->id)
+                            ));
+
+                            $html = '';
+
+                            foreach($attachments as $attachment) {
+
+                                $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
+
+                                $html .= '<li id="' . $contact->id. '" class="bg-success">' . "\n";
+                                $html .= '<div>' . "\n";
+                                $html .= '<input type="hidden" value="' . $contact->id . '">' . "\n";
+                                $html .= '<a class="attachment-details">' . $contact->name . '</a>' . "\n";
+
+                                if(strlen($contact->position) > 0) {
+                                    $html .= '<span>(' . $contact->position . ')</span>' . "\n";
+                                }
+
+                                $html .= '</div>'  . "\n";
+                                $html .= '<div>' . "\n";
+                                $html .= '<button type="button" class="btn btn-danger btn-xs contact-remove">remove</button>';
+                                $html .= '</div>' . "\n";
+
+                                $html .= '</li>' . "\n";
+
+                            }
+
+                            echo $html;
+
+                            ?>
+                        </ul>
                     </div>
 
                 </div> <!-- end .application-right -->

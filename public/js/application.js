@@ -10,6 +10,10 @@ function selectList() {
     }
 }
 
+function showContactDetails(contact_id) {
+    alert('test');
+}
+
 function attachContact(contact_id) {
     getContactDetails(contact_id, function(contact) {
         checkExistence(contact_id, function(existence) {
@@ -115,6 +119,7 @@ function detachContact() {
     var parent = child.parentNode;
     parent.removeChild(child);
 
+    /*
     var lis = document.querySelectorAll('ul#contacts-list li');
 
     if(lis.length < 1) {
@@ -127,6 +132,7 @@ function detachContact() {
         element.appendChild(li);
 
     }
+    */
 
 }
 
@@ -160,7 +166,14 @@ function saveApplication() {
 }
 
 function writeApplication(contacts, callback) {
+    var application_id = parseInt(document.getElementById('app_id').value);
+
+    if(application_id == 'undefined') {
+        application_id = null;
+    }
+
     $.post("save", {
+        app_id: application_id,
         company: document.getElementById('company').value,
         position: document.getElementById('position').value,
         recruitment: document.getElementById('recruitment').value,
@@ -193,7 +206,36 @@ function deleteApplicationQuery(application_id, callback) {
     });
 }
 
+function showContactDetails() {
+    var contact_id = this.parentNode.childNodes[1].value;
+
+    getContactDetails(contact_id, function(contact) {
+        var details = 'Name: ' + contact['name'] + "\n";
+        details += 'Position: ' + contact['position'] + "\n";
+        details += 'Email: ' + contact['email'] + "\n";
+        details += 'Phone: ' + contact['phone'] + "\n";
+        details += 'Notes: ' + contact['notes'];
+
+        alert(details);
+    });
+
+}
+
 function init() {
+    var elements = document.getElementsByClassName('contact-remove');
+    if(elements !== null) {
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', detachContact);
+        }
+    }
+
+    var elements = document.getElementsByClassName('attachment-details');
+    if(elements.length > 0) {
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', showContactDetails);
+        }
+    }
+
     var element = document.getElementById('application-save');
     if(element !== null) {
         element.addEventListener('click', saveApplication);

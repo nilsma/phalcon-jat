@@ -12,3 +12,16 @@ div.application-bottom {
     display: flex;
     flex-direction: row;
 }
+
+div.application-attachments ul {
+    list-style: none;
+}
+
+div.application-attachments ul li {
+    margin-left: -27px;
+    margin-bottom: 10px;
+}
+
+div.application-attachments ul li:last-child {
+    margin-bottom: 0;
+}
