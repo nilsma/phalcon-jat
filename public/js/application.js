@@ -201,14 +201,23 @@ function writeApplication(contacts, callback) {
     }
 }
 
+function deleteOverviewApplication() {
+    if(confirm('Please confirm application deletion')) {
+        var application_id = this.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[9].value;
+        deleteApplicationQuery(application_id, function(result) {
+            if(result) {
+                location.reload();
+            }
+        });
+    }
+}
+
 function deleteApplication() {
     if(confirm('Please confirm application deletion')) {
         var application_id = document.getElementById('app_id').value;
         deleteApplicationQuery(application_id, function(result) {
             if(result) {
                 location.href = 'overview';
-            } else {
-                alert('Something went wrong while deleting contact');
             }
         });
     }
@@ -258,6 +267,13 @@ function init() {
     var element = document.getElementById('application-delete');
     if(element !== null) {
         element.addEventListener('click', deleteApplication);
+    }
+
+    var elements = document.getElementsByClassName('application-overview-delete');
+    for(var i = 0; i < elements.length; i++) {
+        if(elements[i] !== null) {
+            elements[i].addEventListener('click', deleteOverviewApplication);
+        }
     }
 
     var element = document.getElementById('select-contact');
