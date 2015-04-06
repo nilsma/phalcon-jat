@@ -24,6 +24,7 @@ class RegisterUserForm extends Form {
         // create new text contact_details for username
         $username = new Text('username', array(
             'maxlength' => 30,
+            'class' => 'form-control',
             'placeholder' => 'Username'
         ));
 
@@ -44,6 +45,7 @@ class RegisterUserForm extends Form {
         // create new email contact_details
         $email = new Email('email', array(
             'maxlength' => 50,
+            'class' => 'form-control',
             'placeholder' => 'Email'
         ));
 
@@ -66,6 +68,7 @@ class RegisterUserForm extends Form {
         // create new password contact_details
         $password = new Password('password', array(
             'maxlength' => 16,
+            'class' => 'form-control',
             'placeholder' => 'Password'
         ));
 
@@ -86,6 +89,7 @@ class RegisterUserForm extends Form {
         // create new repeat password contact_details
         $repeat = new Password('repeat', array(
             'maxlength' => 16,
+            'class' => 'form-control',
             'placeholder' => 'Repeat password'
         ));
 

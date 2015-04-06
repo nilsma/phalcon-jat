@@ -18,6 +18,11 @@ class IndexController extends ControllerBase {
 
         } else {
 
+            $this->assets->addCss('css/main.css');
+            $this->assets->addCss('css/login.css');
+            $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/main.js');
+
             $form = new LoginForm();
             $this->view->form = $form;
 

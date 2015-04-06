@@ -1,19 +1,34 @@
-<?php $this->partial('partials/publicHeader'); ?>
 <div id="main-container">
-    <h2>index</h2>
+
+    <?php $this->partial('partials/publicHeader'); ?>
+
     <div id="inner-container">
 
         <?php echo $this->flash->output(); ?>
 
-        <?php echo Phalcon\Tag::form(array("session/login", "method" => "post", "name" => "login")); ?>
-        <?php echo $form->label('username') . "\n"; ?>
-        <?php echo $form->render('username') . "\n"; ?>
-        <?php echo $form->label('password') . "\n"; ?>
-        <?php echo $form->render('password') . "\n"; ?>
-        <?php echo $form->render('Login') . "\n"; ?>
-        <?php echo Phalcon\Tag::endForm(); ?>
+        <div id="login-form" class="container col-md-12 col-sm-12">
 
-        <?php echo Phalcon\Tag::linkTo('register/', 'Register') . "\n"; ?>
+            <?php echo Phalcon\Tag::form(array("session/login", "method" => "post", "name" => "login")); ?>
+
+            <div id="login-username" class="form-group">
+                <?php echo $form->label('username') . "\n"; ?>
+                <?php echo $form->render('username') . "\n"; ?>
+            </div>
+
+            <div id="login-password" class="form-group">
+                <?php echo $form->label('password') . "\n"; ?>
+                <?php echo $form->render('password') . "\n"; ?>
+            </div>
+
+            <div id="login-controls" class="form-group">
+                <?php echo $form->render('Login') . "\n"; ?>
+                <?php echo Phalcon\Tag::linkTo('register/', 'Register') . "\n"; ?>
+            </div>
+
+            <?php echo Phalcon\Tag::endForm(); ?>
+
+        </div>
 
     </div>
+
 </div>

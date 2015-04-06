@@ -1,0 +1,5 @@
+div#login-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

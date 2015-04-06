@@ -20,6 +20,7 @@ class LoginForm extends Form {
         // create new text contact_details for username
         $username = new Text('username', array(
             'placeholder' => 'Username',
+            'class' => 'form-control',
             'maxlength' => 30
         ));
 
@@ -40,6 +41,7 @@ class LoginForm extends Form {
         // create password contact_details for password
         $password = new Password('password', array(
             'placeholder' => 'Password',
+            'class' => 'form-control',
             'maxlength' => 16
         ));
 

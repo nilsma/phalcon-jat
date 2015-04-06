@@ -1,23 +1,44 @@
-<?php $this->partial('partials/publicHeader'); ?>
 <div id="main-container">
-    <h2>register</h2>
+
+    <?php $this->partial('partials/publicHeader'); ?>
+
     <div id="inner-container">
 
         <?php echo $this->flash->output(); ?>
 
-        <?php echo Phalcon\Tag::form(array("session/register", "method" => "post", "name" => "registerUser")) . "\n"; ?>
-        <?php echo $form->label('username') . "\n"; ?>
-        <?php echo $form->render('username') . "\n"; ?>
-        <?php echo $form->label('email') . "\n"; ?>
-        <?php echo $form->render('email') . "\n"; ?>
-        <?php echo $form->label('password') . "\n"; ?>
-        <?php echo $form->render('password') . "\n"; ?>
-        <?php echo $form->label('repeat') . "\n"; ?>
-        <?php echo $form->render('repeat') . "\n"; ?>
-        <?php echo $form->render('Register') . "\n"; ?>
-        <?php echo Phalcon\Tag::endForm(); ?>
+        <div id="register-form" class="container col-md-12 col-sm-12">
 
-        <?php echo Phalcon\Tag::linkTo('', 'Login'); ?>
+        <?php echo Phalcon\Tag::form(array("session/register", "method" => "post", "name" => "registerUser")) . "\n"; ?>
+
+            <div id="register-username" class="form-group">
+                <?php echo $form->label('username') . "\n"; ?>
+                <?php echo $form->render('username') . "\n"; ?>
+            </div>
+
+            <div id="register-email" class="form-group">
+                <?php echo $form->label('email') . "\n"; ?>
+                <?php echo $form->render('email') . "\n"; ?>
+            </div>
+
+            <div id="register-password" class="form-group">
+                <?php echo $form->label('password') . "\n"; ?>
+                <?php echo $form->render('password') . "\n"; ?>
+            </div>
+
+            <div id="register-repeat" class="form-group">
+                <?php echo $form->label('repeat') . "\n"; ?>
+                <?php echo $form->render('repeat') . "\n"; ?>
+            </div>
+
+            <div id="login-controls" class="form-group">
+                <?php echo $form->render('Register') . "\n"; ?>
+                <?php echo Phalcon\Tag::linkTo('', 'Login'); ?>
+            </div>
+
+            <?php echo Phalcon\Tag::endForm(); ?>
+
+        </div>
 
     </div>
+
 </div>
