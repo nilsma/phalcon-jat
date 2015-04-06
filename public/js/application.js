@@ -153,38 +153,52 @@ function addContactListeners() {
 }
 
 function saveApplication() {
-    var contacts = new Array();
+    var contacts = [];
     var lis = document.querySelectorAll('ul#contacts-list li');
 
-    for (var i = 0; i < lis.length; i++) {
-        contacts.push(lis[i].id);
+    if(lis.length > 0) {
+        for (var i = 0; i < lis.length; i++) {
+            contacts.push(lis[i].id);
+        }
     }
 
     writeApplication(contacts, function() {
         location.href = 'overview';
     });
+
 }
 
 function writeApplication(contacts, callback) {
-    var application_id = parseInt(document.getElementById('app_id').value);
+    var element = document.getElementById('app_id');
 
-    if(application_id == 'undefined') {
-        application_id = null;
+    if(element != null) {
+        $.post("save", {
+            app_id: parseInt(element.value),
+            company: document.getElementById('company').value,
+            position: document.getElementById('position').value,
+            recruitment: document.getElementById('recruitment').value,
+            notes: document.getElementById('notes').value,
+            applied: document.getElementById('applied').value,
+            due_date: document.getElementById('due_date').value,
+            follow_up: document.getElementById('follow_up').value,
+            contacts: contacts
+        }).done(function() {
+            callback();
+        });
+    } else {
+        $.post("save", {
+            company: document.getElementById('company').value,
+            position: document.getElementById('position').value,
+            recruitment: document.getElementById('recruitment').value,
+            notes: document.getElementById('notes').value,
+            applied: document.getElementById('applied').value,
+            due_date: document.getElementById('due_date').value,
+            follow_up: document.getElementById('follow_up').value,
+            contacts: contacts
+        }).done(function() {
+            callback();
+        });
     }
-
-    $.post("save", {
-        app_id: application_id,
-        company: document.getElementById('company').value,
-        position: document.getElementById('position').value,
-        recruitment: document.getElementById('recruitment').value,
-        notes: document.getElementById('notes').value,
-        applied: document.getElementById('applied').value,
-        due_date: document.getElementById('due_date').value,
-        follow_up: document.getElementById('follow_up').value,
-        contacts: contacts
-    }).done(function() {
-        callback();
-    });
 }
 
 function deleteApplication() {

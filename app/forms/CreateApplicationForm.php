@@ -4,6 +4,7 @@ use Phalcon\Forms\Form;
 use Phalcon\Forms\Element\Date;
 use Phalcon\Forms\Element\Text;
 use Phalcon\Forms\Element\TextArea;
+use Phalcon\Forms\Element\Hidden;
 use Phalcon\Forms\Element\Submit;
 use Phalcon\Validation\Validator\StringLength;
 use Phalcon\Validation\Validator\PresenceOf;
@@ -117,6 +118,13 @@ class CreateApplicationForm extends Form {
                 'message' => 'Notes can not be more than 500 characters'
             ))
         ));
+
+        // create hidden contact_details for application id
+        $app_id = new Hidden('app_id', array(
+            'value' => ''
+        ));
+
+        $this->add($app_id);
 
         $this->add($notes);
 

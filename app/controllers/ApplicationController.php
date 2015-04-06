@@ -231,12 +231,13 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
             $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
 
-            $contacts = $this->request->getPost('contacts');
+            if($this->request->has('contacts')) {
+                $contacts = $this->request->getPost('contacts');
+            } else {
+                $contacts = array();
+            }
 
             $this->writeAction($application, $contacts);
-
-            //$this->flash->success('Application saved!');
-            //$this->response->redirect('application/overview');
 
         } else {
 
@@ -252,47 +253,37 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
         $transactionManager = new TransactionManager();
         $transaction = $transactionManager->get();
 
-        if(count($contacts) < 1) {
+        try {
 
-            try {
-
-                $application->save();
-
-
-            } catch(Exception $e) {
-
-                $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
-                $this->flash->error($error_message);
-                $this->response->redirect('application/createApplication');
-
+            // try saving the application first, the resulting application->id is needed for the subsequent
+            // contact_attachments entries
+            if($application->save() == false) {
+                $transaction->rollback('Failed to save application');
             }
 
-        } else {
+            // remove current contact_attachments
+            $current_attachments = ContactAttachments::find(array(
+                'conditions' => 'app_id = ?1',
+                'bind' => array(1 => $application->id)
+            ));
 
-            try {
+            // check if there actually are any current attachemnts, to avoid errors
+            // when trying to delete non-existing records
+            if(count($current_attachments) > 0) {
 
-                // try saving the application first, the resulting application->id is needed for the subsequent
-                // contact_attachments entries
-                if($application->save() == false) {
-                    $transaction->rollback('Failed to save application');
-                }
-
-                // remove current contact_attachments
-                $current_attachments = ContactAttachments::find(array(
-                    'conditions' => 'app_id = ?1',
-                    'bind' => array(1 => $application->id)
-                ));
-
-                // iterate resultset for current attachments
-                // and remove all
+                // iterate resultset for current attachments and remove all
                 foreach($current_attachments as $attachment) {
                     if($attachment->delete() == false) {
                         $transaction->rollback('Something went wrong removing current attachments');
                     }
                 }
 
-                // iterate the array of contact_ids received from the ajax/post
-                // and add all
+            }
+
+            // check if there are any contacts to be saved
+            if(count($contacts) > 0) {
+
+                // iterate the array of contact_ids received from the ajax/post and add all
                 foreach($contacts as $contact_id) {
 
                     $attachment = new ContactAttachments();
@@ -306,16 +297,16 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
                 }
 
-                $transaction->commit();
-
-
-            } catch(Exception $e) {
-
-                $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
-                $this->flash->error($error_message);
-                $this->response->redirect('application/createApplication');
-
             }
+
+            $transaction->commit();
+
+
+        } catch(Exception $e) {
+
+            $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
+            $this->flash->error($error_message);
+            $this->response->redirect('application/createApplication');
 
         }
 
