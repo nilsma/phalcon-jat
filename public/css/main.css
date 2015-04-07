@@ -4,12 +4,19 @@ div#main-container {
     margin-bottom: 40px;
 }
 
-header {
-    text-align: center;
+.navbar-header {
+    display: inline-block !important;
+    vertical-align: top;
 }
 
-header nav ul {
-    list-style: none;
+.navbar .navbar-nav {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
 }
 
 div#controllers {
