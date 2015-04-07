@@ -11,8 +11,8 @@
             <div id="contact-top">
 
                 <div class="form-controls form-group">
-                    <?php echo $form->render('Save') . "\n"; ?>
-                    <?php echo Phalcon\Tag::linkTo(array("contacts/cancel", "Cancel", "class" => "btn btn-warning")) . "\n"; ?>
+                    <a class="btn btn-default btn-sm" href="/contacts/cancel"><i class="glyphicon glyphicon-arrow-left"></i></span></a>
+                    <button type="submit" class="btn btn-sm btn-default"><span><i class="glyphicon glyphicon-ok"></i></span> </button>
                 </div>
 
             </div> <!-- end #contact-top -->

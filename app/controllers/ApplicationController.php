@@ -239,6 +239,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             }
 
             $this->writeAction($application, $contacts);
+            $this->response->redirect('application/overview');
 
         } else {
 
@@ -301,7 +302,6 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             }
 
             $transaction->commit();
-
 
         } catch(Exception $e) {
 
