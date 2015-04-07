@@ -8,13 +8,23 @@ header {
     text-align: center;
 }
 
+header nav ul {
+    list-style: none;
+}
+
 div#controllers {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
+    justify-content: flex-end;
+    margin-bottom: 15px;
 }
 
+div#controllers div#create-application,
+div#controllers div#create-contact {
+    margin-right: 15px;
+}
+
+/*
 div#controllers-left {
     display: flex;
     justify-content: center;
@@ -33,6 +43,7 @@ div#controllers-right {
     align-items: center;
     width: 100%;
 }
+*/
 
 form {
     border: 1px solid lightgray;

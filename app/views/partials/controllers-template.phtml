@@ -1,0 +1,38 @@
+<?php
+
+if($this->router->getControllerName() == 'application') {
+    $inner_text = "New Application";
+} else {
+    $inner_text = "New Contact";
+}
+
+?>
+
+<div id="controllers" class="container">
+
+    <div id="controllers" class="container">
+        <div id="create-application">
+            <a class="btn btn-primary" href="create"><?php echo $inner_text; ?></a>
+        </div>
+        <div id="sorting-and-filtering" class="btn-group" role="group">
+            <button type="button" class="btn btn-default">Sort</button>
+            <button type="button" class="btn btn-default">Filter</button>
+        </div>
+    </div>
+
+    <!--
+    <div id="controllers-left" class="col-md-6 col-sm-6 col-xs-12">
+        <div id="create-application">
+            <a class="btn btn-default btn-block" href="create">New Application</a>
+        </div>
+    </div>
+
+    <div id="controllers-right" class="col-md-6 col-sm-6 col-xs-12">
+        <div id="sorting-and-filtering" class="btn-group" role="group">
+            <button type="button" class="btn btn-default">Sort</button>
+            <button type="button" class="btn btn-default">Filter</button>
+        </div>
+    </div>
+    -->
+
+</div> <!-- end #controllers -->
