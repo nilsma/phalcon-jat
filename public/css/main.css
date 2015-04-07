@@ -12,19 +12,32 @@ div#controllers {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 50px;
 }
 
 div#controllers-left {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
+}
+
+div#controllers-left div#create-application {
+    background-color: lightgray;
 }
 
 div#controllers-right {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
+}
+
+div#controllers-right div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 form {

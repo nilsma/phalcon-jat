@@ -6,22 +6,18 @@
 
         <?php echo $this->flash->output() . '<br/>'; ?>
 
-        <div id="controllers">
+        <div id="controllers" class="container">
 
-            <div id="controllers-left">
+            <div id="controllers-left" class="col-md-6 col-sm-6 col-xs-12">
                 <div id="create-application">
-                    <?php echo Phalcon\Tag::linkTo(array('application/create', "Create New Application", 'class' => 'control')) . "\n"; ?>
+                    <a class="btn btn-default btn-block" href="create">Create New Application</a>
                 </div>
             </div>
 
-            <div id="controllers-right">
-                <div id="sorting">
-                    <a href="#">Details</a>
-                    <a href="#">List</a>
-                </div>
-                <div id="filter">
-                    <a href="#">Some</a>
-                    <a href="#">Filters</a>
+            <div id="controllers-right"  class="col-md-6 col-sm-6 col-xs-12">
+                <div id="sorting-and-filtering" class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Sort</button>
+                    <button type="button" class="btn btn-default">Filter</button>
                 </div>
             </div>
         </div> <!-- end #controllers -->
