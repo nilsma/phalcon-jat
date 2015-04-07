@@ -2,10 +2,6 @@ div.application {
     margin-bottom: 20px;
 }
 
-div.application div.application-top {
-    text-align: right;
-}
-
 div.application-attachments ul {
     list-style: none;
 }

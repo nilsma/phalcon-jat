@@ -8,16 +8,16 @@
 
             <?php echo Phalcon\Tag::form(array("contacts/save", "method" => "post", "name" => "create-contact", "role" => "form")) . "\n"; ?>
 
-            <div id="contact-top">
+            <div class="contact-top">
 
-                <div class="form-controls form-group">
+                <div class="form-controls">
                     <a class="btn btn-default btn-sm" href="/contacts/cancel"><i class="glyphicon glyphicon-arrow-left"></i></span></a>
                     <button type="submit" class="btn btn-sm btn-default"><span><i class="glyphicon glyphicon-ok"></i></span> </button>
                 </div>
 
             </div> <!-- end #contact-top -->
 
-            <div id="contact-bottom">
+            <div class="contact-bottom">
 
                 <div class="contact-name form-group">
                     <?php echo $form->label('name') . "\n"; ?>

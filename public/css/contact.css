@@ -1,0 +1,10 @@
+div.contact-top {
+    background-color: #6b7c84;
+    border-bottom: 1px solid #444;
+    padding: 4px 6px 4px 6px;
+    text-align: right;
+}
+
+div.contact-bottom {
+    padding: 10px;
+}

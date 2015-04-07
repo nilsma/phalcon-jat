@@ -31,31 +31,9 @@ div#controllers div#create-contact {
     margin-right: 15px;
 }
 
-/*
-div#controllers-left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-div#controllers-left div#create-application {
-    background-color: lightgray;
-}
-
-div#controllers-right {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-*/
-
 form {
     border: 1px solid lightgray;
     border-radius: 5px;
-    padding: 10px;
 }
 
 label {
