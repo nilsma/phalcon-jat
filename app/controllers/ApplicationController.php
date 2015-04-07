@@ -104,6 +104,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->view->setVar('email', $user->email);
             $this->view->setVar('applications', $applications);
             $this->view->setVar('contacts', $contacts);
+            $this->view->setVar('inner_text', "New Application");
 
         } else {
 

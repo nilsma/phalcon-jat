@@ -97,6 +97,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
             $this->view->setVar('contacts', $contacts);
             $this->view->pick('contact/overview');
+            $this->view->setVar('inner_text', "New Contact");
 
         } else {
 
