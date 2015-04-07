@@ -9,7 +9,7 @@
     {{ assets.outputJs() }}
 	<title>Job Application Tracker</title>
 	</head>
-	<body>
+	<body id="{{ router.getControllerName() }}">
 		{{ content() }}
 	</body>
 </html>

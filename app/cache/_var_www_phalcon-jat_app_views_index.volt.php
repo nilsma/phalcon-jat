@@ -9,7 +9,7 @@
     <?php echo $this->assets->outputJs(); ?>
 	<title>Job Application Tracker</title>
 	</head>
-	<body>
+	<body id="<?php echo $this->router->getControllerName(); ?>">
 		<?php echo $this->getContent(); ?>
 	</body>
 </html>

@@ -3,3 +3,7 @@ div#login-controls {
     justify-content: space-between;
     align-items: center;
 }
+
+form {
+    padding: 10px;
+}

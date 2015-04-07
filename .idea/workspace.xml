@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-create.css" afterPath="$PROJECT_DIR$/public/css/application-create.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-edit.css" afterPath="$PROJECT_DIR$/public/css/application-edit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-overview.css" afterPath="$PROJECT_DIR$/public/css/application-overview.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application.css" afterPath="$PROJECT_DIR$/public/css/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-create.css" afterPath="$PROJECT_DIR$/public/css/contact-create.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-edit.css" afterPath="$PROJECT_DIR$/public/css/contact-edit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-overview.css" afterPath="$PROJECT_DIR$/public/css/contact-overview.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact.css" afterPath="$PROJECT_DIR$/public/css/contact.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/create.phtml" afterPath="$PROJECT_DIR$/app/views/application/create.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/create.phtml" afterPath="$PROJECT_DIR$/app/views/contact/create.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/edit.phtml" afterPath="$PROJECT_DIR$/app/views/application/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/edit.phtml" afterPath="$PROJECT_DIR$/app/views/contact/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/_usr_local_www_phalcon-jat_app_views_index.volt.php" afterPath="$PROJECT_DIR$/app/cache/_usr_local_www_phalcon-jat_app_views_index.volt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/_usr_local_www_phalcon-jat_app_views_index_index.volt.php" afterPath="$PROJECT_DIR$/app/cache/_usr_local_www_phalcon-jat_app_views_index_index.volt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/cache/_var_www_phalcon-jat_app_views_index.volt.php" afterPath="$PROJECT_DIR$/app/cache/_var_www_phalcon-jat_app_views_index.volt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.volt" afterPath="$PROJECT_DIR$/app/views/index.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/login.css" afterPath="$PROJECT_DIR$/public/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/register.css" afterPath="$PROJECT_DIR$/public/css/register.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
@@ -39,44 +30,7 @@
     <favorites_list name="phalcon-jat" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/application.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="1" selection-start="189" selection-end="189" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-overview.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/application-overview.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-create.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/application-create.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-edit.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -89,7 +43,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/loader.php" />
         <option value="$PROJECT_DIR$/app/controllers/ApplicationsController.php" />
         <option value="$PROJECT_DIR$/public/css/applications-edit.css" />
         <option value="$PROJECT_DIR$/app/forms/ApplicationsEditForm.php" />
@@ -109,10 +62,8 @@
         <option value="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
         <option value="$PROJECT_DIR$/public/js/contact.js" />
         <option value="$PROJECT_DIR$/app/forms/LoginForm.php" />
-        <option value="$PROJECT_DIR$/public/css/login.css" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/app/controllers/RegisterController.php" />
-        <option value="$PROJECT_DIR$/public/css/register.css" />
         <option value="$PROJECT_DIR$/app/forms/RegisterUserForm.php" />
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
         <option value="$PROJECT_DIR$/public/js/application.js" />
@@ -126,7 +77,6 @@
         <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
         <option value="$PROJECT_DIR$/app/views/contact/overview.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/application/edit.phtml" />
         <option value="$PROJECT_DIR$/public/css/contact.css" />
@@ -140,6 +90,10 @@
         <option value="$PROJECT_DIR$/public/css/application-overview.css" />
         <option value="$PROJECT_DIR$/public/css/application-create.css" />
         <option value="$PROJECT_DIR$/public/css/application-edit.css" />
+        <option value="$PROJECT_DIR$/app/views/index.volt" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/public/css/login.css" />
+        <option value="$PROJECT_DIR$/public/css/register.css" />
       </list>
     </option>
   </component>
@@ -657,7 +611,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -708,11 +662,6 @@
     <entry file="file://$PROJECT_DIR$/app/models/ContactAttachments.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="256" selection-end="256" vertical-scroll-proportion="0.71057516" vertical-offset="215" max-vertical-offset="754" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="361" selection-end="361" vertical-scroll-proportion="0.36684304" vertical-offset="0" max-vertical-offset="567" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/loader.php">
@@ -810,20 +759,6 @@
         <state line="7" column="50" selection-start="192" selection-end="192" vertical-scroll-proportion="0.32384342" vertical-offset="0" max-vertical-offset="598" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="102" selection-end="102" vertical-scroll-proportion="0.17627119" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="102" selection-end="102" vertical-scroll-proportion="0.17627119" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="755" selection-end="755" vertical-scroll-proportion="0.50889677" vertical-offset="494" max-vertical-offset="3666" />
@@ -902,13 +837,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/contact/overview.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="45" selection-start="295" selection-end="295" vertical-scroll-proportion="-3.7142856" vertical-offset="156" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="23" selection-start="616" selection-end="616" vertical-scroll-proportion="0.25084746" vertical-offset="762" max-vertical-offset="1352">
           <folding />
         </state>
       </provider>
@@ -1007,6 +935,34 @@
     <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="393" selection-end="393" vertical-scroll-proportion="0.39661017" vertical-offset="0" max-vertical-offset="590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0" vertical-offset="762" max-vertical-offset="1352">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.30847457" vertical-offset="0" max-vertical-offset="590">
           <folding />
         </state>
       </provider>
