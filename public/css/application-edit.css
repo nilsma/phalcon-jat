@@ -1,17 +1,5 @@
 div.application-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-div.application-bottom {
-    display: flex;
-    flex-direction: row;
-}
-
-div.application-bottom {
-    display: flex;
-    flex-direction: row;
+    text-align: right;
 }
 
 ul#contacts-list li {

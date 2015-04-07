@@ -4,7 +4,7 @@
 
     <div id="inner-container">
 
-        <div id="application" class="container col-md-12 col-sm-12">
+        <div id="application" class="container">
 
             <?php echo Phalcon\Tag::form(array("application/save", "method" => "post", "name" => "create-application", "role" => "form")) . "\n"; ?>
 
@@ -17,9 +17,9 @@
 
             </div> <!-- end #application-top -->
 
-            <div id="application-bottom">
+            <div id="application-bottom" class="row">
 
-                <div class="application-left form-group col-md-6 col-sm-12 col-xs-12">
+                <div class="application-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
                     <div class="application-company form-group">
                         <?php echo $form->label('company') . "\n"; ?>
@@ -43,7 +43,7 @@
 
                 </div> <!-- end .application-left -->
 
-                <div class="application-right col-md-6 col-sm-12 col-xs-12">
+                <div class="application-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
                     <div class="application-applied form-group">
                         <?php echo $form->label('applied') . "\n"; ?>
@@ -90,7 +90,6 @@
                     </div>
 
                 </div> <!-- end .application-right -->
-
 
             </div> <!-- end #application-bottom -->
 

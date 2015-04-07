@@ -29,15 +29,9 @@ div#controllers-left div#create-application {
 div#controllers-right {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
-}
-
-div#controllers-right div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
 }
 
 form {

@@ -1,17 +1,5 @@
 div#application-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-div#application-bottom {
-    display: flex;
-    flex-direction: row;
-}
-
-div#application-bottom {
-    display: flex;
-    flex-direction: row;
+    text-align: right;
 }
 
 ul#contacts-list {
@@ -23,6 +11,7 @@ ul#contacts-list li {
     flex-direction: row;
     justify-content: space-between;
     margin-left: -27px;
+    margin-bottom: 5px;
     padding: 5px;
 }
 

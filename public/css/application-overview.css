@@ -1,16 +1,9 @@
 div.application {
-    margin-bottom: 20px;
+    display: flex;
 }
 
-div.application-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-div.application-bottom {
-    display: flex;
-    flex-direction: row;
+div.application div.application-top {
+    text-align: right;
 }
 
 div.application-attachments ul {
