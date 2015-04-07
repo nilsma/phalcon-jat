@@ -1,12 +1,15 @@
+
 <div class="contact col-xs-12 col-sm-6 col-md-6 col-lg-4">
 
     <?php echo Phalcon\Tag::form(array("contacts/edit", "method" => "get", "name" => "contact-form", "role" => "form")) . "\n"; ?>
 
     <div class="contact-top">
+
         <div class="contact-edit form-group">
             <?php echo $form->render('Edit') . "\n"; ?>
             <button class="btn btn-danger contact-overview-delete" type="button">Delete</button>
         </div>
+
     </div>
 
     <div class="contact-bottom">

@@ -1,22 +1,20 @@
 
-<div class="application form-group col-xs-12 col-sm-6 col-md-6 col-lg-4">
+<div class="application col-xs-12 col-sm-6 col-md-6 col-lg-4">
 
     <?php echo Phalcon\Tag::form(array("application/edit", "method" => "get", "name" => "application-form", "role" => "form")) . "\n"; ?>
 
-    <div class="application-top form-group">
+    <div class="application-top">
 
-        <div class="application-edit">
+        <div class="application-edit form-group">
             <?php echo $form->render('Edit') . "\n"; ?>
             <button class="btn btn-danger application-overview-delete" type="button">Delete</button>
         </div>
 
     </div>
 
-    <!-- <div class="application-bottom"> -->
     <div class="application-bottom row">
 
-        <div class="application-left col-xs-12 col-md-6">
-        <!-- <div class="application-left "> -->
+        <div class="application-left col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
             <div class="application-company form-group">
                 <?php echo $form->label('company') . "\n"; ?>
@@ -42,8 +40,7 @@
 
         </div> <!-- end .application-left -->
 
-        <div class="application-right col-xs-12 col-md-6">
-        <!-- <div class="application-right"> -->
+        <div class="application-right col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
             <div class="application-applied form-group">
                 <?php echo $form->label('applied') . "\n"; ?>

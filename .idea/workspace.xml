@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-create.css" afterPath="$PROJECT_DIR$/public/css/application-create.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-edit.css" afterPath="$PROJECT_DIR$/public/css/application-edit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application-overview.css" afterPath="$PROJECT_DIR$/public/css/application-overview.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application.css" afterPath="$PROJECT_DIR$/public/css/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/application.js" afterPath="$PROJECT_DIR$/public/js/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-create.css" afterPath="$PROJECT_DIR$/public/css/contact-create.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-edit.css" afterPath="$PROJECT_DIR$/public/css/contact-edit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact-overview.css" afterPath="$PROJECT_DIR$/public/css/contact-overview.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/create.phtml" afterPath="$PROJECT_DIR$/app/views/application/create.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/create.phtml" afterPath="$PROJECT_DIR$/app/views/contact/create.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/edit.phtml" afterPath="$PROJECT_DIR$/app/views/application/edit.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/overview.phtml" afterPath="$PROJECT_DIR$/app/views/application/overview.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
@@ -52,43 +39,34 @@
       <file leaf-file-name="overview.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="956" selection-end="956" vertical-scroll-proportion="-6.678571" vertical-offset="515" max-vertical-offset="1248">
+            <state line="24" column="8" selection-start="888" selection-end="888" vertical-scroll-proportion="-6.678571" vertical-offset="437" max-vertical-offset="1248">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/application.js">
+      <file leaf-file-name="overview.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/contact/overview.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="33" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.0" vertical-offset="1546" max-vertical-offset="7644">
+            <state line="24" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="-6.678571" vertical-offset="437" max-vertical-offset="1248">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/application/create.phtml">
+      <file leaf-file-name="overview-application-template.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="2782">
+            <state line="14" column="4" selection-start="478" selection-end="478" vertical-scroll-proportion="-2.8214285" vertical-offset="285" max-vertical-offset="2600">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
+      <file leaf-file-name="overview-contact-template.phtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3796">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application-edit.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="1" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+            <state line="14" column="30" selection-start="481" selection-end="481" vertical-scroll-proportion="0.38069215" vertical-offset="155" max-vertical-offset="1378">
               <folding />
             </state>
           </provider>
@@ -144,20 +122,20 @@
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
         <option value="$PROJECT_DIR$/app/views/contact/overview.phtml" />
         <option value="$PROJECT_DIR$/public/css/application.css" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/application/create.phtml" />
         <option value="$PROJECT_DIR$/app/views/contact/create.phtml" />
         <option value="$PROJECT_DIR$/public/css/contact-create.css" />
         <option value="$PROJECT_DIR$/public/css/application-overview.css" />
         <option value="$PROJECT_DIR$/public/css/contact-overview.css" />
         <option value="$PROJECT_DIR$/app/views/application/overview.phtml" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/public/css/contact-edit.css" />
         <option value="$PROJECT_DIR$/public/js/application.js" />
         <option value="$PROJECT_DIR$/public/css/application-create.css" />
         <option value="$PROJECT_DIR$/app/views/application/edit.phtml" />
         <option value="$PROJECT_DIR$/public/css/application-edit.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
       </list>
     </option>
   </component>
@@ -878,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="28" selection-start="1517" selection-end="1517" vertical-scroll-proportion="0.715847" vertical-offset="751" max-vertical-offset="1300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
@@ -902,20 +873,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/contact/create.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="36" selection-start="692" selection-end="692" vertical-scroll-proportion="0.61748636" vertical-offset="155" max-vertical-offset="1560">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="54" selection-start="2529" selection-end="2529" vertical-scroll-proportion="0.9285714" vertical-offset="2314" max-vertical-offset="8840">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="38" selection-start="569" selection-end="569" vertical-scroll-proportion="0.4809886" vertical-offset="137" max-vertical-offset="2678">
           <folding />
         </state>
       </provider>
@@ -948,20 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contact/overview.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="75" selection-start="555" selection-end="555" vertical-scroll-proportion="0.33274022" vertical-offset="229" max-vertical-offset="1248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="956" selection-end="956" vertical-scroll-proportion="-6.678571" vertical-offset="515" max-vertical-offset="1248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/application-create.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="23" selection-start="241" selection-end="241" vertical-scroll-proportion="0.57288134" vertical-offset="0" max-vertical-offset="650">
@@ -969,9 +912,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application.js">
+    <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="33" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.0" vertical-offset="1546" max-vertical-offset="7644">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3796">
           <folding />
         </state>
       </provider>
@@ -983,16 +926,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
+    <entry file="file://$PROJECT_DIR$/public/js/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="1" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+        <state line="77" column="33" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.7728813" vertical-offset="1546" max-vertical-offset="7644">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
+    <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3796">
+        <state line="15" column="1" selection-start="275" selection-end="275" vertical-scroll-proportion="0.66101694" vertical-offset="0" max-vertical-offset="590">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="54" selection-start="2529" selection-end="2529" vertical-scroll-proportion="0.9285714" vertical-offset="2314" max-vertical-offset="8840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="8" selection-start="888" selection-end="888" vertical-scroll-proportion="-6.678571" vertical-offset="437" max-vertical-offset="1248">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contact/overview.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="-6.678571" vertical-offset="437" max-vertical-offset="1248">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="4" selection-start="478" selection-end="478" vertical-scroll-proportion="-2.8214285" vertical-offset="285" max-vertical-offset="2600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="481" selection-end="481" vertical-scroll-proportion="0.38069215" vertical-offset="155" max-vertical-offset="1378">
           <folding />
         </state>
       </provider>
