@@ -5,9 +5,12 @@
 
     <div class="application-top">
 
-        <div class="application-edit">
-            <button type="submit" class="btn btn-sm btn-default edit-item"><span><i class="glyphicon glyphicon-pencil"></i></span> </button>
-            <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span><i class="glyphicon glyphicon-remove"></i></span> </button>
+        <div class="form-controls">
+            <div></div>
+            <div>
+                <button type="submit" class="btn btn-sm btn-default edit-item"><span><i class="glyphicon glyphicon-pencil"></i></span> </button>
+                <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span><i class="glyphicon glyphicon-remove"></i></span> </button>
+            </div>
         </div>
 
     </div>
@@ -60,29 +63,29 @@
             <div class="application-attachments form-group">
                 <label>Contacts:</label>
                 <ul>
-                <?php
+                    <?php
 
-                $attachments = ContactAttachments::find(array(
-                    'conditions' => 'app_id = ?1',
-                    'bind' => array(1 => $application->id)
-                ));
+                    $attachments = ContactAttachments::find(array(
+                        'conditions' => 'app_id = ?1',
+                        'bind' => array(1 => $application->id)
+                    ));
 
-                $html = '';
+                    $html = '';
 
-                foreach($attachments as $attachment) {
+                    foreach($attachments as $attachment) {
 
-                    $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
+                        $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
 
-                    $html .= '<li>' . "\n";
-                    $html .= '<input type="hidden" value="' . $contact->id . '">' . "\n";
-                    $html .= '<a class="attachment-details">' . $contact->name . '</a>' . "\n";
-                    $html .= '</li>' . "\n";
+                        $html .= '<li>' . "\n";
+                        $html .= '<input type="hidden" value="' . $contact->id . '">' . "\n";
+                        $html .= '<a class="attachment-details">' . $contact->name . '</a>' . "\n";
+                        $html .= '</li>' . "\n";
 
-                }
+                    }
 
-                echo $html;
+                    echo $html;
 
-                ?>
+                    ?>
                 </ul>
             </div>
 
