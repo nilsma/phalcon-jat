@@ -72,6 +72,9 @@ function injectHTML(object, callback) {
 
     if(object['position'].length > 0) {
 
+        var br = document.createElement('br');
+        span1.appendChild(br);
+
         var span2 = document.createElement('span');
         span2.className = 'hidden-xs';
         span2.innerHTML += ' (' + object['position'] + ')';
