@@ -21,6 +21,13 @@ class CreateApplicationForm extends Form {
 
         $applied->setLabel('Applied: ');
 
+        $applied->addValidators(array(
+            new StringLength(array(
+                'max' => 10,
+                'message' => 'A date cannot exceed 10 characters'
+            ))
+        ));
+
         $this->add($applied);
 
         // create date contact_details for due_date
@@ -31,6 +38,13 @@ class CreateApplicationForm extends Form {
 
         $due_date->setLabel('Due Date: ');
 
+        $due_date->addValidators(array(
+            new StringLength(array(
+                'max' => 10,
+                'message' => 'A date cannot exceed 10 characters'
+            ))
+        ));
+
         $this->add($due_date);
 
         // create date contact_details for follow-up
@@ -40,6 +54,13 @@ class CreateApplicationForm extends Form {
         ));
 
         $follow_up->setLabel('Follow-Up: ');
+
+        $follow_up->addValidators(array(
+            new StringLength(array(
+                'max' => 10,
+                'message' => 'A date cannot exceed 10 characters'
+            ))
+        ));
 
         $this->add($follow_up);
 

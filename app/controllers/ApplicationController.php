@@ -29,42 +29,48 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $application_id = $this->request->get('app_id');
+            $user = unserialize($this->session->get('user'));
+
+            $application_id = $this->request->get('app_id', array('int', 'striptags', 'trim'));
             $application = Applications::findFirst('id = "' . $application_id . '"');
 
-            $contact_attachments = ContactAttachments::find(array(
-                'conditions' => 'app_id = ?1',
-                'bind' => array(1 => $application_id)
-            ));
+            if($application->owner_id == $user->id) {
 
-            try {
+                $contact_attachments = ContactAttachments::find(array(
+                    'conditions' => 'app_id = ?1',
+                    'bind' => array(1 => $application_id)
+                ));
 
-                $transactionManager = new TransactionManager();
-                $transaction = $transactionManager->get();
+                try {
 
-                if(count($contact_attachments) > 0) {
+                    $transactionManager = new TransactionManager();
+                    $transaction = $transactionManager->get();
 
-                    foreach($contact_attachments as $attachment) {
+                    if(count($contact_attachments) > 0) {
 
-                        if($attachment->delete() == false) {
+                        foreach($contact_attachments as $attachment) {
 
-                            $transaction->rollback('Failed to delete attachment');
+                            if($attachment->delete() == false) {
+
+                                $transaction->rollback('Failed to delete attachment');
+
+                            }
 
                         }
 
                     }
 
+                    $application->delete();
+
+                    $this->flash->success('Application deleted!');
+                    $this->response->redirect('application/overview');
+
+                } catch(Exception $e) {
+
+                    $this->flash->error('Something went wrong while deleting application: ' . $e->getMessage());
+                    $this->response->redirect('application/overview');
+
                 }
-
-                $application->delete();
-
-                $this->flash->success('Application deleted!');
-                $this->response->redirect('application/overview');
-
-            } catch(Exception $e) {
-
-                $this->flash->error('Something went wrong while deleting application: ' . $e->getMessage());
-                $this->response->redirect('application/overview');
 
             }
 
@@ -181,20 +187,30 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $user = unserialize($this->session->get('user'));
 
             //TODO check if current user owns app_id
-            $app_id = $this->request->get('app_id');
+            $app_id = $this->request->get('app_id', array('int', 'striptags', 'trim'));
             $application = Applications::findFirst('id = "' . $app_id . '"');
 
-            $contacts = Contacts::find(array(
-                'conditions' => 'owner_id = ?1',
-                'bind' => array(1 => $user->id)
-            ));
+            if($application->owner_id != $user->id) {
 
-            $form = new EditApplicationForm(Applications::findFirst('id = "' . $app_id . '"'));
+                $this->view->disable();
+                $this->flash->error('You do not own that application.');
+                $this->response->redirect('application/overview');
 
-            $this->view->pick('application/edit');
-            $this->view->form = $form;
-            $this->view->setVar('application', $application);
-            $this->view->setVar('contacts', $contacts);
+            } else {
+
+                $contacts = Contacts::find(array(
+                    'conditions' => 'owner_id = ?1',
+                    'bind' => array(1 => $user->id)
+                ));
+
+                $form = new EditApplicationForm(Applications::findFirst('id = "' . $app_id . '"'));
+
+                $this->view->pick('application/edit');
+                $this->view->form = $form;
+                $this->view->setVar('application', $application);
+                $this->view->setVar('contacts', $contacts);
+
+            }
 
         } else {
 
@@ -215,23 +231,45 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $user = unserialize($this->session->get('user'));
 
             if($this->request->has('app_id')) {
-                $app_id = $this->request->get('app_id');
+                $app_id = $this->request->get('app_id', array('int', 'striptags', 'trim'));
+                $application = Applications::findFirst('id = "' . $app_id . '"');
+
+                if($application->owner_id != $user->id) {
+
+                    $this->view->disable();
+                    $this->flash->error('You do not own that application.');
+                    $this->response->redirect('application/overview');
+
+                } else {
+
+                    $application->company = $this->request->getPost('company', array('string', 'striptags', 'trim'));
+                    $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
+                    $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
+                    $application->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
+                    $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
+                    $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
+                    $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+
+                }
+
             } else {
-                $app_id = null;
+
+                $application = new Applications();
+                $application->id = null;
+                $application->owner_id = $user->id;
+                $application->created = date("Y-m-d");
+                $application->company = $this->request->getPost('company', array('string', 'striptags', 'trim'));
+                $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
+                $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
+                $application->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
+                $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
+                $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
+                $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+
             }
 
-            $application = new Applications();
-            $application->id = $app_id;
-            $application->owner_id = $user->id;
-            $application->created = date("Y-m-d");
-            $application->company = $this->request->getPost('company');
-            $application->position = $this->request->getPost('position');
-            $application->recruitment_company = $this->request->getPost('recruitment');
-            $application->notes = $this->request->getPost('notes');
-            $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
-            $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
-            $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
-
+            //TODO create a method to verify that the current user actually owns the contacts
+            // and that the contacts' values are valid (sanitize)
             if($this->request->has('contacts')) {
                 $contacts = $this->request->getPost('contacts');
             } else {

@@ -28,42 +28,54 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
-            $contact_id = $this->request->get('contact_id');
+            $user = unserialize($this->session->get('user'));
+
+            $contact_id = $this->request->get('contact_id', array('int', 'striptags', 'trim'));
             $contact = Contacts::findFirst('id = "' . $contact_id . '"');
 
-            $contact_attachments = ContactAttachments::find(array(
-                'conditions' => 'contact_id = ?1',
-                'bind' => array(1 => $contact_id)
-            ));
+            if($contact->owner_id != $user->id) {
 
-            try {
+                $this->view->disable();
+                $this->flash->error('You do not own that contact.');
+                $this->response->redirect('contacts/overview');
 
-                $transactionManager = new TransactionManager();
-                $transaction = $transactionManager->get();
+            } else {
 
-                if(count($contact_attachments) > 0) {
+                $contact_attachments = ContactAttachments::find(array(
+                    'conditions' => 'contact_id = ?1',
+                    'bind' => array(1 => $contact_id)
+                ));
 
-                    foreach($contact_attachments as $attachment) {
+                try {
 
-                        if($attachment->delete() == false) {
+                    $transactionManager = new TransactionManager();
+                    $transaction = $transactionManager->get();
 
-                            $transaction->rollback('Failed to delete attachment');
+                    if(count($contact_attachments) > 0) {
+
+                        foreach($contact_attachments as $attachment) {
+
+                            if($attachment->delete() == false) {
+
+                                $transaction->rollback('Failed to delete attachment');
+
+                            }
 
                         }
 
                     }
 
+                    $contact->delete();
+
+                    $this->flash->success('Contact deleted!');
+                    $this->response->redirect('contacts/overview');
+
+                } catch(Exception $e) {
+
+                    $this->flash->error('Something went wrong while deleting contact: ' . $e->getMessage());
+                    $this->response->redirect('contacts/overview');
+
                 }
-
-                $contact->delete();
-
-                $this->flash->success('Contact deleted!');
-                $this->response->redirect('contacts/overview');
-
-            } catch(Exception $e) {
-
-                $this->flash->error('Something went wrong while deleting contact: ' . $e->getMessage());
-                $this->response->redirect('contacts/overview');
 
             }
 
@@ -117,20 +129,39 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             $user = unserialize($this->session->get('user'));
 
             if($this->request->has('contact_id')) {
-                $contact_id = $this->request->get('contact_id');
+                $contact_id = $this->request->get('contact_id', array('int', 'striptags', 'trim'));
+                $contact = Contacts::findFirst('id = "' . $contact_id . '"');
+
+                if($contact->owner_id != $user->id) {
+
+                    $this->view->disable();
+                    $this->flash->error('You do not own that contact.');
+                    $this->response->redirect('contacts/overview');
+
+                } else {
+
+                    $contact->name = $this->request->getPost('name', array('string', 'striptags', 'trim'));
+                    $contact->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
+                    $contact->email = $this->request->getPost('email', array('string', 'striptags', 'trim'));
+                    $contact->phone = $this->request->getPost('phone', array('string', 'striptags', 'trim'));
+                    $contact->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
+
+                }
+
             } else {
-                $contact_id = null;
+
+                $contact = new Contacts();
+                $contact->id = null;
+                $contact->owner_id = $user->id;
+                $contact->name = $this->request->getPost('name', array('string', 'striptags', 'trim'));
+                $contact->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
+                $contact->email = $this->request->getPost('email', array('string', 'striptags', 'trim'));
+                $contact->phone = $this->request->getPost('phone', array('string', 'striptags', 'trim'));
+                $contact->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
+
             }
 
-            $contact = new Contacts();
-            $contact->id = $contact_id;
-            $contact->owner_id = $user->id;
-            $contact->name = $this->request->getPost('name');
-            $contact->position = $this->request->getPost('position');
-            $contact->email = $this->request->getPost('email');
-            $contact->phone = $this->request->getPost('phone');
-            $contact->notes = $this->request->getPost('notes');
-
+            //TODO refactor to own write-method
             try {
 
                 $contact->save();
@@ -201,6 +232,8 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
         if($this->session->has('user') && $this->session->get('auth') == True) {
 
+            $user = unserialize($this->session->get('user'));
+
             $this->assets->addCss('css/main.css');
             $this->assets->addCss('css/contact.css');
             $this->assets->addCss('css/contact-edit.css');
@@ -208,13 +241,23 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/contact.js');
 
-            $contact_id = $this->request->get('contact_id');
+            $contact_id = $this->request->get('contact_id', array('int', 'striptags', 'trim'));
             $contact = Contacts::findFirst('id = "' . $contact_id . '"');
 
-            $form = new EditContactForm($contact);
+            if($contact->id != $user->id) {
 
-            $this->view->form = $form;
-            $this->view->pick('contact/edit');
+                $this->view->disable();
+                $this->flash->error('You do not own that contact.');
+                $this->response->redirect('contacts/overview');
+
+            } else {
+
+                $form = new EditContactForm($contact);
+
+                $this->view->form = $form;
+                $this->view->pick('contact/edit');
+
+            }
 
         } else {
 

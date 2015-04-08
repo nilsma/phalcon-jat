@@ -13,7 +13,7 @@ function deleteContact() {
 
 function deleteOverviewContact() {
     if(confirm('Please confirm contact deletion')) {
-        var contact_id = this.parentNode.parentNode.parentNode.childNodes[3].childNodes[11].value;
+        var contact_id = this.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[11].value;
         deleteContactQuery(contact_id, function(result) {
             if(result) {
                 location.reload();

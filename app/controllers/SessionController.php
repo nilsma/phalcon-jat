@@ -1,7 +1,5 @@
 <?php
 
-use Phalcon\Exception;
-
 class SessionController extends \Phalcon\Mvc\Controller
 {
 
@@ -19,9 +17,9 @@ class SessionController extends \Phalcon\Mvc\Controller
 
         $form = new LoginForm();
 
-        if($form->isValid($_POST)) {
+        if($form->isValid($this->request->getPost())) {
 
-            $user = Users::findFirst('username = "' . $this->request->getPost('username') . '"');
+            $user = Users::findFirst('username = "' . $this->request->getPost('username', array('string', 'striptags', 'trim')) . '"');
 
             if($user && $this->security->checkHash($this->request->getPost('password'), $user->password)) {
 
@@ -61,8 +59,8 @@ class SessionController extends \Phalcon\Mvc\Controller
 
             $user = new Users();
             $user->id = NULL;
-            $user->username = $this->request->getPost('username');
-            $user->email = $this->request->getPost('email');
+            $user->username = $this->request->getPost('username', array('string', 'striptags', 'trim'));
+            $user->email = $this->request->getPost('email', array('email', 'striptags', 'trim'));
             $user->password = $this->security->hash($this->request->getPost('password'));
             $user->sorting = "DEFAULT";
             $user->filter = "ALL";
@@ -74,6 +72,7 @@ class SessionController extends \Phalcon\Mvc\Controller
 
             } else {
 
+                //TODO refactor to use for-loop over $e->getMessages()
                 $user = Users::findFirst('username = "' . $user->username . '"');
 
                 if($user) {

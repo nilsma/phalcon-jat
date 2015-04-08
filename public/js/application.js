@@ -157,6 +157,7 @@ function addContactListeners() {
     }
 }
 
+//TODO refactor to include application logic/values from writeapplication method
 function saveApplication() {
     var contacts = [];
     var lis = document.querySelectorAll('ul#contacts-list li');
@@ -208,7 +209,7 @@ function writeApplication(contacts, callback) {
 
 function deleteOverviewApplication() {
     if(confirm('Please confirm application deletion')) {
-        var application_id = this.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[9].value;
+        var application_id = this.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[9].value;
         deleteApplicationQuery(application_id, function(result) {
             if(result) {
                 location.reload();
