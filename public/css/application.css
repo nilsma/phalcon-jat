@@ -4,12 +4,6 @@ div.application-top {
     padding: 4px 6px 4px 6px;
 }
 
-div.form-controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 div.application-bottom {
     padding: 10px;
 }
