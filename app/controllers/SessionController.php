@@ -70,6 +70,8 @@ class SessionController extends \Phalcon\Mvc\Controller
 
                 if($user->save()) {
 
+                    $this->session->set('user', serialize($user));
+                    $this->session->set('auth', True);
                     $this->flash->success('You are registered!');
                     $this->response->redirect('application/overview');
 
