@@ -1,6 +1,6 @@
 function logout() {
     if(confirm('Please confirm logout')) {
-        var url = 'session/logout';
+        var url = '/session/logout';
         location.href = url;
     }
 }

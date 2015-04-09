@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/missing-entries.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicationController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ContactsController.php" afterPath="$PROJECT_DIR$/app/controllers/ContactsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/controllers-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/controllers-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/overview.phtml" afterPath="$PROJECT_DIR$/app/views/application/overview.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contact/overview.phtml" afterPath="$PROJECT_DIR$/app/views/contact/overview.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/memberHeader.phtml" afterPath="$PROJECT_DIR$/app/views/partials/memberHeader.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
@@ -31,7 +26,35 @@
     <favorites_list name="phalcon-jat" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="memberHeader.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/memberHeader.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="54" selection-start="1495" selection-end="1495" vertical-scroll-proportion="-9.392858" vertical-offset="517" max-vertical-offset="1066">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="159" column="39" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.0" vertical-offset="3921" max-vertical-offset="7826">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="20" selection-start="83" selection-end="83" vertical-scroll-proportion="0.08813559" vertical-offset="0" max-vertical-offset="1976">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -85,8 +108,6 @@
         <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/forms/OverviewContactForm.php" />
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/memberHeader.phtml" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/app/views/partials/controllers-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/missing-applications.phtml" />
         <option value="$PROJECT_DIR$/app/views/application/overview.phtml" />
@@ -95,6 +116,8 @@
         <option value="$PROJECT_DIR$/app/controllers/ContactsController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/missing-entries.phtml" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/memberHeader.phtml" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
       </list>
     </option>
   </component>
@@ -496,7 +519,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -745,27 +768,6 @@
         <state line="60" column="73" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.28519195" vertical-offset="1404" max-vertical-offset="3926" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/memberHeader.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="104" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.5173042" vertical-offset="496" max-vertical-offset="1066">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="1976">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="5" selection-start="6111" selection-end="6111" vertical-scroll-proportion="0.6828423" vertical-offset="5248" max-vertical-offset="7826">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1456">
@@ -818,6 +820,27 @@
     <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="119" column="54" selection-start="3600" selection-end="3600" vertical-scroll-proportion="0.8142077" vertical-offset="2621" max-vertical-offset="7358">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/memberHeader.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="54" selection-start="1495" selection-end="1495" vertical-scroll-proportion="-9.392858" vertical-offset="517" max-vertical-offset="1066">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="39" selection-start="4010" selection-end="4010" vertical-scroll-proportion="0.0" vertical-offset="3921" max-vertical-offset="7826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="83" selection-end="83" vertical-scroll-proportion="0.08813559" vertical-offset="0" max-vertical-offset="1976">
           <folding />
         </state>
       </provider>
