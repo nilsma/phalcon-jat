@@ -230,6 +230,45 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
     }
 
+    //TODO generalize and refactor to helpers class
+    private function isOwnerContacts(Users $user, Array $contacts) {
+
+        $isOwner = true;
+
+        foreach($contacts as $id) {
+
+            $contact = Contacts::findFirst('id = "' . $id . '"');
+
+            if($user->id != $contact->owner_id) {
+
+                $isOwner = false;
+
+            }
+
+        }
+
+        return $isOwner;
+
+    }
+
+    //TODO refactor to helpers class
+    private function sanitizeContacts(Array $contacts) {
+
+        $filter = new \Phalcon\Filter();
+
+        $sanitized = array();
+
+        foreach($contacts as $contact) {
+
+            $entry = $filter->sanitize($contact, 'int');
+            array_push($sanitized, $entry);
+
+        }
+
+        return $sanitized;
+
+    }
+
     public function saveAction() {
 
         $this->view->disable();
@@ -239,17 +278,41 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
             $user = unserialize($this->session->get('user'));
 
-            if($this->request->has('app_id')) {
-                $app_id = $this->request->get('app_id', array('int', 'striptags', 'trim'));
-                $application = Applications::findFirst('id = "' . $app_id . '"');
+            if($this->request->has('contacts')) {
+                $contacts = $this->sanitizeContacts($this->request->getPost('contacts'));
+            } else {
+                $contacts = array();
+            }
 
-                if($application->owner_id != $user->id) {
+            if($this->isOwnerContacts($user, $contacts)) {
 
-                    $this->flash->error('You do not own that application.');
-                    $this->response->redirect('application/overview');
+                if($this->request->has('app_id')) {
+                    $app_id = $this->request->get('app_id', array('int', 'striptags', 'trim'));
+                    $application = Applications::findFirst('id = "' . $app_id . '"');
+
+                    if($application->owner_id != $user->id) {
+
+                        $this->flash->error('You do not own that application.');
+                        $this->response->redirect('application/overview');
+
+                    } else {
+
+                        $application->company = $this->request->getPost('company', array('string', 'striptags', 'trim'));
+                        $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
+                        $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
+                        $application->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
+                        $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
+                        $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
+                        $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+
+                    }
 
                 } else {
 
+                    $application = new Applications();
+                    $application->id = null;
+                    $application->owner_id = $user->id;
+                    $application->created = date("Y-m-d");
                     $application->company = $this->request->getPost('company', array('string', 'striptags', 'trim'));
                     $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
                     $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
@@ -260,32 +323,14 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
                 }
 
+                $this->writeAction($application, $contacts);
+
             } else {
 
-                $application = new Applications();
-                $application->id = null;
-                $application->owner_id = $user->id;
-                $application->created = date("Y-m-d");
-                $application->company = $this->request->getPost('company', array('string', 'striptags', 'trim'));
-                $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
-                $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
-                $application->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
-                $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
-                $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
-                $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+                $this->flash->error('You do not own these contacts');
+                $this->response->redirect('application/overview');
 
             }
-
-            //TODO create a method to verify that the current user actually owns the contacts
-            // and that the contacts' values are valid (sanitize)
-            if($this->request->has('contacts')) {
-                $contacts = $this->request->getPost('contacts');
-            } else {
-                $contacts = array();
-            }
-
-            $this->writeAction($application, $contacts);
-            $this->response->redirect('application/overview');
 
         } else {
 

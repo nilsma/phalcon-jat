@@ -266,7 +266,7 @@ function init() {
         }
     }
 
-    var element = document.getElementById('application-save');
+    var element = document.getElementById('save-application');
     if(element !== null) {
         element.addEventListener('click', saveApplication);
     }
