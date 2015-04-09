@@ -12,11 +12,19 @@
 
             <?php
 
-            foreach($contacts as $contact) {
+            if(count($contacts) > 0) {
 
-                $form = new OverviewContactForm($contact);
+                foreach($contacts as $contact) {
 
-                echo $this->partial('partials/overview-contact-template') . "\n";
+                    $form = new OverviewContactForm($contact);
+
+                    echo $this->partial('partials/overview-contact-template') . "\n";
+
+                }
+
+            } else {
+
+                echo $this->partial('partials/missing-entries') . "\n";
 
             }
 

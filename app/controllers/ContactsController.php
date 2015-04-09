@@ -107,9 +107,17 @@ class ContactsController extends \Phalcon\Mvc\Controller {
                 'bind' => array(1 => $user->id)
             ));
 
+            if(count($contacts) > 0) {
+                $missing_entries_class = 'container';
+            } else {
+                $missing_entries_class = 'container hidden';
+            }
+
             $this->view->setVar('contacts', $contacts);
             $this->view->pick('contact/overview');
             $this->view->setVar('inner_text', "New Contact");
+            $this->view->setVar('missing_entries_class', $missing_entries_class);
+            $this->view->setVar('entry_type', 'contact');
 
         } else {
 

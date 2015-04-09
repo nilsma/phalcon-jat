@@ -106,11 +106,19 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
                 'bind' => array(1 => $user->id)
             ));
 
+            if(count($applications) > 0) {
+                $missing_entries_class = 'container';
+            } else {
+                $missing_entries_class = 'container hidden';
+            }
+
             $this->view->pick('application/overview');
             $this->view->setVar('email', $user->email);
             $this->view->setVar('applications', $applications);
             $this->view->setVar('contacts', $contacts);
             $this->view->setVar('inner_text', "New Application");
+            $this->view->setVar('missing_entries_class', $missing_entries_class);
+            $this->view->setVar('entry_type', 'application');
 
         } else {
 

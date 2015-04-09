@@ -12,11 +12,19 @@
 
             <?php
 
-            foreach($applications as $application) {
+            if(count($applications) > 0) {
 
-                $form = new OverviewApplicationForm($application);
+                foreach($applications as $application) {
 
-                echo $this->partial('partials/overview-application-template') . "\n";
+                    $form = new OverviewApplicationForm($application);
+
+                    echo $this->partial('partials/overview-application-template') . "\n";
+
+                }
+
+            } else {
+
+                echo $this->partial('partials/missing-entries') . "\n";
 
             }
 

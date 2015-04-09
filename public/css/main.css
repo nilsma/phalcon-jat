@@ -51,3 +51,7 @@ div.form-controls {
     flex-direction: row;
     justify-content: space-between;
 }
+
+div#missing-entries {
+    text-align: center;
+}
