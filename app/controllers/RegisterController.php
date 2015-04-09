@@ -9,7 +9,7 @@ class RegisterController extends ControllerBase {
         $this->assets->addJs('js/jquery-2.1.3.min.js');
         $this->assets->addJs('js/main.js');
 
-        $form = new RegisterUserForm();
+        $form = new RegisterForm();
 
         $this->view->form = $form;
 

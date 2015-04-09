@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: nilsma
- * Date: 3/26/15
- * Time: 7:10 AM
- */
-
 use Phalcon\Forms\Form;
 use Phalcon\Forms\Element\Text;
 use Phalcon\Forms\Element\Email;
@@ -17,7 +10,7 @@ use Phalcon\Validation\Validator\StringLength;
 use Phalcon\Validation\Validator\Confirmation;
 use Phalcon\Filter;
 
-class RegisterUserForm extends Form {
+class RegisterForm extends Form {
 
     public function initialize() {
 
