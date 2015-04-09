@@ -1,3 +1,10 @@
+function logout() {
+    if(confirm('Please confirm logout')) {
+        var url = 'session/logout';
+        location.href = url;
+    }
+}
+
 function getIconBackgroundClass(element, callback) {
     var classes = element.className.split(" ");
     var cls;
@@ -54,6 +61,11 @@ function addIconHoverListeners(array) {
 function mainInit(callback) {
     var classes = ['delete-item', 'edit-item', 'cancel-item', 'save-item'];
     addIconHoverListeners(classes);
+
+    var element = document.getElementById('logout');
+    if(element !== null) {
+        element.addEventListener('click', logout);
+    }
 
     callback();
 }

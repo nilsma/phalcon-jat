@@ -237,7 +237,6 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
                 if($application->owner_id != $user->id) {
 
-                    $this->view->disable();
                     $this->flash->error('You do not own that application.');
                     $this->response->redirect('application/overview');
 
