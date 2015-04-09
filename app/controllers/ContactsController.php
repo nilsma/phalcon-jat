@@ -97,6 +97,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/contact.css');
             $this->assets->addCss('css/contact-overview.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/bootstrap.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/contact.js');
 
@@ -200,6 +201,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/main.css');
             $this->assets->addCss('css/contact.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/bootstrap.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/contact.js');
 
@@ -244,6 +246,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/main.css');
             $this->assets->addCss('css/contact.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/bootstrap.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/contact.js');
 

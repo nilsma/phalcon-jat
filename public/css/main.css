@@ -4,6 +4,11 @@ div#main-container {
     margin-bottom: 40px;
 }
 
+button.navbar-toggle {
+    position: absolute;
+    right: 0;
+}
+
 .navbar-header {
     display: inline-block !important;
     vertical-align: top;

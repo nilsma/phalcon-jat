@@ -92,6 +92,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/application.css');
             $this->assets->addCss('css/application-overview.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/bootstrap.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/application.js');
 
@@ -135,6 +136,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
         $this->assets->addCss('css/application.css');
         $this->assets->addCss('css/application-create.css');
         $this->assets->addJs('js/jquery-2.1.3.min.js');
+        $this->assets->addJs('js/bootstrap.min.js');
         $this->assets->addJs('js/main.js');
         $this->assets->addJs('js/application.js');
 
@@ -190,6 +192,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $this->assets->addCss('css/application.css');
             $this->assets->addCss('css/application-edit.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
+            $this->assets->addJs('js/bootstrap.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/application.js');
 
