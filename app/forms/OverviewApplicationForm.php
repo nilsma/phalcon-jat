@@ -6,6 +6,7 @@ use Phalcon\Forms\Element\TextArea;
 use Phalcon\Forms\Element\Date;
 use Phalcon\Forms\Element\Hidden;
 use Phalcon\Forms\Element\Submit;
+use Phalcon\Mvc\Model\Validator\Numericality;
 use Phalcon\Validation\Validator\StringLength;
 
 class OverviewApplicationForm extends Form {
@@ -43,7 +44,7 @@ class OverviewApplicationForm extends Form {
 
         $position->setLabel('Position: ');
 
-        $company->addValidators(array(
+        $position->addValidators(array(
             new StringLength(array(
                 'max' => 50,
                 'message' => 'Position may not exceed 50 characters'
@@ -131,6 +132,13 @@ class OverviewApplicationForm extends Form {
         // create hidden contact_details for application id
         $app_id = new Hidden('app_id', array(
             'value' => $application->id
+        ));
+
+        $app_id->addValidators(array(
+            new Numericality(array(
+                'message' => 'An application ID is required',
+                'field' => 'app_id'
+            ))
         ));
 
         $this->add($app_id);

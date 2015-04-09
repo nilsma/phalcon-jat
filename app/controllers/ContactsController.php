@@ -191,7 +191,6 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
             $this->assets->addCss('css/main.css');
             $this->assets->addCss('css/contact.css');
-            $this->assets->addCss('css/contact-create.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/contact.js');
@@ -236,7 +235,6 @@ class ContactsController extends \Phalcon\Mvc\Controller {
 
             $this->assets->addCss('css/main.css');
             $this->assets->addCss('css/contact.css');
-            $this->assets->addCss('css/contact-edit.css');
             $this->assets->addJs('js/jquery-2.1.3.min.js');
             $this->assets->addJs('js/main.js');
             $this->assets->addJs('js/contact.js');
@@ -244,7 +242,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             $contact_id = $this->request->get('contact_id', array('int', 'striptags', 'trim'));
             $contact = Contacts::findFirst('id = "' . $contact_id . '"');
 
-            if($contact->id != $user->id) {
+            if($contact->owner_id != $user->id) {
 
                 $this->view->disable();
                 $this->flash->error('You do not own that contact.');

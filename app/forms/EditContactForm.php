@@ -7,6 +7,7 @@ use Phalcon\Forms\Element\Email;
 use Phalcon\Forms\Element\Hidden;
 use Phalcon\Forms\Element\Submit;
 use Phalcon\Validation\Validator\PresenceOf;
+use Phalcon\Mvc\Model\Validator\Numericality;
 use Phalcon\Validation\Validator\StringLength;
 
 class EditContactForm extends Form {
@@ -114,6 +115,13 @@ class EditContactForm extends Form {
         // create hidden element for contact id
         $contact_id = new Hidden('contact_id', array(
             'value' => $contact->id
+        ));
+
+        $contact_id->addValidators(array(
+            new Numericality(array(
+                'message' => 'A contact ID is required',
+                'field' => 'contact_id'
+            ))
         ));
 
         $this->add($contact_id);

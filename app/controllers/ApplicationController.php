@@ -136,6 +136,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             $user = unserialize($this->session->get('user'));
 
             $form = new CreateApplicationForm();
+
             $contacts = Contacts::find(array(
                 'conditions' => 'owner_id = ?1',
                 'bind' => array(1 => $user->id)

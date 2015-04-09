@@ -41,9 +41,10 @@ class SessionController extends \Phalcon\Mvc\Controller
             foreach($form->getMessages() as $message) {
 
                 $this->flash->error($message);
-                $this->response->redirect('register/');
 
             }
+
+            $this->response->redirect('');
 
         }
 
@@ -57,34 +58,43 @@ class SessionController extends \Phalcon\Mvc\Controller
 
         if($form->isValid($this->request->getPost())) {
 
-            $user = new Users();
-            $user->id = NULL;
-            $user->username = $this->request->getPost('username', array('string', 'striptags', 'trim'));
-            $user->email = $this->request->getPost('email', array('email', 'striptags', 'trim'));
-            $user->password = $this->security->hash($this->request->getPost('password'));
-            $user->sorting = "DEFAULT";
-            $user->filter = "ALL";
+            if(!preg_match('/\s/',$this->request->getPost('username'))) {
 
-            if($user->save()) {
+                $user = new Users();
+                $user->id = NULL;
+                $user->username = $this->request->getPost('username', array('string', 'striptags', 'trim'));
+                $user->email = $this->request->getPost('email', array('email', 'striptags', 'trim'));
+                $user->password = $this->security->hash($this->request->getPost('password'));
+                $user->sorting = "DEFAULT";
+                $user->filter = "ALL";
 
-                $this->flash->success('You are registered!');
-                $this->response->redirect('application/overview');
+                if($user->save()) {
+
+                    $this->flash->success('You are registered!');
+                    $this->response->redirect('application/overview');
+
+                } else {
+
+                    //TODO refactor to use for-loop over $e->getMessages()
+                    $user = Users::findFirst('username = "' . $user->username . '"');
+
+                    if($user) {
+                        $this->flash->error('That username is already registered');
+                    }
+
+                    $user = Users::findFirst('email = "' . $user->email . '"');
+
+                    if($user) {
+                        $this->flash->error('That email is already registered');
+                    }
+
+                    $this->response->redirect('register/');
+
+                }
 
             } else {
 
-                //TODO refactor to use for-loop over $e->getMessages()
-                $user = Users::findFirst('username = "' . $user->username . '"');
-
-                if($user) {
-                    $this->flash->error('That username is already registered');
-                }
-
-                $user = Users::findFirst('email = "' . $user->email . '"');
-
-                if($user) {
-                    $this->flash->error('That email is already registered');
-                }
-
+                $this->flash->error('Username may not contain any white-space characters');
                 $this->response->redirect('register/');
 
             }
@@ -94,9 +104,10 @@ class SessionController extends \Phalcon\Mvc\Controller
             foreach($form->getMessages() as $message) {
 
                 $this->flash->error($message);
-                $this->response->redirect('register/');
 
             }
+
+            $this->response->redirect('register/');
 
         }
 

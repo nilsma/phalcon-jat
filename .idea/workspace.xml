@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/forms/AttachmentsForm.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/contact-create.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/css/contact-edit.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/application_old.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/edit.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicationController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ContactsController.php" afterPath="$PROJECT_DIR$/app/controllers/ContactsController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/EditApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/EditApplicationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/EditContactForm.php" afterPath="$PROJECT_DIR$/app/forms/EditContactForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/OverviewContactForm.php" afterPath="$PROJECT_DIR$/app/forms/OverviewContactForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/SessionController.php" afterPath="$PROJECT_DIR$/app/controllers/SessionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/application.js" afterPath="$PROJECT_DIR$/public/js/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/contact.js" afterPath="$PROJECT_DIR$/public/js/contact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/application.css" afterPath="$PROJECT_DIR$/public/css/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact.css" afterPath="$PROJECT_DIR$/public/css/contact.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
@@ -30,7 +39,17 @@
     <favorites_list name="phalcon-jat" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SessionController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="73" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.28519195" vertical-offset="1404" max-vertical-offset="3926">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -51,12 +70,8 @@
         <option value="$PROJECT_DIR$/app/views/partials/application-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/application-edit.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/application-attachments-form.phtml" />
-        <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/forms/CreateContactForm.php" />
-        <option value="$PROJECT_DIR$/app/forms/OverviewContactForm.php" />
         <option value="$PROJECT_DIR$/public/js/contact-edit.js" />
-        <option value="$PROJECT_DIR$/app/forms/EditContactForm.php" />
-        <option value="$PROJECT_DIR$/app/forms/EditApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/forms/AttachmentsForm.php" />
         <option value="$PROJECT_DIR$/app/forms/LoginForm.php" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
@@ -80,18 +95,22 @@
         <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/public/css/application-create.css" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml" />
-        <option value="$PROJECT_DIR$/public/css/application.css" />
-        <option value="$PROJECT_DIR$/public/css/contact.css" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/views/application/create.phtml" />
         <option value="$PROJECT_DIR$/app/views/contact/edit.phtml" />
         <option value="$PROJECT_DIR$/app/views/contact/create.phtml" />
-        <option value="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-template.phtml" />
         <option value="$PROJECT_DIR$/public/js/application.js" />
         <option value="$PROJECT_DIR$/app/views/application/edit.phtml" />
         <option value="$PROJECT_DIR$/public/js/contact.js" />
+        <option value="$PROJECT_DIR$/public/css/contact.css" />
+        <option value="$PROJECT_DIR$/public/css/application.css" />
         <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
+        <option value="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
+        <option value="$PROJECT_DIR$/app/forms/EditApplicationForm.php" />
+        <option value="$PROJECT_DIR$/app/forms/EditContactForm.php" />
+        <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
+        <option value="$PROJECT_DIR$/app/forms/OverviewContactForm.php" />
         <option value="$PROJECT_DIR$/app/controllers/ContactsController.php" />
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
       </list>
@@ -134,6 +153,40 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phalcon-jat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phalcon-jat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phalcon-jat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phalcon-jat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phalcon-jat" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Default">
           <PATH>
@@ -300,254 +353,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="register" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="contact" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="phalcon-jat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,15 +416,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21601209" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15030211" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -627,6 +431,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -662,11 +467,6 @@
         <state line="9" column="28" selection-start="189" selection-end="189" vertical-scroll-proportion="-8.357142" vertical-offset="0" max-vertical-offset="520" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/application-attachments-form.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1404" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="56" selection-start="464" selection-end="464" vertical-scroll-proportion="0.46263346" vertical-offset="78" max-vertical-offset="702" />
@@ -682,54 +482,9 @@
         <state line="22" column="17" selection-start="286" selection-end="286" vertical-scroll-proportion="0.046263345" vertical-offset="546" max-vertical-offset="2262" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/OverviewContactForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="48" selection-start="383" selection-end="383" vertical-scroll-proportion="0.6014235" vertical-offset="0" max-vertical-offset="3718" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/EditContactForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="33" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="156" max-vertical-offset="3510" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/forms/CreateContactForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="507" selection-end="507" vertical-scroll-proportion="0.55516016" vertical-offset="0" max-vertical-offset="3016" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application_old.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.044067796" vertical-offset="832" max-vertical-offset="3614" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/AttachmentsForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="564" selection-end="564" vertical-scroll-proportion="-2.4285715" vertical-offset="400" max-vertical-offset="962" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="56" selection-start="1796" selection-end="1796" vertical-scroll-proportion="0.0" vertical-offset="1572" max-vertical-offset="5512" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="38" selection-start="620" selection-end="620" vertical-scroll-proportion="0.6014235" vertical-offset="0" max-vertical-offset="3796" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/LoginForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="559" selection-end="559" vertical-scroll-proportion="-0.46263346" vertical-offset="572" max-vertical-offset="1716" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="295" selection-end="295" vertical-scroll-proportion="0.37010676" vertical-offset="52" max-vertical-offset="884" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/publicHeader.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="16" selection-start="536" selection-end="536" vertical-scroll-proportion="-4.75" vertical-offset="101" max-vertical-offset="676" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/memberHeader.phtml">
@@ -742,42 +497,14 @@
         <state line="11" column="0" selection-start="312" selection-end="312" vertical-scroll-proportion="0.50889677" vertical-offset="0" max-vertical-offset="1118" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/controllers-template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="467" selection-end="467" vertical-scroll-proportion="0.46263346" vertical-offset="0" max-vertical-offset="562" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/overview.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="45" selection-start="295" selection-end="295" vertical-scroll-proportion="-3.7142856" vertical-offset="156" max-vertical-offset="884" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact-overview.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="1" selection-start="40" selection-end="40" vertical-scroll-proportion="0.08813559" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact-edit.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact-create.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="156">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/application-edit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="590" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.volt">
@@ -785,158 +512,228 @@
         <state line="9" column="34" selection-start="393" selection-end="393" vertical-scroll-proportion="0.39661017" vertical-offset="0" max-vertical-offset="590" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.30847457" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="522" selection-end="522" vertical-scroll-proportion="0.61694914" vertical-offset="0" max-vertical-offset="1664">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/application-overview.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.08813559" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
+        <state line="14" column="24" selection-start="522" selection-end="522" vertical-scroll-proportion="0.61694914" vertical-offset="0" max-vertical-offset="1664" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.23861566" vertical-offset="25" max-vertical-offset="1456">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/application-create.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="119" selection-end="119" vertical-scroll-proportion="0.17627119" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/contact.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="1" selection-start="115" selection-end="115" vertical-scroll-proportion="0.17627119" vertical-offset="0" max-vertical-offset="590">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.23861566" vertical-offset="25" max-vertical-offset="1456" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/create.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.23679417" vertical-offset="0" max-vertical-offset="1664">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="92" selection-end="92" vertical-scroll-proportion="0.13220339" vertical-offset="0" max-vertical-offset="1508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/create.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="47" selection-start="3782" selection-end="3782" vertical-scroll-proportion="0.428051" vertical-offset="2131" max-vertical-offset="2886">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="113" selection-end="113" vertical-scroll-proportion="0.23679417" vertical-offset="0" max-vertical-offset="1664" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="35" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.75774133" vertical-offset="1170" max-vertical-offset="1742">
-          <folding />
-        </state>
+        <state line="61" column="35" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.75774133" vertical-offset="1170" max-vertical-offset="1742" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/register/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.4262295" vertical-offset="0" max-vertical-offset="1378">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.4262295" vertical-offset="0" max-vertical-offset="1378" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/RegisterUserForm.php">
+    <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="16" selection-start="977" selection-end="977" vertical-scroll-proportion="0.33274022" vertical-offset="463" max-vertical-offset="3250">
+        <state line="16" column="44" selection-start="697" selection-end="697" vertical-scroll-proportion="0.38069215" vertical-offset="207" max-vertical-offset="3900" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="30" selection-start="347" selection-end="347" vertical-scroll-proportion="0.23679417" vertical-offset="130" max-vertical-offset="2678" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/RegisterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="50" selection-start="192" selection-end="192" vertical-scroll-proportion="0.32384342" vertical-offset="0" max-vertical-offset="598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="47" selection-start="758" selection-end="758" vertical-scroll-proportion="0.64768684" vertical-offset="234" max-vertical-offset="1040" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ControllerBase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="338" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/create.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="44" selection-start="2888" selection-end="2888" vertical-scroll-proportion="0.37111518" vertical-offset="1513" max-vertical-offset="2886">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/forms/CreateApplicationForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="18" selection-start="2589" selection-end="2589" vertical-scroll-proportion="0.33274022" vertical-offset="1971" max-vertical-offset="4134">
+        <state line="7" column="33" selection-start="198" selection-end="198" vertical-scroll-proportion="0.325" vertical-offset="0" max-vertical-offset="4316">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/LoginForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="38" selection-start="559" selection-end="559" vertical-scroll-proportion="-1.5071429" vertical-offset="1156" max-vertical-offset="1716">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/application/overview.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="36" selection-start="478" selection-end="478" vertical-scroll-proportion="0.33214286" vertical-offset="282" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="20" selection-start="2341" selection-end="2341" vertical-scroll-proportion="0.37111518" vertical-offset="2007" max-vertical-offset="9880">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/forms/EditApplicationForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="464" selection-end="464" vertical-scroll-proportion="0.33274022" vertical-offset="73" max-vertical-offset="3614">
+        <state line="151" column="1" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.7214286" vertical-offset="3522" max-vertical-offset="4082">
+          <folding>
+            <element signature="e#7#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/EditContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="137" column="1" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.7214286" vertical-offset="3158" max-vertical-offset="3718">
+          <folding>
+            <element signature="e#7#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/OverviewContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="570" selection-end="570" vertical-scroll-proportion="-5.175" vertical-offset="3366" max-vertical-offset="3926">
+          <folding>
+            <element signature="e#7#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="44" selection-start="383" selection-end="383" vertical-scroll-proportion="0.23928571" vertical-offset="204" max-vertical-offset="4160">
+          <folding>
+            <element signature="e#7#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/RegisterUserForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="16" selection-start="1347" selection-end="1347" vertical-scroll-proportion="-2.9" vertical-offset="2690" max-vertical-offset="3250">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/edit.phtml">
+    <entry file="file://$PROJECT_DIR$/public/css/contact.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="44" selection-start="697" selection-end="697" vertical-scroll-proportion="0.38069215" vertical-offset="207" max-vertical-offset="3900">
+        <state line="2" column="33" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0920354" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-template.phtml">
+    <entry file="file://$PROJECT_DIR$/public/css/application-overview.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="30" selection-start="347" selection-end="347" vertical-scroll-proportion="0.23679417" vertical-offset="130" max-vertical-offset="2678">
+        <state line="2" column="0" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0920354" vertical-offset="0" max-vertical-offset="565">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/application.js">
+    <entry file="file://$PROJECT_DIR$/public/css/application-create.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="254" selection-end="254" vertical-scroll-proportion="0.090121314" vertical-offset="130" max-vertical-offset="7826">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="33" selection-start="86" selection-end="86" vertical-scroll-proportion="0.088435374" vertical-offset="0" max-vertical-offset="588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/publicHeader.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="16" selection-start="536" selection-end="536" vertical-scroll-proportion="0.24314442" vertical-offset="101" max-vertical-offset="676">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/controllers-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="10" selection-start="467" selection-end="467" vertical-scroll-proportion="0.4642857" vertical-offset="0" max-vertical-offset="560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/application-attachments-form.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="328" selection-end="328" vertical-scroll-proportion="-0.9963437" vertical-offset="857" max-vertical-offset="1404">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="1" selection-start="852" selection-end="852" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/register.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="364">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/contact.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="109" selection-start="600" selection-end="600" vertical-scroll-proportion="0.4559322" vertical-offset="121" max-vertical-offset="1430">
+        <state line="21" column="5" selection-start="750" selection-end="750" vertical-scroll-proportion="0.73913044" vertical-offset="121" max-vertical-offset="1430">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="12" selection-start="254" selection-end="254" vertical-scroll-proportion="0.09043478" vertical-offset="130" max-vertical-offset="7826">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="129" selection-end="129" vertical-scroll-proportion="0.30952382" vertical-offset="0" max-vertical-offset="588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/contact-overview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="1" selection-start="40" selection-end="40" vertical-scroll-proportion="0.088435374" vertical-offset="0" max-vertical-offset="588">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="0" selection-start="6823" selection-end="6823" vertical-scroll-proportion="0.046263345" vertical-offset="5564" max-vertical-offset="7228">
-          <folding>
-            <element signature="e#7#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="822" selection-end="822" vertical-scroll-proportion="0.3697632" vertical-offset="655" max-vertical-offset="9880">
+        <state line="236" column="53" selection-start="7376" selection-end="7376" vertical-scroll-proportion="0.23765996" vertical-offset="6006" max-vertical-offset="7176">
           <folding>
             <element signature="e#7#29#0" expanded="true" />
           </folding>
@@ -945,28 +742,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="3236" selection-end="3236" vertical-scroll-proportion="3.6958106" vertical-offset="1091" max-vertical-offset="3640">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/RegisterController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="50" selection-start="192" selection-end="192" vertical-scroll-proportion="0.32384342" vertical-offset="0" max-vertical-offset="598">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="47" selection-start="758" selection-end="758" vertical-scroll-proportion="0.64768684" vertical-offset="234" max-vertical-offset="1040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ControllerBase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="338">
+        <state line="60" column="73" selection-start="1453" selection-end="1453" vertical-scroll-proportion="0.28519195" vertical-offset="1404" max-vertical-offset="3926">
           <folding />
         </state>
       </provider>

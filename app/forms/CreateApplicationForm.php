@@ -140,14 +140,14 @@ class CreateApplicationForm extends Form {
             ))
         ));
 
+        $this->add($notes);
+
         // create hidden contact_details for application id
         $app_id = new Hidden('app_id', array(
             'value' => ''
         ));
 
         $this->add($app_id);
-
-        $this->add($notes);
 
         // create submit contact_details for the form
         $submit = new Submit('Save', array(
