@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/forms/RegisterUserForm.php" afterPath="$PROJECT_DIR$/app/forms/RegisterForm.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/RegisterController.php" afterPath="$PROJECT_DIR$/app/controllers/RegisterController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/publicHeader.phtml" afterPath="$PROJECT_DIR$/app/views/partials/publicHeader.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="" />
     <ignored path="phalcon-jat.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
