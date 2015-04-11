@@ -174,8 +174,14 @@ class ContactsController extends \Phalcon\Mvc\Controller {
             try {
 
                 $contact->save();
-                $this->flash->success('Contact saved');
-                $this->response->redirect('contacts/overview');
+
+                if(!$this->request->isAjax()) {
+                    $this->flash->success('Contact saved');
+                    $this->response->redirect('contacts/overview');
+                } else {
+                    $this->flash->success('Else block');
+                    $this->response->redirect('contacts/overview');
+                }
 
             } catch(Exception $e) {
 

@@ -1,5 +1,7 @@
 <div id="main-container">
 
+    <div id="dialog-overlay"></div>
+
     <?php $this->partial('partials/memberHeader'); ?>
 
     <div id="inner-container">
@@ -24,42 +26,42 @@
                 <div class="application-left col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
                     <div class="application-company form-group">
-                        <?php echo $form->label('company') . "\n"; ?>
-                        <?php echo $form->render('company') . "\n"; ?>
+                        <?php echo $application_form->label('company') . "\n"; ?>
+                        <?php echo $application_form->render('company') . "\n"; ?>
                     </div>
 
                     <div class="application-position form-group">
-                        <?php echo $form->label('position') . "\n"; ?>
-                        <?php echo $form->render('position') . "\n"; ?>
+                        <?php echo $application_form->label('position') . "\n"; ?>
+                        <?php echo $application_form->render('position') . "\n"; ?>
                     </div>
 
-                    <div class="application-recruitment form-group">
-                        <?php echo $form->label('recruitment') . "\n"; ?>
-                        <?php echo $form->render('recruitment') . "\n"; ?>
+                    <div class="application-recruitment application_form-group">
+                        <?php echo $application_form->label('recruitment') . "\n"; ?>
+                        <?php echo $application_form->render('recruitment') . "\n"; ?>
                     </div>
 
-                    <div class="application-notes form-group">
-                        <?php echo $form->label('notes') . "\n"; ?>
-                        <?php echo $form->render('notes') . "\n"; ?>
+                    <div class="application-notes application_form-group">
+                        <?php echo $application_form->label('notes') . "\n"; ?>
+                        <?php echo $application_form->render('notes') . "\n"; ?>
                     </div>
 
                 </div> <!-- end .application-left -->
 
                 <div class="application-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="application-applied form-group">
-                        <?php echo $form->label('applied') . "\n"; ?>
-                        <?php echo $form->render('applied') . "\n"; ?>
+                    <div class="application-applied application_form-group">
+                        <?php echo $application_form->label('applied') . "\n"; ?>
+                        <?php echo $application_form->render('applied') . "\n"; ?>
                     </div>
 
-                    <div class="application-due-date form-group">
-                        <?php echo $form->label('due_date') . "\n"; ?>
-                        <?php echo $form->render('due_date') . "\n"; ?>
+                    <div class="application-due-date application_form-group">
+                        <?php echo $application_form->label('due_date') . "\n"; ?>
+                        <?php echo $application_form->render('due_date') . "\n"; ?>
                     </div>
 
-                    <div class="application-follow-up form-group">
-                        <?php echo $form->label('follow_up') . "\n"; ?>
-                        <?php echo $form->render('follow_up') . "\n"; ?>
+                    <div class="application-follow-up application_form-group">
+                        <?php echo $application_form->label('follow_up') . "\n"; ?>
+                        <?php echo $application_form->render('follow_up') . "\n"; ?>
                     </div>
 
                     <div class="application-attachments-form form-group">
@@ -83,6 +85,7 @@
                             ?>
 
                         </select>
+
                     </div>
 
                     <div class="application-attachments form-group">
@@ -90,6 +93,8 @@
                         <ul id="contacts-list">
                         </ul>
                     </div>
+
+                    <?php echo $this->partial('partials/create-contact-modal') . "\n"; ?>
 
                 </div> <!-- end .application-right -->
 

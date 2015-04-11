@@ -1,8 +1,43 @@
+function saveModal() {
+    getContactElements(function(elements) {
+        saveContact(elements, function(contact_id) {
+            attachContact(contact_id);
+            exitModal();
+        });
+    });
+}
+
+function getContactElements(callback) {
+    callback();
+}
+
+function saveContact(elements, callback) {
+    callback();
+}
+
+function showModal() {
+    var element = document.getElementById('open-modal');
+    element.showModal();
+
+    var overlay = document.getElementById('dialog-overlay');
+    overlay.style.display = 'block';
+}
+
+function exitModal() {
+    resetSelectList(function() {
+        var element = document.getElementById('open-modal');
+        element.close();
+
+        var overlay = document.getElementById('dialog-overlay');
+        overlay.style.display = 'none';
+    });
+}
+
 function selectList() {
     var contact_id = parseInt(document.getElementById('select-contact').value);
 
     if(contact_id === 0) {
-        alert('creating new contact ...');
+        showModal();
     } else if(contact_id > 0) {
         attachContact(contact_id);
     } else {
@@ -252,6 +287,16 @@ function showContactDetails() {
 
 function init() {
 
+    var element = document.getElementById('save-modal');
+    if(element !== null) {
+        element.addEventListener('click', saveModal);
+    }
+
+    var element = document.getElementById('exit-modal');
+    if(element !== null) {
+        element.addEventListener('click', exitModal);
+    }
+
     var elements = document.getElementsByClassName('contact-remove');
     if(elements !== null) {
         for(var i = 0; i < elements.length; i++) {
@@ -287,6 +332,19 @@ function init() {
     if(element !== null) {
         element.addEventListener('change', selectList);
     }
+
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        if (evt.keyCode == 27) {
+            var overlay = document.getElementById('dialog-overlay');
+
+            if(overlay !== null || overlay !== undefined) {
+                overlay.style.display = 'none';
+            }
+
+        }
+    };
+
 }
 
 window.onload = function() {

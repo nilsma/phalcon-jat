@@ -55,7 +55,8 @@ div.form-controls {
     text-align: right;
 }
 
-div.form-controls a.cancel-item {
+div.form-controls a.cancel-item,
+div.form-controls a#exit-modal {
     margin-right: 20px;
 }
 

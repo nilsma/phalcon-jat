@@ -145,7 +145,8 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
             $user = unserialize($this->session->get('user'));
 
-            $form = new CreateApplicationForm();
+            $application_form = new CreateApplicationForm();
+            $contact_form = new CreateContactForm();
 
             $contacts = Contacts::find(array(
                 'conditions' => 'owner_id = ?1',
@@ -153,7 +154,8 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
             ));
 
             $this->view->setVar('contacts', $contacts);
-            $this->view->form = $form;
+            $this->view->application_form = $application_form;
+            $this->view->contact_form = $contact_form;
             $this->view->pick('application/create');
 
         } else {
@@ -234,7 +236,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
     }
 
     //TODO generalize and refactor to helpers class
-    private function isOwnerContacts(Users $user, Array $contacts) {
+    private function isOwnerContacts($user, Array $contacts) {
 
         $isOwner = true;
 
@@ -401,7 +403,7 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
 
             $error_message = 'Something went wrong while writing application to database: ' . $e->getMessage();
             $this->flash->error($error_message);
-            $this->response->redirect('application/createApplication');
+            $this->response->redirect('application/overview');
 
         }
 
