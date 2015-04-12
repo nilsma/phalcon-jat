@@ -42,21 +42,9 @@ function saveContact(elements, callback) {
     });
 }
 
-function showModal() {
-    var element = document.getElementById('open-modal');
-    element.showModal();
-
-    var overlay = document.getElementById('dialog-overlay');
-    overlay.style.display = 'block';
-}
-
 function exitModal() {
     resetSelectList(function() {
-        var element = document.getElementById('open-modal');
-        element.close();
-
-        var overlay = document.getElementById('dialog-overlay');
-        overlay.style.display = 'none';
+        $('#contact-modal').modal('hide');
     });
 }
 
@@ -64,7 +52,7 @@ function selectList() {
     var contact_id = parseInt(document.getElementById('select-contact').value);
 
     if(contact_id === 0) {
-        showModal();
+        $('#contact-modal').modal('show');
     } else if(contact_id > 0) {
         attachContact(contact_id);
     } else {
@@ -271,6 +259,7 @@ function showContactDetails() {
 }
 
 function init() {
+
     var elements = document.getElementsByClassName('date-field');
     if(elements.length > 0) {
         for(var i = 0; i < elements.length; i++) {
@@ -323,18 +312,6 @@ function init() {
     if(element !== null) {
         element.addEventListener('change', selectList);
     }
-
-    document.onkeydown = function(evt) {
-        evt = evt || window.event;
-        if (evt.keyCode == 27) {
-            var overlay = document.getElementById('dialog-overlay');
-
-            if(overlay !== null || overlay !== undefined) {
-                overlay.style.display = 'none';
-            }
-
-        }
-    };
 
 }
 

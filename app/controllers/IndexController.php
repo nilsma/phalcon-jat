@@ -20,6 +20,7 @@ class IndexController extends ControllerBase {
 
             $this->assets->addCss('css/main.css');
             $this->assets->addCss('css/login.css');
+            $this->assets->addCss('css/bootstrap.min.css');
             $this->assets->addJs('js/main.js');
 
             $form = new LoginForm();

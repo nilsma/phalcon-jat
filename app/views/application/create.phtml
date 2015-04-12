@@ -15,7 +15,7 @@
                 <div class="form-controls">
                     <div>
                         <a class="btn btn-default btn-sm cancel-item" href="/application/cancel"><i class="glyphicon glyphicon-arrow-left"></i></span></a>
-                        <button id="save-application" type="button" class="btn btn-sm btn-default save-item"><span><i class="glyphicon glyphicon-ok"></i></span> </button>
+                        <button id="save-application" type="button" class="btn btn-sm btn-default save-item"><i class="glyphicon glyphicon-ok"></i> </button>
                     </div>
                 </div>
 
@@ -35,12 +35,12 @@
                         <?php echo $application_form->render('position') . "\n"; ?>
                     </div>
 
-                    <div class="application-recruitment application_form-group">
+                    <div class="application-recruitment form-group">
                         <?php echo $application_form->label('recruitment') . "\n"; ?>
                         <?php echo $application_form->render('recruitment') . "\n"; ?>
                     </div>
 
-                    <div class="application-notes application_form-group">
+                    <div class="application-notes form-group">
                         <?php echo $application_form->label('notes') . "\n"; ?>
                         <?php echo $application_form->render('notes') . "\n"; ?>
                     </div>
@@ -49,17 +49,17 @@
 
                 <div class="application-right col-xs-12 col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="application-applied application_form-group">
+                    <div class="application-applied form-group">
                         <?php echo $application_form->label('applied') . "\n"; ?>
                         <?php echo $application_form->render('applied') . "\n"; ?>
                     </div>
 
-                    <div class="application-due-date application_form-group">
+                    <div class="application-due-date form-group">
                         <?php echo $application_form->label('due_date') . "\n"; ?>
                         <?php echo $application_form->render('due_date') . "\n"; ?>
                     </div>
 
-                    <div class="application-follow-up application_form-group">
+                    <div class="application-follow-up form-group">
                         <?php echo $application_form->label('follow_up') . "\n"; ?>
                         <?php echo $application_form->render('follow_up') . "\n"; ?>
                     </div>
@@ -93,6 +93,8 @@
                         <ul id="contacts-list">
                         </ul>
                     </div>
+
+                    <?php echo $this->partial('partials/contact-modal') . "\n"; ?>
 
                 </div> <!-- end .application-right -->
 
