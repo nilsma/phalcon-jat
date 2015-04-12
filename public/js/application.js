@@ -263,7 +263,7 @@ function init() {
     var elements = document.getElementsByClassName('date-field');
     if(elements.length > 0) {
         for(var i = 0; i < elements.length; i++) {
-            $(elements[i]).datepicker({dateFormat: 'dd/mm/yy'});
+            $(elements[i]).datepicker({dateFormat: 'yy/mm/dd'});
         }
     }
 
