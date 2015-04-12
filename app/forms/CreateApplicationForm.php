@@ -68,7 +68,7 @@ class CreateApplicationForm extends Form {
         $company = new Text('company', array(
             'placeholder' => 'Company',
             'maxlength' => 50,
-            'class' => 'form-control date-field'
+            'class' => 'form-control'
         ));
 
         $company->setLabel('Company: ');
