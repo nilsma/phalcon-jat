@@ -164,7 +164,7 @@ class ContactsController extends \Phalcon\Mvc\Controller {
                 $contact->owner_id = $user->id;
                 $contact->name = $this->request->getPost('name', array('string', 'striptags', 'trim'));
                 $contact->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
-                $contact->email = $this->request->getPost('email', array('string', 'striptags', 'trim'));
+                $contact->email = $this->request->getPost('email', array('email', 'striptags', 'trim'));
                 $contact->phone = $this->request->getPost('phone', array('string', 'striptags', 'trim'));
                 $contact->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
 
@@ -179,8 +179,8 @@ class ContactsController extends \Phalcon\Mvc\Controller {
                     $this->flash->success('Contact saved');
                     $this->response->redirect('contacts/overview');
                 } else {
-                    $this->flash->success('Else block');
-                    $this->response->redirect('contacts/overview');
+                    echo json_encode($contact->id, JSON_FORCE_OBJECT);
+                    //$this->response->redirect('contacts/overview');
                 }
 
             } catch(Exception $e) {

@@ -51,17 +51,10 @@ class Contacts extends \Phalcon\Mvc\Model {
      */
     public function validation() {
 
-        $this->validate(
-            new Email(
-                array(
-                    'field'    => 'email',
-                    'required' => true,
-                )
-            )
-        );
         if ($this->validationHasFailed() == true) {
             return false;
         }
+
     }
 
     /**

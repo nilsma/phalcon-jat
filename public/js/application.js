@@ -1,18 +1,45 @@
 function saveModal() {
-    getContactElements(function(elements) {
-        saveContact(elements, function(contact_id) {
-            attachContact(contact_id);
-            exitModal();
+    getContactElements(function(contact) {
+        saveContact(contact, function(contact_id) {
+            contact.id = contact_id;
+            appendContactToSelect(contact, function() {
+                injectHTML(contact, function() {
+                    attachContact(contact_id);
+                    exitModal();
+                });
+            });
         });
     });
 }
 
-function getContactElements(callback) {
+function appendContactToSelect(contact, callback) {
+    var options = document.getElementById('select-contact').options;
+
+    options[options.length] = new Option(contact['name'], contact['id']);
+
     callback();
 }
 
+function getContactElements(callback) {
+    var details = new Object();
+    details.name = document.getElementById('name').value;
+    details.position = document.getElementsByName('position')[1].value;
+    details.email = document.getElementById('email').value;
+    details.phone = document.getElementById('phone').value;
+    details.notes = document.getElementById('notes').value;
+    callback(details);
+}
+
 function saveContact(elements, callback) {
-    callback();
+    $.post("/contacts/save", {
+        name: elements['name'],
+        position: elements['position'],
+        email: elements['email'],
+        phone: elements['phone'],
+        notes: elements['notes']
+    }).done(function(contact_id) {
+        callback(JSON.parse(contact_id));
+    });
 }
 
 function showModal() {
@@ -43,10 +70,6 @@ function selectList() {
     } else {
         // do nothing
     }
-}
-
-function showContactDetails(contact_id) {
-    alert('test');
 }
 
 function attachContact(contact_id) {
@@ -139,51 +162,13 @@ function resetSelectList(callback) {
     callback();
 }
 
-function notifyContactName() {
-    var contact_id = parseInt(this.parentNode.parentNode.id);
-
-    getContactDetails(contact_id, function(contact) {
-        var string = 'Name: ' + contact['name'] + "\n";
-        string += 'Position: ' + contact['position'] + "\n";
-        string += 'Email: ' + contact['email'] + "\n";
-        string += 'Phone: ' + contact['phone'] + "\n";
-        string += 'Notes: ' + contact['notes'] + "\n";
-
-        alert(string);
-    });
-
-}
-
 function detachContact() {
     var child = this.parentNode.parentNode;
     var parent = child.parentNode;
     parent.removeChild(child);
-
-    /*
-    var lis = document.querySelectorAll('ul#contacts-list li');
-
-    if(lis.length < 1) {
-
-        var element = document.getElementById('contacts-list');
-
-        var li = document.createElement('li');
-        li.innerHTML = 'You have not attached any contacts yet.';
-
-        element.appendChild(li);
-
-    }
-    */
-
 }
 
 function addContactListeners() {
-    var elements = document.getElementsByClassName('contact-name');
-    if(elements !== null) {
-        for(var i = 0; i < elements.length; i++) {
-            elements[i].addEventListener('click', notifyContactName);
-        }
-    }
-
     var elements = document.getElementsByClassName('contact-remove');
     if(elements !== null) {
         for(var i = 0; i < elements.length; i++) {
