@@ -14,9 +14,9 @@ class CreateApplicationForm extends Form {
     public function initialize() {
 
         // create date contact_details for applied date
-        $applied = new Date("applied", array(
+        $applied = new Text("applied", array(
             'placeholder' => 'Application Date',
-            'class' => 'form-control'
+            'class' => 'form-control date-field'
         ));
 
         $applied->setLabel('Applied: ');
@@ -31,9 +31,9 @@ class CreateApplicationForm extends Form {
         $this->add($applied);
 
         // create date contact_details for due_date
-        $due_date = new Date("due_date", array(
-            'placeholder' => 'Application Due Date',
-            'class' => 'form-control'
+        $due_date = new Text("due_date", array(
+            'placeholder' => 'Due Date',
+            'class' => 'form-control date-field'
         ));
 
         $due_date->setLabel('Due Date: ');
@@ -48,9 +48,9 @@ class CreateApplicationForm extends Form {
         $this->add($due_date);
 
         // create date contact_details for follow-up
-        $follow_up = new Date("follow_up", array(
-            'placeholder' => 'Application Follow-Up Date',
-            'class' => 'form-control'
+        $follow_up = new Text("follow_up", array(
+            'placeholder' => 'Follow-Up Date',
+            'class' => 'form-control date-field'
         ));
 
         $follow_up->setLabel('Follow-Up: ');
@@ -68,7 +68,7 @@ class CreateApplicationForm extends Form {
         $company = new Text('company', array(
             'placeholder' => 'Company',
             'maxlength' => 50,
-            'class' => 'form-control'
+            'class' => 'form-control date-field'
         ));
 
         $company->setLabel('Company: ');
