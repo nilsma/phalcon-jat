@@ -26,7 +26,7 @@ function getContactElements(callback) {
     details.position = document.getElementsByName('position')[1].value;
     details.email = document.getElementById('email').value;
     details.phone = document.getElementById('phone').value;
-    details.notes = document.getElementById('notes').value;
+    details.notes = document.getElementsByName('notes')[1].value;
     callback(details);
 }
 
