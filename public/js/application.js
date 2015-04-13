@@ -182,8 +182,10 @@ function saveApplication() {
     var lis = document.querySelectorAll('ul#contacts-list li');
 
     if(lis.length > 0) {
+        var contact_id;
         for (var i = 0; i < lis.length; i++) {
-            contacts.push(lis[i].id);
+            contact_id = lis[i].childNodes[0].childNodes[0].value;
+            contacts.push(contact_id);
         }
     }
 

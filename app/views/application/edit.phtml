@@ -104,7 +104,7 @@
 
                                 $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
 
-                                $html .= '<li class="bg-success">' . "\n";
+                                $html .= '<li class="bg-success">';
                                 $html .= '<div>';
                                 $html .= '<input type="hidden" value="' . $contact->id . '"/>';
                                 $html .= '<span class="contact-name">';
@@ -119,6 +119,11 @@
 
                                 $html .= '</span>';
                                 $html .= '</div>';
+
+                                $html .= '<div>' . "\n";
+                                $html .= '<button class="btn btn-danger btn-xs contact-remove" type="button">remove</button>' . "\n";
+                                $html .= '</div>' . "\n";
+
                                 $html .= '</li>';
 
                             }

@@ -10,17 +10,21 @@ div.application-bottom {
 
 ul#contacts-list {
     list-style: none;
+    margin-left: -10px;
 }
 
 ul#contacts-list li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: -27px;
     margin-bottom: 5px;
     padding: 5px;
 }
 
 ul#contacts-list li:last-child {
     margin-bottom: 0;
+}
+
+ul#contacts-list span.contact-name span {
+    font-size: 10px;
 }
