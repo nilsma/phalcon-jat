@@ -3,10 +3,8 @@ function saveContactCreateModal() {
         saveContact(contact, function(contact_id) {
             contact.id = contact_id;
             appendContactToSelect(contact, function() {
-                injectHTML(contact, function() {
-                    attachContact(contact_id);
-                    exitContactCreateModal();
-                });
+                attachContact(contact_id);
+                exitContactCreateModal();
             });
         });
     });
