@@ -1,11 +1,11 @@
-function saveModal() {
+function saveContactCreateModal() {
     getContactElements(function(contact) {
         saveContact(contact, function(contact_id) {
             contact.id = contact_id;
             appendContactToSelect(contact, function() {
                 injectHTML(contact, function() {
                     attachContact(contact_id);
-                    exitModal();
+                    exitContactCreateModal();
                 });
             });
         });
@@ -42,9 +42,9 @@ function saveContact(elements, callback) {
     });
 }
 
-function exitModal() {
+function exitContactCreateModal() {
     resetSelectList(function() {
-        $('#contact-modal').modal('hide');
+        $('#contact-create-modal').modal('hide');
     });
 }
 
@@ -52,7 +52,7 @@ function selectList() {
     var contact_id = parseInt(document.getElementById('select-contact').value);
 
     if(contact_id === 0) {
-        $('#contact-modal').modal('show');
+        $('#contact-create-modal').modal('show');
     } else if(contact_id > 0) {
         attachContact(contact_id);
     } else {
@@ -106,15 +106,19 @@ function injectHTML(object, callback) {
     var contacts_list = document.getElementById('contacts-list');
 
     var li = document.createElement('li');
-    li.id = object['id'];
     li.className = 'bg-success';
 
     var div1 = document.createElement('div');
     li.appendChild(div1);
 
+    var hidden = document.createElement('input');
+    hidden.setAttribute('type', 'hidden');
+    hidden.setAttribute('value', object['id']);
+    div1.appendChild(hidden);
+
     var span1 = document.createElement('span');
     span1.className = 'contact-name';
-    span1.innerHTML = '<a href="#">' + object['name'] + '</a>';
+    span1.innerHTML = '<a class="attachment-details">' + object['name'] + '</a>';
 
     if(object['position'].length > 0) {
 
@@ -161,6 +165,13 @@ function addContactListeners() {
     if(elements !== null) {
         for(var i = 0; i < elements.length; i++) {
             elements[i].addEventListener('click', detachContact);
+        }
+    }
+
+    var elements = document.getElementsByClassName('attachment-details');
+    if(elements !== null) {
+        for(var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', showContactDetails);
         }
     }
 }
@@ -244,7 +255,8 @@ function deleteApplicationQuery(application_id, callback) {
 }
 
 function showContactDetails() {
-    var contact_id = this.parentNode.childNodes[1].value;
+
+    var contact_id = this.parentNode.parentNode.childNodes[0].value;
 
     getContactDetails(contact_id, function(contact) {
         var details = 'Name: ' + contact['name'] + "\n";
@@ -255,7 +267,6 @@ function showContactDetails() {
 
         alert(details);
     });
-
 }
 
 function init() {
@@ -267,14 +278,14 @@ function init() {
         }
     }
 
-    var element = document.getElementById('save-modal');
+    var element = document.getElementById('save-contact-create-modal');
     if(element !== null) {
-        element.addEventListener('click', saveModal);
+        element.addEventListener('click', saveContactCreateModal);
     }
 
-    var element = document.getElementById('exit-modal');
+    var element = document.getElementById('exit-contact-create-modal');
     if(element !== null) {
-        element.addEventListener('click', exitModal);
+        element.addEventListener('click', exitContactCreateModal);
     }
 
     var elements = document.getElementsByClassName('contact-remove');

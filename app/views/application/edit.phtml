@@ -104,22 +104,22 @@
 
                                 $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
 
-                                $html .= '<li id="' . $contact->id. '" class="bg-success">' . "\n";
-                                $html .= '<div>' . "\n";
-                                $html .= '<input type="hidden" value="' . $contact->id . '">' . "\n";
-                                $html .= '<a class="attachment-details">' . $contact->name . '</a>' . "\n";
+                                $html .= '<li class="bg-success">' . "\n";
+                                $html .= '<div>';
+                                $html .= '<input type="hidden" value="' . $contact->id . '"/>';
+                                $html .= '<span class="contact-name">';
+                                $html .= '<a class="attachment-details">' . $contact->name . '</a>';
 
                                 if(strlen($contact->position) > 0) {
-                                    $html .= '<br/>' . "\n";
-                                    $html .= '<span>(' . $contact->position . ')</span>' . "\n";
+                                    $html .= '<br>';
+                                    $html .= '<span class="hidden-xs">';
+                                    $html .= '(' . $contact->position . ')';
+                                    $html .= '</span>';
                                 }
 
-                                $html .= '</div>'  . "\n";
-                                $html .= '<div>' . "\n";
-                                $html .= '<button type="button" class="btn btn-danger btn-xs contact-remove">remove</button>';
-                                $html .= '</div>' . "\n";
-
-                                $html .= '</li>' . "\n";
+                                $html .= '</span>';
+                                $html .= '</div>';
+                                $html .= '</li>';
 
                             }
 

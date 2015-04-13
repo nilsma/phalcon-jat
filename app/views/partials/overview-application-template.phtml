@@ -62,7 +62,7 @@
 
             <div class="application-attachments form-group">
                 <label>Contacts:</label>
-                <ul>
+                <ul id="contacts-list">
                     <?php
 
                     $attachments = ContactAttachments::find(array(
@@ -76,10 +76,22 @@
 
                         $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
 
-                        $html .= '<li>' . "\n";
-                        $html .= '<input type="hidden" value="' . $contact->id . '">' . "\n";
-                        $html .= '<a class="attachment-details">' . $contact->name . '</a>' . "\n";
-                        $html .= '</li>' . "\n";
+                        $html .= '<li class="bg-success">' . "\n";
+                        $html .= '<div>';
+                        $html .= '<input type="hidden" value="' . $contact->id . '"/>';
+                        $html .= '<span class="contact-name">';
+                        $html .= '<a class="attachment-details">' . $contact->name . '</a>';
+
+                        if(strlen($contact->position) > 0) {
+                            $html .= '<br>';
+                            $html .= '<span class="hidden-xs">';
+                            $html .= '(' . $contact->position . ')';
+                            $html .= '</span>';
+                        }
+
+                        $html .= '</span>';
+                        $html .= '</div>';
+                        $html .= '</li>';
 
                     }
 
