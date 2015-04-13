@@ -258,6 +258,11 @@ function showContactDetails() {
 
     var contact_id = this.parentNode.parentNode.childNodes[0].value;
 
+    showContactPresentationModal(function() {
+
+    });
+
+    /*
     getContactDetails(contact_id, function(contact) {
         var details = 'Name: ' + contact['name'] + "\n";
         details += 'Position: ' + contact['position'] + "\n";
@@ -265,8 +270,9 @@ function showContactDetails() {
         details += 'Phone: ' + contact['phone'] + "\n";
         details += 'Notes: ' + contact['notes'];
 
-        alert(details);
+    //    alert(details);
     });
+    */
 }
 
 function init() {
