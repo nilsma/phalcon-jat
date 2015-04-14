@@ -42,7 +42,7 @@ function saveContact(elements, callback) {
 
 function exitContactCreateModal() {
     resetSelectList(function() {
-        $('#contact-create-modal').modal('hide');
+        $('#contact-modal-create').modal('hide');
     });
 }
 
@@ -50,7 +50,7 @@ function selectList() {
     var contact_id = parseInt(document.getElementById('select-contact').value);
 
     if(contact_id === 0) {
-        $('#contact-create-modal').modal('show');
+        $('#contact-modal-create').modal('show');
     } else if(contact_id > 0) {
         attachContact(contact_id);
     } else {
@@ -258,21 +258,27 @@ function showContactDetails() {
 
     var contact_id = this.parentNode.parentNode.childNodes[0].value;
 
-    showContactPresentationModal(function() {
-
-    });
-
-    /*
     getContactDetails(contact_id, function(contact) {
-        var details = 'Name: ' + contact['name'] + "\n";
-        details += 'Position: ' + contact['position'] + "\n";
-        details += 'Email: ' + contact['email'] + "\n";
-        details += 'Phone: ' + contact['phone'] + "\n";
-        details += 'Notes: ' + contact['notes'];
-
-    //    alert(details);
+        insertContactModalValues(contact, function() {
+            $('#contact-modal-presentation').modal('show');
+        });
     });
-    */
+}
+
+function insertContactModalValues(contact, callback) {
+    var name = document.getElementById('name');
+    var position = document.getElementsByName('position')[1];
+    var email = document.getElementById('email');
+    var phone = document.getElementById('phone');
+    var notes = document.getElementsByName('notes')[1];
+
+    name.value = contact['name'];
+    position.value = contact['position'];
+    email.value = contact['email'];
+    phone.value = contact['phone'];
+    notes.value = contact['notes'];
+
+    callback();
 }
 
 function init() {
@@ -284,12 +290,12 @@ function init() {
         }
     }
 
-    var element = document.getElementById('save-contact-create-modal');
+    var element = document.getElementById('save-contact-modal-create');
     if(element !== null) {
         element.addEventListener('click', saveContactCreateModal);
     }
 
-    var element = document.getElementById('exit-contact-create-modal');
+    var element = document.getElementById('exit-contact-modal-create');
     if(element !== null) {
         element.addEventListener('click', exitContactCreateModal);
     }

@@ -1,0 +1,52 @@
+<!-- Modal -->
+<div class="modal" id="contact-modal-presentation" tabindex="-1" role="dialog" aria-labelledby="contact-modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <!-- <h4 class="modal-title" id="myModalLabel">Create New Contact</h4> -->
+            </div>
+            <div class="modal-body">
+
+                <!-- start custom content -->
+
+                <form action="/contacts/save" name="create-contact" method="post" role="form">
+
+                    <div class="contact-bottom">
+
+                        <div class="contact-name form-group">
+                            <label for="name">Name: </label>
+                            <input name="name" id="name" type="text" class="form-control" value="" placeholder="Contact Name" maxlength="50" disabled/>
+                        </div>
+
+                        <div class="contact-position form-group">
+                            <label for="position">Position: </label>
+                            <input name="position" id="position" type="text" class="form-control" value="" placeholder="Contact Position" maxlength="50" disabled/>
+                        </div>
+
+                        <div class="contact-email form-group">
+                            <label for="email">Email: </label>
+                            <input name="email" id="email" type="email" class="form-control" value="" placeholder="Contact Email" maxlength="50" disabled/>
+                        </div>
+
+                        <div class="contact-phone form-group">
+                            <label for="phone">Phone: </label>
+                            <input name="phone" id="phone" type="text" class="form-control" value="" placeholder="Contact Phone" maxlength="20" disabled/>
+                        </div>
+
+                        <div class="contact-notes form-group">
+                            <label for="notes">Notes: </label>
+                            <textarea name="notes" id="notes" value="" class="form-control" placeholder="Contact Notes" maxlength="500"></textarea>
+                        </div>
+
+                    </div> <!-- end #contact-bottom -->
+
+                </form>
+
+                <!-- end custom content -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end modal -->
