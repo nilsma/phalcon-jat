@@ -14,28 +14,28 @@
                     <div class="contact-bottom">
 
                         <div class="contact-name form-group">
-                            <?php echo $contact_form->label('name') . "\n"; ?>
-                            <?php echo $contact_form->render('name') . "\n"; ?>
+                            <label for="contact-modal-create-name">Name: </label>
+                            <input name="contact-modal-create-name" id="contact-modal-create-name" type="text" class="form-control" value="" placeholder="Contact Name" maxlength="50"/>
                         </div>
 
                         <div class="contact-position form-group">
-                            <?php echo $contact_form->label('position') . "\n"; ?>
-                            <?php echo $contact_form->render('position') . "\n"; ?>
+                            <label for="contact-modal-create-position">Position: </label>
+                            <input name="contact-modal-create-name" id="contact-modal-create-position" type="text" class="form-control" value="" placeholder="Contact Position" maxlength="50"/>
                         </div>
 
                         <div class="contact-email form-group">
-                            <?php echo $contact_form->label('email') . "\n"; ?>
-                            <?php echo $contact_form->render('email') . "\n"; ?>
+                            <label for="contact-modal-create-email">Email: </label>
+                            <input name="contact-modal-create-email" id="contact-modal-create-email" type="email" class="form-control" value="" placeholder="Contact Email" maxlength="50"/>
                         </div>
 
                         <div class="contact-phone form-group">
-                            <?php echo $contact_form->label('phone') . "\n"; ?>
-                            <?php echo $contact_form->render('phone') . "\n"; ?>
+                            <label for="contact-modal-create-phone">Phone: </label>
+                            <input name="contact-modal-create-phone" id="contact-modal-create-phone" type="text" class="form-control" value="" placeholder="Contact Phone" maxlength="50"/>
                         </div>
 
                         <div class="contact-notes form-group">
-                            <?php echo $contact_form->label('notes') . "\n"; ?>
-                            <?php echo $contact_form->render('notes') . "\n"; ?>
+                            <label for="contact-modal-create-notes">Notes: </label>
+                            <textarea name="contact-modal-create-notes" id="contact-modal-create-notes" value="" class="form-control" placeholder="Contact Notes" maxlength="500"></textarea>
                         </div>
 
                     </div> <!-- end #contact-bottom -->
