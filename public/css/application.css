@@ -4,10 +4,6 @@ div.application-top {
     padding: 4px 6px 4px 6px;
 }
 
-div.application-bottom {
-    padding: 10px;
-}
-
 ul#contacts-list {
     list-style: none;
     margin-left: -10px;

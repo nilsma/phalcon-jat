@@ -41,6 +41,22 @@ form {
     border-radius: 5px;
 }
 
+div.modal-header {
+    background-color: #6B7C84;
+    color: white;
+}
+
+div#contact-modal-presentation form,
+div#contact-modal-create form {
+    border: 0;
+    border-radius: 0;
+}
+
+div.application-bottom,
+div.contact-bottom {
+    padding: 10px;
+}
+
 label {
     font-weight: normal;
     margin-left: 12px;

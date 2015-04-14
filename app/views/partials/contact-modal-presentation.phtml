@@ -3,8 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <!-- <h4 class="modal-title" id="myModalLabel">Create New Contact</h4> -->
+                <h4 class="modal-title" id="myModalLabel">Contact Details</h4>
             </div>
             <div class="modal-body">
 
@@ -36,7 +35,7 @@
 
                         <div class="contact-notes form-group">
                             <label for="contact-modal-presentation-notes">Notes: </label>
-                            <textarea name="contact-modal-presentation-notes" id="contact-modal-presentation-notes" value="" class="form-control" placeholder="Contact Notes" maxlength="500"></textarea>
+                            <textarea name="contact-modal-presentation-notes" id="contact-modal-presentation-notes" value="" class="form-control" placeholder="Contact Notes" maxlength="500" disabled></textarea>
                         </div>
 
                     </div> <!-- end #contact-bottom -->
@@ -46,6 +45,11 @@
                 <!-- end custom content -->
 
             </div>
+
+            <div class="modal-footer">
+                <button id="exit-contact-modal-create" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
         </div>
     </div>
 </div>
