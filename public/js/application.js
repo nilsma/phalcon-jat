@@ -266,11 +266,11 @@ function showContactDetails() {
 }
 
 function insertContactModalValues(contact, callback) {
-    var name = document.getElementById('name');
-    var position = document.getElementsByName('position')[1];
-    var email = document.getElementById('email');
-    var phone = document.getElementById('phone');
-    var notes = document.getElementsByName('notes')[1];
+    var name = document.getElementById('contact-modal-presentation-name');
+    var position = document.getElementById('contact-modal-presentation-position');
+    var email = document.getElementById('contact-modal-presentation-email');
+    var phone = document.getElementById('contact-modal-presentation-phone');
+    var notes = document.getElementById('contact-modal-presentation-notes');
 
     name.value = contact['name'];
     position.value = contact['position'];
