@@ -76,6 +76,10 @@ div.form-controls a#exit-modal {
     margin-right: 20px;
 }
 
+textarea {
+    resize: none;
+}
+
 div#missing-entries {
     text-align: center;
 }
