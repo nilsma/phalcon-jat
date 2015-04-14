@@ -1,10 +1,12 @@
 function saveContactModalCreate() {
     getContactElements(function(contact) {
-        saveContact(contact, function(contact_id) {
-            contact.id = contact_id;
-            appendContactToSelect(contact, function() {
-                attachContact(contact_id);
-                exitContactModalCreate();
+        resetContactElements(function() {
+            saveContact(contact, function(contact_id) {
+                contact.id = contact_id;
+                appendContactToSelect(contact, function() {
+                    attachContact(contact_id);
+                    exitContactModalCreate();
+                });
             });
         });
     });
@@ -26,6 +28,18 @@ function getContactElements(callback) {
     details.phone = document.getElementById('contact-modal-create-phone').value;
     details.notes = document.getElementById('contact-modal-create-notes').value;
     callback(details);
+}
+
+function resetContactElements(callback) {
+
+    document.getElementById('contact-modal-create-name').value = '';
+    document.getElementById('contact-modal-create-position').value = '';
+    document.getElementById('contact-modal-create-email').value = '';
+    document.getElementById('contact-modal-create-phone').value = '';
+    document.getElementById('contact-modal-create-notes').value = '';
+
+    callback();
+
 }
 
 function saveContact(elements, callback) {
