@@ -16,7 +16,7 @@ class CreateApplicationForm extends Form {
         // create date contact_details for applied date
         $applied = new Text("applied", array(
             'placeholder' => 'Application Date',
-            'class' => 'form-control date-field'
+            'class' => 'form-control date-field date-picker'
         ));
 
         $applied->setLabel('Applied: ');
