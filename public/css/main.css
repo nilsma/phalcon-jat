@@ -32,7 +32,8 @@ div#controllers {
 }
 
 div#controllers div#create-application,
-div#controllers div#create-contact {
+div#controllers div#create-contact,
+div#sorting-and-filtering {
     margin-right: 15px;
 }
 

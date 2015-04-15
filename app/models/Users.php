@@ -1,9 +1,9 @@
 <?php
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
-use Phalcon\Mvc\Model\Validator\Uniqueness as UniquenessValidator;
 
-class Users extends \Phalcon\Mvc\Model {
+class Users extends \Phalcon\Mvc\Model
+{
 
     /**
      *
@@ -33,6 +33,12 @@ class Users extends \Phalcon\Mvc\Model {
      *
      * @var string
      */
+    public $view_type;
+
+    /**
+     *
+     * @var string
+     */
     public $sorting;
 
     /**
@@ -40,10 +46,6 @@ class Users extends \Phalcon\Mvc\Model {
      * @var string
      */
     public $filter;
-
-    /**
-     * Validations and business logic
-     */
     public function validation() {
 
         $this->validate(new UniquenessValidator(array(
@@ -67,6 +69,22 @@ class Users extends \Phalcon\Mvc\Model {
         if ($this->validationHasFailed() == true) {
             return false;
         }
+    }
+
+    /**
+     * Independent Column Mapping.
+     */
+    public function columnMap()
+    {
+        return array(
+            'id' => 'id', 
+            'username' => 'username', 
+            'email' => 'email', 
+            'password' => 'password', 
+            'view_type' => 'view_type', 
+            'sorting' => 'sorting', 
+            'filter' => 'filter'
+        );
     }
 
 }
