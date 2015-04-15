@@ -8,7 +8,14 @@
     <?php echo $this->assets->outputJs(); ?>
 	<title>Job Application Tracker</title>
 	</head>
-	<body id="<?php echo $this->router->getControllerName(); ?>">
+	<?php
+	if($this->router->getControllerName() == "") {
+	    $body_id = "index";
+	} else {
+	    $body_id = $this->router->getControllerName();
+	}
+	?>
+	<body id="<?php echo $body_id; ?>">
 		<?php echo $this->getContent(); ?>
 	</body>
 </html>

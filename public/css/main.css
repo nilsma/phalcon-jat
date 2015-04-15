@@ -191,7 +191,7 @@ div#missing-entries {
 }
 
 .ui-datepicker .ui-datepicker-current-day a {
-    color: #fff
+    color: #000;
 }
 
 .ui-datepicker .ui-datepicker-calendar .ui-datepicker-unselectable:hover {

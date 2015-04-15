@@ -8,7 +8,14 @@
     {{ assets.outputJs() }}
 	<title>Job Application Tracker</title>
 	</head>
-	<body id="{{ router.getControllerName() }}">
+	<?php
+	if($this->router->getControllerName() == "") {
+	    $body_id = "index";
+	} else {
+	    $body_id = $this->router->getControllerName();
+	}
+	?>
+	<body id="{{ body_id }}">
 		{{ content() }}
 	</body>
 </html>
