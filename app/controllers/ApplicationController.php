@@ -3,7 +3,7 @@
 use Phalcon\Exception;
 use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
 
-class ApplicationController extends \Phalcon\Mvc\Controller {
+class ApplicationController extends ControllerBase {
 
     public function indexAction() {
 
@@ -313,9 +313,24 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
                         $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
                         $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
                         $application->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
-                        $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
-                        $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
-                        $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+
+                        if($this->validateDate($this->request->getPost('applied'))) {
+                            $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
+                        } else {
+                            $application->applied = date("Y-m-d");
+                        }
+
+                        if($this->validateDate($this->request->getPost('due_date'))) {
+                            $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
+                        } else {
+                            $application->due = date("Y-m-d");
+                        }
+
+                        if($this->validateDate($this->request->getPost('follow_up'))) {
+                            $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+                        } else {
+                            $application->follow_up = date("Y-m-d");
+                        }
 
                     }
 
@@ -329,11 +344,28 @@ class ApplicationController extends \Phalcon\Mvc\Controller {
                     $application->position = $this->request->getPost('position', array('string', 'striptags', 'trim'));
                     $application->recruitment_company = $this->request->getPost('recruitment', array('string', 'striptags', 'trim'));
                     $application->notes = $this->request->getPost('notes', array('string', 'striptags', 'trim'));
-                    $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
-                    $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
-                    $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+
+                    if($this->validateDate($this->request->getPost('applied'))) {
+                        $application->applied = date("Y-m-d", strtotime($this->request->getPost('applied')));
+                    } else {
+                        $application->applied = date("Y-m-d");
+                    }
+
+                    if($this->validateDate($this->request->getPost('due_date'))) {
+                        $application->due = date("Y-m-d", strtotime($this->request->getPost('due_date')));
+                    } else {
+                        $application->due = date("Y-m-d");
+                    }
+
+                    if($this->validateDate($this->request->getPost('follow_up'))) {
+                        $application->follow_up = date("Y-m-d", strtotime($this->request->getPost('follow_up')));
+                    } else {
+                        $application->follow_up = date("Y-m-d");
+                    }
 
                 }
+
+                var_dump($application->applied);
 
                 $this->writeAction($application, $contacts);
 

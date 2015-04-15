@@ -1,6 +1,6 @@
 function saveContactModalCreate() {
     getContactElements(function(contact) {
-        resetContactElements(function() {
+        resetContactModalElements(function() {
             saveContact(contact, function(contact_id) {
                 contact.id = contact_id;
                 appendContactToSelect(contact, function() {
@@ -30,7 +30,7 @@ function getContactElements(callback) {
     callback(details);
 }
 
-function resetContactElements(callback) {
+function resetContactModalElements(callback) {
 
     document.getElementById('contact-modal-create-name').value = '';
     document.getElementById('contact-modal-create-position').value = '';
