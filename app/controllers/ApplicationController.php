@@ -248,23 +248,6 @@ class ApplicationController extends ControllerBase {
         return $order;
     }
 
-    private function getUserViewTypes(Users $user) {
-
-        $view_types = new stdClass();
-
-        $base_classes = "btn btn-default";
-        $view_types->details_classes = $base_classes;
-        $view_types->list_classes = $base_classes;
-
-        if($user->view_type == "OVERVIEW") {
-            $view_types->details_classes = $base_classes .= ' active';
-        } else {
-            $view_types->list_classes = $base_classes .= ' active';
-        }
-
-        return $view_types;
-    }
-
     public function setViewTypeAction() {
 
         $this->view->disable();

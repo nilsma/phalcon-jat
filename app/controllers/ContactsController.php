@@ -3,7 +3,7 @@
 use Phalcon\Exception;
 use Phalcon\Mvc\Model\Transaction\Manager as TransactionManager;
 
-class ContactsController extends \Phalcon\Mvc\Controller {
+class ContactsController extends ControllerBase {
 
     public function indexAction() {
 
@@ -115,8 +115,10 @@ class ContactsController extends \Phalcon\Mvc\Controller {
                 $missing_entries_class = 'container hidden';
             }
 
-            $this->view->setVar('contacts', $contacts);
             $this->view->pick('contact/overview');
+            $this->view->setVar('view_types', $this->getUserViewTypes($user));
+            $this->view->setVar('user', $user);
+            $this->view->setVar('contacts', $contacts);
             $this->view->setVar('inner_text', "New Contact");
             $this->view->setVar('missing_entries_class', $missing_entries_class);
             $this->view->setVar('entry_type', 'contact');
