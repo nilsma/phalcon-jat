@@ -33,7 +33,7 @@ div#controllers {
 
 div#controllers div#create-application,
 div#controllers div#create-contact,
-div#sorting-and-filtering {
+div#order-by {
     margin-right: 15px;
 }
 
@@ -63,15 +63,20 @@ a.application-order-link {
 }
 
 div.application-list div.application-start {
-    background-color: #efefef;
+    background-color: #d7d7d7;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     padding: 2px 4px;
     align-items: center;
 }
 
-div.application-list-company {
-    order: 0;
+div.application-list-dates {
+    display: flex;
+    align-items: center;
+}
+
+div.application-list-date {
+    text-align: center;
 }
 
 div.application-bottom,
@@ -219,4 +224,33 @@ div#missing-entries {
 .ui-datepicker .ui-datepicker-calendar .ui-datepicker-unselectable:hover {
     background-color: #fff;
     cursor: default;
+}
+
+div.application-list > div:first-child {
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #6B7C84;
+    border-bottom: 1px solid #666;
+}
+
+div.application-list > div:first-child a {
+    color: white;
+}
+
+button.delete-item,
+a.delete-item {
+    background-color: #d9534f;
+}
+
+button.save-item,
+a.save-item {
+    background-color: #5cb85c;
+}
+
+button.edit-item,
+a.edit-item,
+button.cancel-item,
+a.cancel-item {
+    background-color: #f0ad4e;
 }

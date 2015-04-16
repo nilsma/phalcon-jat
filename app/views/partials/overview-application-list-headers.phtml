@@ -2,27 +2,29 @@
 
     <div class="application-start">
 
-        <div class="application-list-date col-md-2">
-            <a href="/application/setApplicationOrder?app_order=due" class="application-order-link">Due Date</a>
+        <div class="application-list-dates hidden-xs col-sm-3 col-md-3 col-lg-3">
+            <div class="application-list-date hidden-xs hidden-sm hidden-md col-lg-4 ">
+                <a href="/application/setApplicationOrder?app_order=due" class="application-order-link">Due</a>
+            </div>
+
+            <div class="application-list-date xs-hidden hidden-xs hidden-sm col-md-6 col-lg-4">
+                <a href="/application/setApplicationOrder?app_order=applied" class="application-order-link">Applied</a>
+            </div>
+
+            <div class="application-list-date hidden-xs col-sm-12 col-md-6 col-lg-4">
+                <a href="/application/setApplicationOrder?app_order=follow_up" class="application-order-link">Follow-Up</a>
+            </div>
         </div>
 
-        <div class="application-list-date col-md-2">
-            <a href="/application/setApplicationOrder?app_order=applied" class="application-order-link">Applied</a>
-        </div>
-
-        <div class="application-list-date col-md-2">
-            <a href="/application/setApplicationOrder?app_order=follow_up" class="application-order-link">Follow-Up</a>
-        </div>
-
-        <div class="application-list-company col-md-2">
+        <div class="application-list-company col-xs-4 col-sm-3 col-md-3 col-lg-3">
             <a href="/application/setApplicationOrder?app_order=company" class="application-order-link">Company</a>
         </div>
 
-        <div class="application-list-position col-md-2">
+        <div class="application-list-position col-xs-4 col-sm-3 col-md-3 col-lg-3">
             <a href="/application/setApplicationOrder?app_order=position" class="application-order-link">Position</a>
         </div>
 
-        <div class="form-controls col-md-2">
+        <div class="form-controls col-xs-4 col-sm-3 col-md-3 col-lg-3">
             <!-- placeholder for form-controls column -->
         </div>
 

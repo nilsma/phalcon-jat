@@ -1,3 +1,63 @@
+<?php
+if($user->view_type == 'OVERVIEW') {
+    $html = <<<EOD
+
+<div id="controllers" class="{$missing_entries_class}">
+
+    <div id="controllers" class="container">
+        <div id="create-application">
+            <a class="btn btn-primary" href="create">{$inner_text}</a>
+        </div>
+
+        <!-- Single button -->
+        <div id="order-by" class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Sorting <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/application/setApplicationOrder?app_order=applied">Applied</a></li>
+                <li><a href="/application/setApplicationOrder?app_order=due">Due Date</a></li>
+                <li><a href="/application/setApplicationOrder?app_order=follow_up">Follow-Up</a></li>
+                <li><a href="/application/setApplicationOrder?app_order=company">Company</a></li>
+                <li><a href="/application/setApplicationOrder?app_order=position">Position</a></li>
+            </ul>
+        </div>
+
+        <div id="sorting-and-filtering" class="btn-group" role="group">
+            <a href="/application/setviewtype" class="{$view_types->details_classes}"><span><i class="glyphicon glyphicon-th-large"></i></span></a>
+            <a href="/application/setviewtype" class="{$view_types->list_classes}"><span><i class="glyphicon glyphicon-list"></i></span></a>
+        </div>
+    </div>
+</div> <!-- end #controllers -->
+
+EOD;
+
+} else {
+
+    $html = <<<EOD
+
+<div id="controllers" class="{$missing_entries_class}">
+
+    <div id="controllers" class="container">
+        <div id="create-application">
+            <a class="btn btn-primary" href="create">{$inner_text}</a>
+        </div>
+        <div id="sorting-and-filtering" class="btn-group" role="group">
+            <a href="/application/setviewtype" class="{$view_types->details_classes}"><span><i class="glyphicon glyphicon-th-large"></i></span></a>
+            <a href="/application/setviewtype" class="{$view_types->list_classes}"><span><i class="glyphicon glyphicon-list"></i></span></a>
+        </div>
+    </div>
+</div> <!-- end #controllers -->
+
+EOD;
+
+}
+
+echo $html;
+?>
+
+<!--
 <div id="controllers" class="<?php echo $missing_entries_class; ?>">
 
     <div id="controllers" class="container">
@@ -10,5 +70,4 @@
         </div>
         <button type="button" class="btn btn-default">Filter</button>
     </div>
-
-</div> <!-- end #controllers -->
+-->
