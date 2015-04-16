@@ -1,6 +1,7 @@
 <?php
 
 use Phalcon\Mvc\Model\Validator\Email as Email;
+use Phalcon\Mvc\Model\Validator\Uniqueness as UniquenessValidator;
 
 class Users extends \Phalcon\Mvc\Model
 {

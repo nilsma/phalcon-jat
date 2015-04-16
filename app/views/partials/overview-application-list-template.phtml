@@ -1,0 +1,41 @@
+
+<div class="application-list row">
+
+    <?php echo Phalcon\Tag::form(array("application/edit", "method" => "get", "name" => "application-form", "role" => "form")) . "\n"; ?>
+
+    <div class="application-start">
+
+        <div class="application-list-date col-md-2">
+            <?php echo $application->due . "\n"; ?>
+        </div>
+
+        <div class="application-list-date col-md-2">
+            <?php echo $application->applied . "\n"; ?>
+        </div>
+
+        <div class="application-list-date col-md-2">
+            <?php echo $application->follow_up . "\n"; ?>
+        </div>
+
+        <div class="application-list-company col-md-2">
+            <?php echo $application->company . "\n"; ?>
+        </div>
+
+        <div class="application-list-position col-md-2">
+            <?php echo $application->position . "\n"; ?>
+        </div>
+
+        <input type="hidden" id="app_id" name="app_id" value="<?php echo $application->id . "\n"; ?>"/>
+
+        <div class="form-controls col-md-2">
+            <div>
+                <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span> </button>
+                <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
+            </div>
+        </div>
+
+    </div> <!-- end .application-start -->
+
+    <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+
+</div>

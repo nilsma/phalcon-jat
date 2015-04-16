@@ -1,3 +1,4 @@
+
 <div id="main-container">
 
     <?php $this->partial('partials/memberHeader'); ?>
@@ -14,12 +15,25 @@
 
             if(count($applications) > 0) {
 
+                if($user->view_type == "LIST") {
+                    echo '<div class="container">' . "\n";
+                    echo $this->partial('partials/overview-application-list-headers') . "\n";
+                }
+
                 foreach($applications as $application) {
 
                     $form = new OverviewApplicationForm($application);
 
-                    echo $this->partial('partials/overview-application-details-template') . "\n";
+                    if($user->view_type == "OVERVIEW") {
+                        echo $this->partial('partials/overview-application-details-template') . "\n";
+                    } else {
+                        echo $this->partial('partials/overview-application-list-template') . "\n";
+                    }
 
+                }
+
+                if($user->view_type == "LIST") {
+                    echo '</div>' . "\n";
                 }
 
             } else {

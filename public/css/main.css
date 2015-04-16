@@ -53,6 +53,27 @@ div#contact-modal-create form {
     border-radius: 0;
 }
 
+div.application-list form {
+    border: none;
+    border-radius: 0;
+}
+
+a.application-order-link {
+    text-decoration: underline;
+}
+
+div.application-list div.application-start {
+    background-color: #efefef;
+    display: flex;
+    margin-bottom: 15px;
+    padding: 2px 4px;
+    align-items: center;
+}
+
+div.application-list-company {
+    order: 0;
+}
+
 div.application-bottom,
 div.contact-bottom {
     padding: 10px;

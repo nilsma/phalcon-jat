@@ -98,9 +98,13 @@ class ApplicationController extends ControllerBase {
             $this->assets->addJs('js/application.js');
 
             $user = unserialize($this->session->get('user'));
+
+            $order = $this->getApplicationOrder();
+
             $applications = Applications::find(array(
                 'conditions' => 'owner_id = ?1',
-                'bind' => array(1 => $user->id)
+                'bind' => array(1 => $user->id),
+                'order' => $order
             ));
 
             $contacts = Contacts::find(array(
@@ -115,6 +119,8 @@ class ApplicationController extends ControllerBase {
             }
 
             $this->view->pick('application/overview');
+            $this->view->setVar('user', $user);
+            $this->view->setVar('view_types', $this->getUserViewTypes($user));
             $this->view->setVar('email', $user->email);
             $this->view->setVar('applications', $applications);
             $this->view->setVar('contacts', $contacts);
@@ -126,6 +132,156 @@ class ApplicationController extends ControllerBase {
 
             $this->flash->error('You have to login first');
             $this->response->redirect('');
+
+        }
+
+    }
+
+    public function setApplicationOrderAction() {
+
+        $this->view->disable();
+
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $app_order = $this->request->get('app_order', array('string', 'striptags', 'trim'));
+
+            $new_order = '';
+
+            switch($app_order) {
+
+                case 'applied':
+
+                    if($current_order = $this->session->get('app_order')) {
+                        if($current_order == $app_order) {
+                            $new_order = 'applied desc';
+                        } else {
+                            $new_order = $app_order;
+                        }
+                    } else {
+                        $new_order = 'applied';
+                    }
+
+                    break;
+
+                case 'due':
+
+                    if($current_order = $this->session->get('app_order')) {
+                        if($current_order == $app_order) {
+                            $new_order = 'due desc';
+                        } else {
+                            $new_order = $app_order;
+                        }
+                    } else {
+                        $new_order = 'due';
+                    }
+
+                    break;
+
+                case 'follow_up':
+
+                    if($current_order = $this->session->get('app_order')) {
+                        if($current_order == $app_order) {
+                            $new_order = 'follow_up desc';
+                        } else {
+                            $new_order = $app_order;
+                        }
+                    } else {
+                        $new_order = 'follow_up';
+                    }
+
+                    break;
+
+                case 'company':
+
+                    if($current_order = $this->session->get('app_order')) {
+                        if($current_order == $app_order) {
+                            $new_order = 'company desc';
+                        } else {
+                            $new_order = $app_order;
+                        }
+                    } else {
+                        $new_order = 'company';
+                    }
+
+                    break;
+
+                case 'position':
+
+                    if($current_order = $this->session->get('app_order')) {
+                        if($current_order == $app_order) {
+                            $new_order = 'position desc';
+                        } else {
+                            $new_order = $app_order;
+                        }
+                    } else {
+                        $new_order = 'position';
+                    }
+
+                    break;
+
+                default:
+                    $new_order = 'due';
+                    break;
+
+            }
+
+            $this->session->set('app_order', $new_order);
+            $this->response->redirect('application/overview');
+
+        } else {
+
+            $this->flash->error('You have to login first');
+            $this->response->redirect('');
+
+        }
+
+    }
+
+    private function getApplicationOrder() {
+
+        if($this->session->has('app_order')) {
+            $order = $this->session->get('app_order');
+        } else {
+            $order = '';
+        }
+
+        return $order;
+    }
+
+    private function getUserViewTypes(Users $user) {
+
+        $view_types = new stdClass();
+
+        $base_classes = "btn btn-default";
+        $view_types->details_classes = $base_classes;
+        $view_types->list_classes = $base_classes;
+
+        if($user->view_type == "OVERVIEW") {
+            $view_types->details_classes = $base_classes .= ' active';
+        } else {
+            $view_types->list_classes = $base_classes .= ' active';
+        }
+
+        return $view_types;
+    }
+
+    public function setViewTypeAction() {
+
+        $this->view->disable();
+
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $user = unserialize($this->session->get('user'));
+
+            if($user->view_type == "OVERVIEW") {
+                $user->view_type = "LIST";
+            } else {
+                $user->view_type = "OVERVIEW";
+            }
+
+            $user->save();
+            $this->session->set('user', serialize($user));
+            $this->response->redirect('application/overview');
 
         }
 
