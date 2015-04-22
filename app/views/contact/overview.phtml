@@ -14,12 +14,25 @@
 
             if(count($contacts) > 0) {
 
+                if($user->view_type == "LIST") {
+                    echo '<div class="container">' . "\n";
+                    echo $this->partial('partials/overview-contact-list-headers') . "\n";
+                }
+
                 foreach($contacts as $contact) {
 
                     $form = new OverviewContactForm($contact);
 
-                    echo $this->partial('partials/overview-contact-template') . "\n";
+                    if($user->view_type == "OVERVIEW") {
+                        echo $this->partial('partials/overview-contact-details-template') . "\n";
+                    } else {
+                        echo $this->partial('partials/overview-contact-list-template') . "\n";
+                    }
 
+                }
+
+                if($user->view_type == "LIST") {
+                    echo '</div>' . "\n";
                 }
 
             } else {

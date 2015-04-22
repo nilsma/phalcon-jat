@@ -4,6 +4,30 @@ use Phalcon\Mvc\Controller;
 
 class ControllerBase extends Controller {
 
+    public function setViewTypeAction() {
+
+        $this->view->disable();
+
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $user = unserialize($this->session->get('user'));
+
+            $controllerName = $this->router->getControllerName();
+
+            if($user->view_type == "OVERVIEW") {
+                $user->view_type = "LIST";
+            } else {
+                $user->view_type = "OVERVIEW";
+            }
+
+            $user->save();
+            $this->session->set('user', serialize($user));
+            $this->response->redirect($controllerName . '/overview');
+
+        }
+
+    }
+
     protected function getUserViewTypes(Users $user) {
 
         $view_types = new stdClass();

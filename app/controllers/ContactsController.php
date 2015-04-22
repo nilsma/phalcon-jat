@@ -104,9 +104,12 @@ class ContactsController extends ControllerBase {
 
             $user = unserialize($this->session->get('user'));
 
+            $order = $this->getContactsOrder();
+
             $contacts = Contacts::find(array(
                 'conditions' => 'owner_id = ?1',
-                'bind' => array(1 => $user->id)
+                'bind' => array(1 => $user->id),
+                'order' => $order
             ));
 
             if(count($contacts) > 0) {
@@ -122,6 +125,75 @@ class ContactsController extends ControllerBase {
             $this->view->setVar('inner_text', "New Contact");
             $this->view->setVar('missing_entries_class', $missing_entries_class);
             $this->view->setVar('entry_type', 'contact');
+
+        } else {
+
+            $this->flash->error('You have to login first');
+            $this->response->redirect('');
+
+        }
+
+    }
+
+    private function getContactsOrder() {
+
+        if($this->session->has('contacts_order')) {
+            $order = $this->session->get('contacts_order');
+        } else {
+            $order = '';
+        }
+
+        return $order;
+    }
+
+    public function setContactsOrderAction() {
+
+        $this->view->disable();
+
+        if($this->session->has('user') && $this->session->get('auth') == True) {
+
+            $contacts_order = $this->request->get('contacts_order', array('string', 'striptags', 'trim'));
+
+            $new_order = '';
+
+            switch($contacts_order) {
+
+                case 'name':
+
+                    if($current_order = $this->session->get('contacts_order')) {
+                        if($current_order == $contacts_order) {
+                            $new_order = 'name desc';
+                        } else {
+                            $new_order = $contacts_order;
+                        }
+                    } else {
+                        $new_order = 'name';
+                    }
+
+                    break;
+
+                case 'position':
+
+                    if($current_order = $this->session->get('contacts_order')) {
+                        if($current_order == $contacts_order) {
+                            $new_order = 'position desc';
+                        } else {
+                            $new_order = $contacts_order;
+                        }
+                    } else {
+                        $new_order = 'position';
+                    }
+
+                    break;
+
+                default:
+                    $new_order = 'name';
+                    break;
+
+            }
+
+            $this->session->set('contacts_order', $new_order);
+            $this->response->redirect('contacts/overview');
 
         } else {
 

@@ -1,5 +1,8 @@
 <?php
-if($user->view_type == 'OVERVIEW') {
+if(
+($user->view_type == 'OVERVIEW' && $this->router->getControllerName() == 'application') ||
+($user->view_type == 'LIST' && $this->router->getControllerName() == 'application')
+) {
     $html = <<<EOD
 
 <div id="controllers" class="{$missing_entries_class}">
@@ -40,12 +43,12 @@ EOD;
 <div id="controllers" class="{$missing_entries_class}">
 
     <div id="controllers" class="container">
-        <div id="create-application">
+        <div id="create-contact">
             <a class="btn btn-primary" href="create">{$inner_text}</a>
         </div>
         <div id="sorting-and-filtering" class="btn-group" role="group">
-            <a href="/application/setviewtype" class="{$view_types->details_classes}"><span><i class="glyphicon glyphicon-th-large"></i></span></a>
-            <a href="/application/setviewtype" class="{$view_types->list_classes}"><span><i class="glyphicon glyphicon-list"></i></span></a>
+            <a href="/contacts/setviewtype" class="{$view_types->details_classes}"><span><i class="glyphicon glyphicon-th-large"></i></span></a>
+            <a href="/contacts/setviewtype" class="{$view_types->list_classes}"><span><i class="glyphicon glyphicon-list"></i></span></a>
         </div>
     </div>
 </div> <!-- end #controllers -->
@@ -56,18 +59,3 @@ EOD;
 
 echo $html;
 ?>
-
-<!--
-<div id="controllers" class="<?php echo $missing_entries_class; ?>">
-
-    <div id="controllers" class="container">
-        <div id="create-application">
-            <a class="btn btn-primary" href="create"><?php echo $inner_text; ?></a>
-        </div>
-        <div id="sorting-and-filtering" class="btn-group" role="group">
-            <a href="/application/setviewtype" class="<?php echo $view_types->details_classes; ?>"><span><i class="glyphicon glyphicon-th-large"></i></span></a>
-            <a href="/application/setviewtype" class="<?php echo $view_types->list_classes; ?>"><span><i class="glyphicon glyphicon-list"></i></span></a>
-        </div>
-        <button type="button" class="btn btn-default">Filter</button>
-    </div>
--->

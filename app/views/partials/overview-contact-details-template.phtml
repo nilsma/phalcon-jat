@@ -8,6 +8,7 @@
         <div class="form-controls">
             <div></div>
             <div>
+                <?php echo $form->render('contact_id') . "\n"; ?>
                 <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span></button>
                 <button type="button" class="btn btn-sm btn-default contact-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
             </div>
@@ -41,8 +42,6 @@
             <?php echo $form->label('notes') . "\n"; ?>
             <?php echo $form->render('notes') . "\n"; ?>
         </div>
-
-        <?php echo $form->render('contact_id') . "\n"; ?>
 
     </div>
 

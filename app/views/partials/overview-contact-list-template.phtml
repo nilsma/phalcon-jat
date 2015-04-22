@@ -1,0 +1,37 @@
+<div class="contact-list row">
+
+    <?php echo Phalcon\Tag::form(array("contacts/edit", "method" => "get", "name" => "contact-form", "role" => "form")) . "\n"; ?>
+
+    <div class="contact-start">
+
+        <div class="contact-list-name col-xs-4 col-sm-4 col-md-3 col-lg-3">
+            <?php echo $contact->name . "\n"; ?>
+        </div>
+
+        <div class="contact-list-position col-xs-4 col-sm-4 col-md-3 col-lg-3">
+            <?php echo $contact->position . "\n"; ?>
+        </div>
+
+        <div class="contact-list-addresses hidden-xs hidden-sm col-md-3 col-lg-3">
+            <div class="contact-list-address hidden-xs hidden-sm col-md-6 col-lg-4">
+                <?php echo $contact->phone . "\n"; ?>
+            </div>
+
+            <div class="contact-list-address hidden-xs hidden-sm col-md-6 col-lg-4">
+                <?php echo $contact->email . "\n"; ?>
+            </div>
+        </div>
+
+        <div class="form-controls col-xs-4 col-sm-4 col-md-3 col-lg-3">
+            <div>
+                <input type="hidden" id="contact_id" name="contact_id" value="<?php echo $contact->id . "\n"; ?>"/>
+                <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span> </button>
+                <button type="button" class="btn btn-sm btn-default contact-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
+            </div>
+        </div>
+
+    </div> <!-- end .application-start -->
+
+    <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+
+</div>

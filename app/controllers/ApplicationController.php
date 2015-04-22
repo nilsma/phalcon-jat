@@ -248,28 +248,6 @@ class ApplicationController extends ControllerBase {
         return $order;
     }
 
-    public function setViewTypeAction() {
-
-        $this->view->disable();
-
-        if($this->session->has('user') && $this->session->get('auth') == True) {
-
-            $user = unserialize($this->session->get('user'));
-
-            if($user->view_type == "OVERVIEW") {
-                $user->view_type = "LIST";
-            } else {
-                $user->view_type = "OVERVIEW";
-            }
-
-            $user->save();
-            $this->session->set('user', serialize($user));
-            $this->response->redirect('application/overview');
-
-        }
-
-    }
-
     public function createAction() {
 
         $this->assets->addCss('css/main.css');

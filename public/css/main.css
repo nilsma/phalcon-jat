@@ -53,16 +53,19 @@ div#contact-modal-create form {
     border-radius: 0;
 }
 
-div.application-list form {
+div.application-list form,
+div.contact-list form {
     border: none;
     border-radius: 0;
 }
 
-a.application-order-link {
+a.application-order-link,
+a.contact-order-link {
     text-decoration: underline;
 }
 
-div.application-list div.application-start {
+div.application-list div.application-start,
+div.contact-list div.contact-start {
     background-color: #d7d7d7;
     display: flex;
     margin-bottom: 6px;
@@ -70,13 +73,34 @@ div.application-list div.application-start {
     align-items: center;
 }
 
-div.application-list-dates {
+div.application-list-dates,
+div.contact-list-addresses {
     display: flex;
     align-items: center;
 }
 
-div.application-list-date {
+div.application-list-date,
+div.contact-list-address {
     text-align: center;
+}
+
+div.contact-list-addresses > div:first-child {
+    min-width: 170px;
+}
+
+div.application-list > div:first-child,
+div.contact-list > div:first-child {
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #6B7C84;
+    border-bottom: 1px solid #666;
+}
+
+div.application-list > div:first-child a,
+div.contact-list > div:first-child a,
+div.contact-list > div:first-child {
+    color: white;
 }
 
 div.application-bottom,
@@ -224,18 +248,6 @@ div#missing-entries {
 .ui-datepicker .ui-datepicker-calendar .ui-datepicker-unselectable:hover {
     background-color: #fff;
     cursor: default;
-}
-
-div.application-list > div:first-child {
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: #6B7C84;
-    border-bottom: 1px solid #666;
-}
-
-div.application-list > div:first-child a {
-    color: white;
 }
 
 button.delete-item,
