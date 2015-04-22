@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +35,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview-contact-list-headers.phtml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="overview-contact-list-headers.phtml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="14" selection-start="260" selection-end="260" vertical-scroll-proportion="-5.571429" vertical-offset="0" max-vertical-offset="858">
-              <folding />
+            <state line="18" column="41" selection-start="737" selection-end="737" vertical-scroll-proportion="0.48237476" vertical-offset="0" max-vertical-offset="676">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,20 +51,21 @@
       <file leaf-file-name="overview-contact-list-template.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="49" selection-start="793" selection-end="793" vertical-scroll-proportion="-10.25" vertical-offset="233" max-vertical-offset="1196">
-              <folding />
+            <state line="10" column="50" selection-start="388" selection-end="388" vertical-scroll-proportion="-2.7857144" vertical-offset="130" max-vertical-offset="988">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="overview-application-list-template.phtml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="overview-application-list-template.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="63" selection-start="529" selection-end="529" vertical-scroll-proportion="0.33269963" vertical-offset="163" max-vertical-offset="1144">
-              <folding>
-                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#div#0" expanded="false" />
-              </folding>
+            <state line="37" column="83" selection-start="1741" selection-end="1741" vertical-scroll-proportion="-4.678571" vertical-offset="831" max-vertical-offset="1690">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,12 +73,8 @@
       <file leaf-file-name="overview-application-list-headers.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="-15.785714" vertical-offset="0" max-vertical-offset="754">
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#div#0" expanded="false" />
-              </folding>
+            <state line="20" column="0" selection-start="866" selection-end="866" vertical-scroll-proportion="-2.5357144" vertical-offset="449" max-vertical-offset="1066">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +132,6 @@
         <option value="$PROJECT_DIR$/app/forms/CreateApplicationForm.php" />
         <option value="$PROJECT_DIR$/app/controllers/ControllerBase.php" />
         <option value="$PROJECT_DIR$/app/views/contact/overview.phtml" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml" />
         <option value="$PROJECT_DIR$/app/controllers/ContactsController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-details-template.phtml" />
         <option value="$PROJECT_DIR$/public/js/contact.js" />
@@ -141,9 +139,10 @@
         <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
         <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml" />
       </list>
     </option>
   </component>
@@ -586,7 +585,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27416918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -876,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="14" selection-start="260" selection-end="260" vertical-scroll-proportion="-5.571429" vertical-offset="0" max-vertical-offset="858">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ContactsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="113" column="0" selection-start="3296" selection-end="3296" vertical-scroll-proportion="-8.535714" vertical-offset="2673" max-vertical-offset="9594">
@@ -892,16 +884,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="49" selection-start="793" selection-end="793" vertical-scroll-proportion="-10.25" vertical-offset="233" max-vertical-offset="1196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="865" selection-end="865" vertical-scroll-proportion="-15.785714" vertical-offset="0" max-vertical-offset="754">
+        <state line="10" column="50" selection-start="388" selection-end="388" vertical-scroll-proportion="-2.7857144" vertical-offset="130" max-vertical-offset="988">
           <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#div#0;tag#div#0" expanded="false" />
           </folding>
@@ -910,8 +895,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="63" selection-start="529" selection-end="529" vertical-scroll-proportion="0.33269963" vertical-offset="163" max-vertical-offset="1144">
+        <state line="37" column="83" selection-start="1741" selection-end="1741" vertical-scroll-proportion="-4.678571" vertical-offset="831" max-vertical-offset="1690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="866" selection-end="866" vertical-scroll-proportion="-2.5357144" vertical-offset="449" max-vertical-offset="1066">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="41" selection-start="737" selection-end="737" vertical-scroll-proportion="0.48237476" vertical-offset="0" max-vertical-offset="676">
           <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#div#0" expanded="false" />
             <element signature="tag#div#2;tag#div#0;tag#div#0" expanded="false" />
           </folding>
