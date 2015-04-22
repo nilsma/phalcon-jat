@@ -112,6 +112,7 @@ class ApplicationController extends ControllerBase {
                 'bind' => array(1 => $user->id)
             ));
 
+            //TODO refactor to logical/intuitive structure
             if(count($applications) > 0) {
                 $missing_entries_class = 'container';
             } else {

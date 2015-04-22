@@ -73,6 +73,11 @@ div.contact-list div.contact-start {
     align-items: center;
 }
 
+div.application .overdue-date,
+div.application-list .overdue-date {
+    background-color: rgba(221, 0, 13, 0.2);
+}
+
 div.application-list-dates,
 div.contact-list-addresses {
     display: flex;
@@ -84,8 +89,8 @@ div.contact-list-address {
     text-align: center;
 }
 
-div.contact-list-addresses > div:first-child {
-    min-width: 170px;
+div.application-list input[type="date"] {
+    text-align: center;
 }
 
 div.application-list > div:first-child,

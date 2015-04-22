@@ -5,36 +5,53 @@
 
     <div class="application-start">
 
-        <div class="application-list-dates hidden-xs col-sm-3 col-md-3 col-lg-3">
+        <div class="application-list-dates col-xs-3 col-sm-3 col-md-4 col-lg-5">
+
             <div class="application-list-date hidden-xs hidden-sm hidden-md col-lg-4">
-                <?php echo $application->due . "\n"; ?>
+                <?php echo $form->render('due_date') . "\n"; ?>
             </div>
 
             <div class="application-list-date hidden-xs hidden-sm col-md-6 col-lg-4">
-                <?php echo $application->applied . "\n"; ?>
+                <?php echo $form->render('applied') . "\n"; ?>
             </div>
 
             <div class="application-list-date hidden-xs col-sm-12 col-md-6 col-lg-4">
-                <?php echo $application->follow_up . "\n"; ?>
+                <?php echo $form->render('follow_up') . "\n"; ?>
+            </div>
+
+            <div class="<?php if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {echo 'overdue-date';} ?> application-list-date col-xs-12 hidden-sm hidden-md hidden-lg">
+                <p style="display: inline"><?php echo date("Y", strtotime($application->follow_up)) . "\n"; ?></p>
+                <p style="display: inline"><?php echo date("m-d", strtotime($application->follow_up)) . "\n"; ?></p>
+            </div>
+
+        </div>
+
+        <div class="application-list-company col-xs-5 col-sm-4 col-md-3 col-lg-3">
+            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <?php echo $application->company . "\n"; ?>
+            </div>
+            <div class="row col-xs-12 hidden-sm hidden-md hidden-lg">
+                <?php echo $application->position . "\n"; ?>
             </div>
         </div>
 
-        <div class="application-list-company col-xs-4 col-sm-3 col-md-3 col-lg-3">
-            <?php echo $application->company . "\n"; ?>
-        </div>
+        <div class="application-list-end-holder col-xs-4 col-sm-6 col-md-5 col-lg-4">
 
-        <div class="application-list-position col-xs-4 col-sm-3 col-md-3 col-lg-3">
-            <?php echo $application->position . "\n"; ?>
-        </div>
-
-        <input type="hidden" id="app_id" name="app_id" value="<?php echo $application->id . "\n"; ?>"/>
-
-        <div class="form-controls col-xs-4 col-sm-3 col-md-3 col-lg-3">
-            <div>
-                <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span> </button>
-                <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
+            <div class="application-list-position hidden-xs col-sm-7 col-md-6 col-lg-8">
+                <?php echo $application->position . "\n"; ?>
             </div>
+
+            <div class="form-controls col-xs-12 col-sm-5 col-md-6 col-lg-4">
+                <input type="hidden" id="app_id" name="app_id" value="<?php echo $application->id . "\n"; ?>"/>
+                <div>
+                    <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span> </button>
+                    <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+            </div>
+
         </div>
+
+
 
     </div> <!-- end .application-start -->
 
