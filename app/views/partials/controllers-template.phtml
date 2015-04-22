@@ -46,6 +46,19 @@ EOD;
         <div id="create-contact">
             <a class="btn btn-primary" href="create">{$inner_text}</a>
         </div>
+
+        <!-- Single button -->
+        <div id="order-by" class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Sorting <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="/contacts/setContactsOrder?contacts_order=name">Name</a></li>
+                <li><a href="/contacts/setContactsOrder?contacts_order=position">Position</a></li>
+            </ul>
+        </div>
+
         <div id="sorting-and-filtering" class="btn-group" role="group">
             <a href="/contacts/setviewtype" class="{$view_types->details_classes}"><span><i class="glyphicon glyphicon-th-large"></i></span></a>
             <a href="/contacts/setviewtype" class="{$view_types->list_classes}"><span><i class="glyphicon glyphicon-list"></i></span></a>
