@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('CET');
+
 use Phalcon\Forms\Form;
 use Phalcon\Forms\Element\Text;
 use Phalcon\Forms\Element\TextArea;
