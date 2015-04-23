@@ -1,3 +1,7 @@
+body {
+    background-image: url("../img/low_contrast_linen_white.png");
+}
+
 div#main-container {
     display: flex;
     flex-direction: column;
@@ -38,8 +42,16 @@ div#order-by {
 }
 
 form {
+    background-color: rgb(246, 246, 246);
     border: 1px solid lightgray;
     border-radius: 5px;
+}
+
+div.application form,
+div#application form,
+div.contact form,
+div#contact form {
+    box-shadow: 1px 2px 3px #111;
 }
 
 div.modal-header {
@@ -66,7 +78,6 @@ a.contact-order-link {
 
 div.application-list div.application-start,
 div.contact-list div.contact-start {
-    background-color: #d7d7d7;
     display: flex;
     margin-bottom: 6px;
     padding: 2px 4px;
@@ -75,17 +86,17 @@ div.contact-list div.contact-start {
 
 div.application .overdue-date,
 div.application-list .overdue-date {
-    background-color: rgba(221, 0, 13, 0.2);
+    background-color: rgba(214, 99, 83, 0.92);
+    color: #dee;
 }
 
 div.application-list-dates,
-div.contact-list-addresses {
+div.contact-list-address {
     display: flex;
     align-items: center;
 }
 
-div.application-list-date,
-div.contact-list-address {
+div.application-list-date {
     text-align: center;
 }
 
@@ -111,6 +122,12 @@ div.contact-list > div:first-child {
 div.application-bottom,
 div.contact-bottom {
     padding: 10px;
+}
+
+div.application-list-end-holder,
+div.contact-list-end-holder {
+    display: flex;
+    align-items: center;
 }
 
 label {
