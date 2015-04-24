@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="2" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="2071" max-vertical-offset="10036">
+            <state line="88" column="1" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.5525424" vertical-offset="1962" max-vertical-offset="10062">
               <folding />
             </state>
           </provider>
@@ -65,10 +61,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OverviewApplicationForm.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OverviewApplicationForm.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="29" selection-start="4456" selection-end="4456" vertical-scroll-proportion="0.9074733" vertical-offset="3026" max-vertical-offset="4576">
+            <state line="143" column="29" selection-start="4456" selection-end="4456" vertical-scroll-proportion="-18.214285" vertical-offset="3026" max-vertical-offset="4576">
               <folding />
             </state>
           </provider>
@@ -136,8 +132,8 @@
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
       </list>
     </option>
   </component>
@@ -846,13 +842,6 @@
         <state line="113" column="0" selection-start="3296" selection-end="3296" vertical-scroll-proportion="-0.046263345" vertical-offset="2938" max-vertical-offset="9594" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="2" selection-start="1585" selection-end="1585" vertical-scroll-proportion="0.0" vertical-offset="2071" max-vertical-offset="10036">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="55" selection-start="1972" selection-end="1972" vertical-scroll-proportion="-6.535714" vertical-offset="1091" max-vertical-offset="3198">
@@ -876,7 +865,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="29" selection-start="4456" selection-end="4456" vertical-scroll-proportion="0.9074733" vertical-offset="3026" max-vertical-offset="4576">
+        <state line="143" column="29" selection-start="4456" selection-end="4456" vertical-scroll-proportion="-18.214285" vertical-offset="3026" max-vertical-offset="4576">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="1" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.5525424" vertical-offset="1962" max-vertical-offset="10062">
           <folding />
         </state>
       </provider>

@@ -80,14 +80,12 @@ div.application-list div.application-start,
 div.contact-list div.contact-start {
     display: flex;
     margin-bottom: 6px;
-    padding: 2px 4px;
+    padding: 8px 4px;
     align-items: center;
 }
 
-div.application .overdue-date,
-div.application-list .overdue-date {
-//    background-color: rgba(214, 99, 83, 0.92);
-//    color: #dee;
+div.application-start div.application-list-dates input[type="text"] {
+    text-align: center;
 }
 
 div.application-list-dates,
@@ -316,10 +314,6 @@ a.cancel-item {
     label.horizontal {
         display: none;
     }
-
-    form {
-        background-color: green;
-    }
 }
 
 @media(min-width: 992px) and (max-width: 1199px) {
@@ -362,6 +356,13 @@ a.cancel-item {
 
     body#application div.application-right input[type="text"] {
         text-align: center;
+    }
+
+    body#application div.application-right input[type="text"]:-moz-placeholder,
+    body#application div.application-right input[type="text"]::-moz-placeholder,
+    body#application div.application-right input[type="text"]:-webkit-input-placeholder,
+    body#application div.application-right input[type="text"]:-ms-input-placeholder {
+        text-align: left;
     }
 
     div.application input[type="date"] {
