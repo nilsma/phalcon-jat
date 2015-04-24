@@ -45,18 +45,27 @@
         <div class="application-right col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
             <div class="application-applied form-group">
-                <?php echo $form->label('applied') . "\n"; ?>
-                <?php echo $form->render('applied') . "\n"; ?>
+                <label for="applied" class="vertical">Applied: </label>
+                <div>
+                    <label for="applied" class="horizontal">Applied: </label>
+                    <?php echo $form->render('applied') . "\n"; ?>
+                </div>
             </div>
 
             <div class="application-due-date form-group">
-                <?php echo $form->label('due_date') . "\n"; ?>
-                <?php echo $form->render('due_date') . "\n"; ?>
+                <label for="due_date" class="vertical">Due Date: </label>
+                <div>
+                    <label for="due_date" class="horizontal">Due Date: </label>
+                    <?php echo $form->render('due_date') . "\n"; ?>
+                </div>
             </div>
 
             <div class="application-follow-up form-group">
-                <?php echo $form->label('follow_up') . "\n"; ?>
-                <?php echo $form->render('follow_up') . "\n"; ?>
+                <label for="follow_up" class="vertical">Follow-Up: </label>
+                <div>
+                    <label for="follow_up" class="horizontal">Follow-Up: </label>
+                    <?php echo $form->render('follow_up') . "\n"; ?>
+                </div>
             </div>
 
             <div class="application-attachments form-group">

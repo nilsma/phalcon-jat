@@ -103,7 +103,7 @@ class OverviewApplicationForm extends Form {
         }
 
         // create date contact_details for applied date
-        $applied = new Date('applied', array(
+        $applied = new Text('applied', array(
             'placeholder' => 'Enter a Date',
             'disabled' => 'disabled',
             'class' => $date_classes,
@@ -122,7 +122,7 @@ class OverviewApplicationForm extends Form {
         }
 
         // create date contact_details for due date
-        $due_date = new Date('due_date', array(
+        $due_date = new Text('due_date', array(
             'placeholder' => 'Enter a Date',
             'disabled' => 'disabled',
             'class' => $date_classes,
@@ -141,7 +141,7 @@ class OverviewApplicationForm extends Form {
         }
 
         // create date contact_details for due date
-        $follow_up = new Date('follow_up', array(
+        $follow_up = new Text('follow_up', array(
             'placeholder' => 'Enter a Date',
             'disabled' => 'disabled',
             'class' => $date_classes,

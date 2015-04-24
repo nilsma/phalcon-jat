@@ -20,8 +20,7 @@
             </div>
 
             <div class="<?php if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {echo 'overdue-date';} ?> application-list-date col-xs-12 hidden-sm hidden-md hidden-lg">
-                <p style="display: inline"><?php echo date("Y", strtotime($application->follow_up)) . "\n"; ?></p>
-                <p style="display: inline"><?php echo date("m-d", strtotime($application->follow_up)) . "\n"; ?></p>
+                <p style="display: inline"><?php echo date("M d", strtotime($application->follow_up)) . "\n"; ?></p>
             </div>
 
         </div>
