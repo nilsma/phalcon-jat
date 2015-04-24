@@ -13,7 +13,6 @@ class IndexController extends ControllerBase {
             $this->session->set("user", serialize($user));
             $this->session->set("auth", true);
 
-            $this->flash->success('Welcome back!');
             $this->response->redirect('application/overview');
 
         } else {
