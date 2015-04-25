@@ -130,6 +130,14 @@ span.overdue-date {
     max-width: 100px;
 }
 
+div.overdue-date {
+    padding: 2px 4px;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
 div.application-list-end-holder,
 div.contact-list-end-holder {
     display: flex;
@@ -296,8 +304,28 @@ a.cancel-item {
 }
 
 @media(max-width:767px) {
+
+    div#applications {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    div.application-start > div {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
     label.vertical {
         display: none;
+    }
+
+    div.application-list-end-holder div.form-controls {
+        padding: 0;
+    }
+
+    div.application-list-date {
+        padding-left: 3px;
+        padding-right: 3px;
     }
 
     div.application-applied,
