@@ -44,27 +44,74 @@
 
         <div class="application-right col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
+            <!--
             <div class="application-applied form-group">
-                <label for="applied" class="vertical">Applied: </label>
+                <label for="applied">Applied: </label>
                 <div>
-                    <label for="applied" class="horizontal">Applied: </label>
-                    <?php echo $form->render('applied') . "\n"; ?>
+                    <div>
+                        <input type="text" id="applied" name="applied" value="<?php echo $application->applied ?>" class="form-control" placeholder="Enter a Date" disabled="disabled" />
+                    </div>
+                </div>
+            </div>
+            -->
+
+            <div class="application-applied form-group">
+                <label for="due_date">Applied: </label>
+                <div class="input-group-container">
+
+                    <?php
+                    if(strtotime($application->applied) < strtotime(date("Y-m-d"))) {
+                        echo '<div class="input-group">' . "\n";
+                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    } else {
+                        echo '<div>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    }
+                    ?>
+
                 </div>
             </div>
 
             <div class="application-due-date form-group">
-                <label for="due_date" class="vertical">Due Date: </label>
-                <div>
-                    <label for="due_date" class="horizontal">Due Date: </label>
-                    <?php echo $form->render('due_date') . "\n"; ?>
+                <label for="due_date">Due Date: </label>
+                <div class="input-group-container">
+
+                    <?php
+                    if(strtotime($application->due) < strtotime(date("Y-m-d"))) {
+                        echo '<div class="input-group">' . "\n";
+                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                        echo '<input type="text" name="due_date" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    } else {
+                        echo '<div>' . "\n";
+                        echo '<input type="text" name="due_date" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    }
+                    ?>
+
                 </div>
             </div>
 
             <div class="application-follow-up form-group">
-                <label for="follow_up" class="vertical">Follow-Up: </label>
-                <div>
-                    <label for="follow_up" class="horizontal">Follow-Up: </label>
-                    <?php echo $form->render('follow_up') . "\n"; ?>
+                <label for="follow_up">Follow-Up: </label>
+                <div class="input-group-container">
+
+                        <?php
+                        if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
+                            echo '<div class="input-group">' . "\n";
+                            echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                            echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                            echo '</div>' . "\n";
+                        } else {
+                            echo '<div>' . "\n";
+                            echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                            echo '</div>' . "\n";
+                        }
+                        ?>
+
                 </div>
             </div>
 

@@ -95,18 +95,20 @@ class OverviewApplicationForm extends Form {
 
         $this->add($notes);
 
+        /*
         //determine if applied date has come and passed
         if(strtotime($application->applied) < strtotime(date("Y-m-d"))) {
             $date_classes = 'form-control overdue-date';
         } else {
             $date_classes = 'form-control';
         }
+        */
 
         // create date contact_details for applied date
         $applied = new Text('applied', array(
             'placeholder' => 'Enter a Date',
             'disabled' => 'disabled',
-            'class' => $date_classes,
+            'class' => 'form-control',
             'value' => $application->applied
         ));
 
@@ -115,17 +117,19 @@ class OverviewApplicationForm extends Form {
         $this->add($applied);
 
         //determine if due date has come and passed
+        /*
         if(strtotime($application->due) < strtotime(date("Y-m-d"))) {
             $date_classes = 'form-control overdue-date';
         } else {
             $date_classes = 'form-control';
         }
+        */
 
         // create date contact_details for due date
         $due_date = new Text('due_date', array(
             'placeholder' => 'Enter a Date',
             'disabled' => 'disabled',
-            'class' => $date_classes,
+            'class' => 'form-control',
             'value' => $application->due
         ));
 

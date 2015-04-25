@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/controllers-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/controllers-template.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" afterPath="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="phalcon-jat.iws" />
@@ -26,19 +30,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="1" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0" vertical-offset="1962" max-vertical-offset="10062">
+            <state line="420" column="5" selection-start="8611" selection-end="8611" vertical-scroll-proportion="0.6474576" vertical-offset="10538" max-vertical-offset="11232">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controllers-template.phtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/controllers-template.phtml">
+      <file leaf-file-name="overview-application-details-template.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="127" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.33333334" vertical-offset="1065" max-vertical-offset="2106">
+            <state line="62" column="68" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.0" vertical-offset="1409" max-vertical-offset="4420">
+              <folding>
+                <marker date="1429875225597" expanded="true" signature="5494:5694" placeholder="..." />
+                <marker date="1429875225597" expanded="true" signature="5575:5694" placeholder="..." />
+                <marker date="1429875225597" expanded="true" signature="6111:6160" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="overview-application-list-template.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="81" selection-start="3603" selection-end="3603" vertical-scroll-proportion="0.0" vertical-offset="1716" max-vertical-offset="2704">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="overview-application-list-headers.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="83" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1300">
               <folding />
             </state>
           </provider>
@@ -101,13 +127,13 @@
         <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-headers.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
-        <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
         <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/controllers-template.phtml" />
+        <option value="$PROJECT_DIR$/app/forms/OverviewApplicationForm.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
       </list>
     </option>
   </component>
@@ -560,11 +586,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32686085" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39967638" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -589,11 +615,6 @@
     <entry file="file://$PROJECT_DIR$/app/forms/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="38" selection-start="559" selection-end="559" vertical-scroll-proportion="-1.5071429" vertical-offset="1156" max-vertical-offset="1716" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/OverviewContactForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="570" selection-end="570" vertical-scroll-proportion="-5.175" vertical-offset="3366" max-vertical-offset="3926" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/application-attachments-form.phtml">
@@ -803,56 +824,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.33269963" vertical-offset="1385" max-vertical-offset="3978">
-          <folding />
-        </state>
+        <state line="60" column="16" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.33269963" vertical-offset="1385" max-vertical-offset="3978" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.5250464" vertical-offset="81" max-vertical-offset="1014">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="413" selection-end="413" vertical-scroll-proportion="0.5250464" vertical-offset="81" max-vertical-offset="1014" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/controllers-template.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="127" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.33333334" vertical-offset="1065" max-vertical-offset="2106" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/OverviewContactForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="570" selection-end="570" vertical-scroll-proportion="0.046263345" vertical-offset="234" max-vertical-offset="3718" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="0" selection-start="3533" selection-end="3533" vertical-scroll-proportion="0.55516016" vertical-offset="2574" max-vertical-offset="4680" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="51" selection-start="303" selection-end="303" vertical-scroll-proportion="0.33151183" vertical-offset="0" max-vertical-offset="1066">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="55" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.33333334" vertical-offset="1091" max-vertical-offset="3198">
+        <state line="30" column="83" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="1300">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="12" selection-start="818" selection-end="818" vertical-scroll-proportion="0.85428053" vertical-offset="77" max-vertical-offset="1664">
+        <state line="66" column="81" selection-start="3603" selection-end="3603" vertical-scroll-proportion="0.0" vertical-offset="1716" max-vertical-offset="2704">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/forms/OverviewApplicationForm.php">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="29" selection-start="4456" selection-end="4456" vertical-scroll-proportion="0.9074733" vertical-offset="3026" max-vertical-offset="4576">
-          <folding />
+        <state line="62" column="68" selection-start="2475" selection-end="2475" vertical-scroll-proportion="0.0" vertical-offset="1409" max-vertical-offset="4420">
+          <folding>
+            <marker date="1429875225597" expanded="true" signature="5494:5694" placeholder="..." />
+            <marker date="1429875225597" expanded="true" signature="5575:5694" placeholder="..." />
+            <marker date="1429875225597" expanded="true" signature="6111:6160" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="1" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0" vertical-offset="1962" max-vertical-offset="10062">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/controllers-template.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="127" selection-start="2331" selection-end="2331" vertical-scroll-proportion="0.33333334" vertical-offset="1065" max-vertical-offset="2106">
+        <state line="420" column="5" selection-start="8611" selection-end="8611" vertical-scroll-proportion="0.6474576" vertical-offset="10538" max-vertical-offset="11232">
           <folding />
         </state>
       </provider>

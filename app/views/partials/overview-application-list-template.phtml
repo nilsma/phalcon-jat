@@ -5,27 +5,66 @@
 
     <div class="application-start">
 
-        <div class="application-list-dates col-xs-3 col-sm-3 col-md-4 col-lg-5">
+        <div class="application-list-dates col-xs-4 col-sm-4 col-md-5 col-lg-6">
 
+            <!-- due date -->
             <div class="application-list-date hidden-xs hidden-sm hidden-md col-lg-4">
-                <?php echo $form->render('due_date') . "\n"; ?>
+                <div class="input-group-container">
+                    <?php
+                    if(strtotime($application->due) < strtotime(date("Y-m-d"))) {
+                        echo '<div class="input-group">' . "\n";
+                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    } else {
+                        echo '<div>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    }
+                    ?>
+                </div>
             </div>
 
+            <!-- applied -->
             <div class="application-list-date hidden-xs hidden-sm col-md-6 col-lg-4">
-                <?php echo $form->render('applied') . "\n"; ?>
+                <div class="input-group-container">
+                    <?php
+                    if(strtotime($application->applied) < strtotime(date("Y-m-d"))) {
+                        echo '<div class="input-group">' . "\n";
+                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    } else {
+                        echo '<div>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    }
+                    ?>
+                </div>
             </div>
 
-            <div class="application-list-date hidden-xs col-sm-12 col-md-6 col-lg-4">
-                <?php echo $form->render('follow_up') . "\n"; ?>
-            </div>
-
-            <div class="<?php if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {echo 'overdue-date';} ?> application-list-date col-xs-12 hidden-sm hidden-md hidden-lg">
-                <p style="display: inline"><?php echo date("M d", strtotime($application->follow_up)) . "\n"; ?></p>
+            <!-- follow-up -->
+            <div class="application-list-date col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="input-group-container">
+                    <?php
+                    if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
+                        echo '<div class="input-group">' . "\n";
+                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    } else {
+                        echo '<div>' . "\n";
+                        echo '<input type="text" name="applied" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    }
+                    ?>
+                </div>
             </div>
 
         </div>
 
-        <div class="application-list-company col-xs-5 col-sm-4 col-md-3 col-lg-3">
+        <!-- company and position (only xs) -->
+        <div class="application-list-company col-xs-4 col-sm-3 col-md-2 col-lg-2">
             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <?php echo $application->company . "\n"; ?>
             </div>
@@ -34,12 +73,15 @@
             </div>
         </div>
 
+        <!-- end holder; position (all but xs) and form controllers -->
         <div class="application-list-end-holder col-xs-4 col-sm-5 col-md-5 col-lg-4">
 
+            <!-- position -->
             <div class="application-list-position hidden-xs col-sm-7 col-md-6 col-lg-8">
                 <?php echo $application->position . "\n"; ?>
             </div>
 
+            <!-- form controllers -->
             <div class="form-controls col-xs-12 col-sm-5 col-md-6 col-lg-4">
                 <input type="hidden" id="app_id" name="app_id" value="<?php echo $application->id . "\n"; ?>"/>
                 <div>
@@ -49,8 +91,6 @@
             </div>
 
         </div>
-
-
 
     </div> <!-- end .application-start -->
 
