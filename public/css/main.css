@@ -305,6 +305,14 @@ a.cancel-item {
 
 @media(max-width:767px) {
 
+    div.application-right div.input-group-container {
+        max-width: 130px;
+    }
+
+    div.application-right div.input-group-container input[type="text"] {
+        text-align: right;
+    }
+
     div#applications {
         padding-left: 5px;
         padding-right: 5px;
