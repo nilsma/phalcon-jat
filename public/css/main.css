@@ -313,11 +313,13 @@ a.cancel-item {
         text-align: right;
     }
 
+    div#contacts,
     div#applications {
         padding-left: 5px;
         padding-right: 5px;
     }
 
+    div.contact-start > div,
     div.application-start > div {
         padding-left: 3px;
         padding-right: 3px;
@@ -327,6 +329,7 @@ a.cancel-item {
         display: none;
     }
 
+    div.contact-list-end-holder div.form-controls,
     div.application-list-end-holder div.form-controls {
         padding: 0;
     }
