@@ -88,33 +88,36 @@
                 <label for="follow_up">Follow-Up: </label>
                 <div class="input-group-container">
 
-                        <?php
-                        if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
-                            echo '<div class="input-group">' . "\n";
-                            echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                            echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                            echo '</div>' . "\n";
-                        } else {
-                            echo '<div>' . "\n";
-                            echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                            echo '</div>' . "\n";
-                        }
-                        ?>
+                    <?php
+                    if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
+                        echo '<div class="input-group">' . "\n";
+                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
+                        echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    } else {
+                        echo '<div>' . "\n";
+                        echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
+                        echo '</div>' . "\n";
+                    }
+                    ?>
 
                 </div>
             </div>
 
             <div class="application-attachments form-group">
-                <label>Contacts:</label>
-                <ul id="contacts-list">
-                    <?php
+                <?php
 
-                    $attachments = ContactAttachments::find(array(
-                        'conditions' => 'app_id = ?1',
-                        'bind' => array(1 => $application->id)
-                    ));
+                $attachments = ContactAttachments::find(array(
+                    'conditions' => 'app_id = ?1',
+                    'bind' => array(1 => $application->id)
+                ));
 
-                    $html = '';
+                $html = '';
+
+                if(count($attachments) > 0) {
+
+                    $html .= '<label>Contacts:</label>' . "\n";
+                    $html .= '<ul id="contacts-list">' . "\n";
 
                     foreach($attachments as $attachment) {
 
@@ -125,24 +128,24 @@
                         $html .= '<input type="hidden" value="' . $contact->id . '"/>';
                         $html .= '<span class="contact-name">';
                         $html .= '<a class="attachment-details">' . $contact->name . '</a>';
-
-                        if(strlen($contact->position) > 0) {
-                            $html .= '<br>';
-                            $html .= '<span class="hidden-xs">';
-                            $html .= '(' . $contact->position . ')';
-                            $html .= '</span>';
-                        }
-
                         $html .= '</span>';
                         $html .= '</div>';
                         $html .= '</li>';
 
                     }
 
-                    echo $html;
+                    $html .= '</ul>' . "\n";
 
-                    ?>
-                </ul>
+                } else {
+
+                    $html .= '<label>Contacts:</label>' . "\n";
+                    $html .= '<p>There are no attached contacts yet.</p>' . "\n";
+
+                }
+
+                echo $html;
+
+                ?>
             </div>
 
         </div> <!-- end .application-right -->

@@ -54,6 +54,15 @@ div#contact form {
     box-shadow: 1px 2px 3px #111;
 }
 
+div.contact {
+    margin-bottom: 20px;
+}
+
+div.application,
+div.application form {
+    min-height: 450px;
+}
+
 div.modal-header {
     background-color: #6B7C84;
     color: white;
@@ -63,6 +72,10 @@ div#contact-modal-presentation form,
 div#contact-modal-create form {
     border: 0;
     border-radius: 0;
+}
+
+div.application-top {
+    margin-bottom: 10px;
 }
 
 div.application-list form,
@@ -301,6 +314,10 @@ a.edit-item,
 button.cancel-item,
 a.cancel-item {
     background-color: #f0ad4e;
+}
+
+div#controllers-placeholder {
+    height: 50px;
 }
 
 @media(max-width:767px) {
