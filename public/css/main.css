@@ -44,7 +44,6 @@ div#order-by {
 form {
     background-color: rgb(246, 246, 246);
     border: 1px solid lightgray;
-    border-radius: 5px;
 }
 
 div.application form,
@@ -118,8 +117,6 @@ div.application-list-date p {
 div.application-list > div:first-child,
 div.contact-list > div:first-child {
     padding: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     background-color: #6B7C84;
     border-bottom: 1px solid #666;
 }
