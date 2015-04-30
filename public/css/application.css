@@ -11,8 +11,11 @@ ul#contacts-list {
 
 ul#contacts-list li {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     margin-bottom: 5px;
     padding: 5px;
 }

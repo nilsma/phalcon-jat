@@ -4,7 +4,9 @@ body {
 
 div#main-container {
     display: flex;
+    display: -webkit-flex;
     flex-direction: column;
+    -webkit-flex-direction: column;
     margin-bottom: 40px;
 }
 
@@ -30,8 +32,11 @@ button.navbar-toggle {
 
 div#controllers {
     display: flex;
+    display: -webkit-flex;
     flex-direction: row;
+    -webkit-flex-direction: row;
     justify-content: flex-end;
+    -webkit-justify-content: flex-end;
     margin-bottom: 15px;
 }
 
@@ -91,9 +96,11 @@ a.contact-order-link {
 div.application-list div.application-start,
 div.contact-list div.contact-start {
     display: flex;
+    display: -webkit-flex;
     margin-bottom: 6px;
     padding: 8px 4px;
     align-items: center;
+    -webkit-align-items: center;
 }
 
 div.application-start div.application-list-dates input[type="text"] {
@@ -103,7 +110,9 @@ div.application-start div.application-list-dates input[type="text"] {
 div.application-list-dates,
 div.contact-list-address {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
 }
 
 div.application-list-date {
@@ -151,7 +160,9 @@ input[type="hidden"] {
 div.application-list-end-holder,
 div.contact-list-end-holder {
     display: flex;
+    display: -webkit-flex;
     align-items: center;
+    -webkit-align-items: center;
 }
 
 label {
@@ -357,8 +368,11 @@ div#controllers-placeholder {
     div.application-due-date,
     div.application-follow-up {
         display: flex;
+        display: -webkit-flex;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
         align-items: center;
+        -webkit-align-items: center;
     }
 
 }
@@ -394,13 +408,12 @@ div#controllers-placeholder {
     div.application-due-date div:nth-child(2),
     div.application-follow-up div:nth-child(2) {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
         display: -webkit-flex;
+        flex-direction: row;
         -webkit-flex-direction: row;
+        justify-content: space-between;
         -webkit-justify-content: space-between;
+        align-items: center;
         -webkit-align-items: center;
     }
 
@@ -430,8 +443,11 @@ div#controllers-placeholder {
     div.application-due-date,
     div.application-follow-up {
         display: flex;
+        display: -webkit-flex;
         justify-content: space-between;
+        -webkit-justify-content: space-between;
         align-items: center;
+        -webkit-align-items: center;
     }
 
     div.application-applied label,
