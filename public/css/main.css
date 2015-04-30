@@ -493,4 +493,8 @@ div#controllers-placeholder {
         max-width: 100px;
     }
 
+    div.input-group {
+        max-width: 130px;
+    }
+
 }
