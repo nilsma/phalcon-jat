@@ -19,28 +19,82 @@
     <div class="contact-bottom">
 
         <div class="contact-name form-group">
-            <?php echo $form->label('name') . "\n"; ?>
-            <?php echo $form->render('name') . "\n"; ?>
+            <p>
+                <span class="entry-label">Name: </span>
+                <span class="entry-value">
+                    <?php
+                    if(strlen($contact->name) > 0) {
+                        echo $contact->name;
+                    } else {
+                        echo 'Unspecified';
+                    }
+                    ?>
+                </span>
+            </p>
         </div>
 
         <div class="contact-position form-group">
-            <?php echo $form->label('position') . "\n"; ?>
-            <?php echo $form->render('position') . "\n"; ?>
+            <p>
+                <span class="entry-label">Position: </span>
+                <span class="entry-value">
+                    <?php
+                    if(strlen($contact->position) > 0) {
+                        echo $contact->position;
+                    } else {
+                        echo 'Unspecified';
+                    }
+                    ?>
+                </span>
+            </p>
         </div>
 
         <div class="contact-email form-group">
-            <?php echo $form->label('email') . "\n"; ?>
-            <?php echo $form->render('email') . "\n"; ?>
+            <p>
+                <span class="entry-label">Email: </span>
+                <span class="entry-value">
+                    <?php
+
+                    if(strlen($contact->email) > 0) {
+                        echo $contact->email;
+                    } else {
+                        echo 'Unspecified';
+                    }
+
+                    ?>
+                </span>
+            </p>
         </div>
 
         <div class="contact-phone form-group">
-            <?php echo $form->label('phone') . "\n"; ?>
-            <?php echo $form->render('phone') . "\n"; ?>
+            <p>
+                <span class="entry-label">Phone: </span>
+                <span class="entry-value">
+                    <?php
+
+                    if(strlen($contact->phone) > 0) {
+                        echo $contact->phone;
+                    } else {
+                        echo 'Unspecified';
+                    }
+
+                    ?>
+                </span>
+            </p>
         </div>
 
         <div class="contact-notes form-group">
-            <?php echo $form->label('notes') . "\n"; ?>
-            <?php echo $form->render('notes') . "\n"; ?>
+            <p>
+                <span class="entry-label">Notes: </span>
+                <?php
+
+                if(strlen($contact->notes) > 0) {
+                    echo '<textarea class="form-controls" disabled="disabled">' . $contact->notes . '</textarea>' . "\n";
+                } else {
+                    echo '<textarea class="form-controls" disabled="disabled">You haven\'t made any notes yet.</textarea>' . "\n";
+                }
+
+                ?>
+            </p>
         </div>
 
     </div>

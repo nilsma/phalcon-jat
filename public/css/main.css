@@ -95,6 +95,7 @@ div#contact form {
 
 div.contact {
     margin-bottom: 20px;
+    padding: 10px;
 }
 
 
@@ -164,9 +165,12 @@ div.contact-list > div:first-child {
     color: white;
 }
 
-div.application-bottom,
-div.contact-bottom {
+div.application-bottom {
     padding: 10px;
+}
+
+div.contact-bottom {
+    padding: 20px 10px 10px 10px;
 }
 
 div.application-bottom {
@@ -224,6 +228,9 @@ div.form-controls a#exit-modal {
 
 textarea {
     resize: none;
+    width: 100%;
+    min-height: 100px;
+    padding: 2px 4px;
 }
 
 div#missing-entries {
