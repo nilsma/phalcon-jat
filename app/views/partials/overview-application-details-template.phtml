@@ -47,15 +47,16 @@
 
                     <div class="application-notes form-group">
                         <span class="entry-label">Notes: </span>
-                        <span class="entry-value">
+
                             <?php
                             if(!empty($application->notes)) {
-                                echo $application->notes;
+                                echo '<textarea class="form-controls" disabled="disabled">' . $application->notes . '</textarea>' . "\n";
                             } else {
+                                echo '<span class="entry-value">';
                                 echo 'You haven\'t added any notes yet.';
+                                echo '</span>' . "\n";
                             }
                             ?>
-                    </span>
                     </div>
 
                 </div> <!-- end .application-left -->

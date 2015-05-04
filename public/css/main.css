@@ -178,7 +178,7 @@ div.application-bottom {
 }
 
 div.application-bottom-outer {
-    height: 300px;
+    height: 330px;
     overflow-x: hidden;
 }
 
@@ -187,8 +187,6 @@ div.list-overdue-date {
     color: white;
 }
 
-/* div.overdue-date, */
-/*input[type="text"].overdue-date*/
 span.overdue-date {
     background-color: white;
     color: indianred;

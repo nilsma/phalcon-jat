@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcb3079b-6621-4f7b-bc22-35f75db0ca63" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/contact.css" afterPath="$PROJECT_DIR$/public/css/contact.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-contact-details-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-contact-details-template.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" afterPath="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
     </list>
     <ignored path="phalcon-jat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="11" selection-start="2987" selection-end="2987" vertical-scroll-proportion="0.54713804" vertical-offset="4147" max-vertical-offset="14976">
+            <state line="188" column="0" selection-start="3213" selection-end="3213" vertical-scroll-proportion="0.8097643" vertical-offset="4407" max-vertical-offset="14924">
               <folding />
             </state>
           </provider>
@@ -58,8 +56,10 @@
       <file leaf-file-name="overview-application-details-template.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="64" selection-start="1018" selection-end="1018" vertical-scroll-proportion="-6.571429" vertical-offset="440" max-vertical-offset="4888">
-              <folding />
+            <state line="52" column="137" selection-start="2487" selection-end="2487" vertical-scroll-proportion="-8.428572" vertical-offset="1116" max-vertical-offset="4914">
+              <folding>
+                <marker date="1430760656714" expanded="true" signature="2588:2628" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,7 +67,7 @@
       <file leaf-file-name="overview-contact-details-template.phtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-details-template.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="77" selection-start="2860" selection-end="2860" vertical-scroll-proportion="-7.392857" vertical-offset="2133" max-vertical-offset="2834">
+            <state line="90" column="121" selection-start="2904" selection-end="2904" vertical-scroll-proportion="-7.392857" vertical-offset="2133" max-vertical-offset="2834">
               <folding>
                 <marker date="1430759961222" expanded="true" signature="1230:1641" placeholder="..." />
                 <marker date="1430759961222" expanded="true" signature="1703:2107" placeholder="..." />
@@ -145,13 +145,13 @@
         <option value="$PROJECT_DIR$/app/views/application/overview.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-application-list-headers.phtml" />
-        <option value="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
         <option value="$PROJECT_DIR$/public/js/application.js" />
         <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
         <option value="$PROJECT_DIR$/public/js/contact.js" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-list-template.phtml" />
         <option value="$PROJECT_DIR$/app/views/partials/overview-contact-details-template.phtml" />
         <option value="$PROJECT_DIR$/public/css/contact.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
       </list>
     </option>
@@ -938,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-contact-details-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="77" selection-start="2860" selection-end="2860" vertical-scroll-proportion="-7.392857" vertical-offset="2133" max-vertical-offset="2834">
+        <state line="90" column="121" selection-start="2904" selection-end="2904" vertical-scroll-proportion="-7.392857" vertical-offset="2133" max-vertical-offset="2834">
           <folding>
             <marker date="1430759961222" expanded="true" signature="1230:1641" placeholder="..." />
             <marker date="1430759961222" expanded="true" signature="1703:2107" placeholder="..." />
@@ -950,8 +950,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/overview-application-details-template.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="64" selection-start="1018" selection-end="1018" vertical-scroll-proportion="-6.571429" vertical-offset="440" max-vertical-offset="4888">
-          <folding />
+        <state line="52" column="137" selection-start="2487" selection-end="2487" vertical-scroll-proportion="-8.428572" vertical-offset="1116" max-vertical-offset="4914">
+          <folding>
+            <marker date="1430760656714" expanded="true" signature="2588:2628" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -971,7 +973,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="11" selection-start="2987" selection-end="2987" vertical-scroll-proportion="0.54713804" vertical-offset="4147" max-vertical-offset="14976">
+        <state line="188" column="0" selection-start="3213" selection-end="3213" vertical-scroll-proportion="0.8097643" vertical-offset="4407" max-vertical-offset="14924">
           <folding />
         </state>
       </provider>
