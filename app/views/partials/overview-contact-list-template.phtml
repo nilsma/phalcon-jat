@@ -23,8 +23,10 @@
             </div>
 
             <div class="form-controls col-xs-12 col-sm-12 col-md-5 col-lg-5">
+
+                <input type="hidden" id="contact_id" name="contact_id" value="<?php echo $contact->id . "\n"; ?>"/>
+
                 <div>
-                    <input type="hidden" id="contact_id" name="contact_id" value="<?php echo $contact->id . "\n"; ?>"/>
                     <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span> </button>
                     <button type="button" class="btn btn-sm btn-default contact-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
                 </div>

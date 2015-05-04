@@ -6,9 +6,9 @@
     <div class="contact-top">
 
         <div class="form-controls">
-            <div></div>
+            <?php echo $form->render('contact_id') . "\n"; ?>
+
             <div>
-                <?php echo $form->render('contact_id') . "\n"; ?>
                 <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span></button>
                 <button type="button" class="btn btn-sm btn-default contact-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span></button>
             </div>
