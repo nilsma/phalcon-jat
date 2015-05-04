@@ -47,11 +47,46 @@ div#order-by {
 }
 
 form {
-    background-color: rgb(246, 246, 246);
+    background-color: #fff;
     border: 1px solid lightgray;
 }
 
-div.application form,
+div#applications {
+    display: flex;
+    flex-direction: column;
+}
+
+div.application {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 2px 3px #111;
+}
+
+div.application-right {
+    border-left: 1px solid #e0e0e0;
+}
+
+div.application-left,
+div.application-right {
+    padding-top: 10px;
+}
+
+span.entry-label {
+    display: block;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+span.entry-value {
+    display: block;
+    font-size: 16px;
+}
+
+div.application-notes span.entry-value {
+    font-size: 16px;
+}
+
 div#application form,
 div.contact form,
 div#contact form {
@@ -62,10 +97,7 @@ div.contact {
     margin-bottom: 20px;
 }
 
-div.application,
-div.application form {
-    min-height: 450px;
-}
+
 
 div.modal-header {
     background-color: #6B7C84;
@@ -76,10 +108,6 @@ div#contact-modal-presentation form,
 div#contact-modal-create form {
     border: 0;
     border-radius: 0;
-}
-
-div.application-top {
-    margin-bottom: 10px;
 }
 
 div.application-list form,
@@ -141,16 +169,26 @@ div.contact-bottom {
     padding: 10px;
 }
 
-div.overdue-date,
-input[type="text"].overdue-date,
-span.overdue-date {
-    background-color: indianred;
-    color: white;
-    max-width: 100px;
+div.application-bottom {
+    height: 100%;
 }
 
-div.overdue-date {
-    padding: 2px 4px;
+div.application-bottom-outer {
+    height: 300px;
+    overflow-x: hidden;
+}
+
+div.list-overdue-date {
+    background-color: indianred;
+    color: white;
+}
+
+/* div.overdue-date, */
+/*input[type="text"].overdue-date*/
+span.overdue-date {
+    background-color: white;
+    color: indianred;
+    margin-right: 10px;
 }
 
 input[type="hidden"] {
@@ -328,6 +366,12 @@ div#controllers-placeholder {
     height: 50px;
 }
 
+div.application-date {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 @media(max-width:767px) {
 
     div.application-right div.input-group-container {
@@ -375,6 +419,10 @@ div#controllers-placeholder {
         -webkit-align-items: center;
     }
 
+    div.application-bottom-outer {
+        height: auto;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 991px) {
@@ -400,9 +448,21 @@ div#controllers-placeholder {
         padding-left: 0;
     }
 
+    div.application-date {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        text-align: right;
+        margin-bottom: 15px;
+    }
+
 }
 
 @media(min-width: 992px) and (max-width: 1199px) {
+
+    div.application-right {
+        height: 100%;
+    }
 
     div.application-applied div:nth-child(2),
     div.application-due-date div:nth-child(2),
@@ -439,6 +499,10 @@ div#controllers-placeholder {
 
 @media(min-width:1200px) {
 
+    div.application-right {
+        height: 100%;
+    }
+
     div.application-applied,
     div.application-due-date,
     div.application-follow-up {
@@ -457,15 +521,19 @@ div#controllers-placeholder {
     }
 
     div.application-applied {
-        margin-top: 25px;
+        margin-top: 0px;
     }
 
     div.application-due-date {
-        margin-top: 40px;
+        margin-top: 35px;
     }
 
     div.application-follow-up {
-        margin-top: 40px;
+        margin-top: 35px;
+    }
+
+    div.application-attachments {
+        margin-top: 35px;
     }
 
     body#application div.application-right input[type="text"] {
@@ -477,10 +545,6 @@ div#controllers-placeholder {
     body#application div.application-right input[type="text"]:-webkit-input-placeholder,
     body#application div.application-right input[type="text"]:-ms-input-placeholder {
         text-align: left;
-    }
-
-    div.application input[type="date"] {
-        text-align: center;
     }
 
     div.application-applied input[type="text"],

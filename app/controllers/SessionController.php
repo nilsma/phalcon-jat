@@ -54,7 +54,7 @@ class SessionController extends \Phalcon\Mvc\Controller
 
         $this->view->disable();
 
-        $form = new RegisterUserForm();
+        $form = new RegisterForm();
 
         if($form->isValid($this->request->getPost())) {
 
@@ -65,6 +65,7 @@ class SessionController extends \Phalcon\Mvc\Controller
                 $user->username = $this->request->getPost('username', array('string', 'striptags', 'trim'));
                 $user->email = $this->request->getPost('email', array('email', 'striptags', 'trim'));
                 $user->password = $this->security->hash($this->request->getPost('password'));
+                $user->view_type = "OVERVIEW";
                 $user->sorting = "DEFAULT";
                 $user->filter = "ALL";
 

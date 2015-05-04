@@ -5,85 +5,108 @@
 
     <div class="application-start">
 
-        <div class="application-list-dates col-xs-2 col-sm-4 col-md-5 col-lg-6">
+        <div class="application-list-dates col-xs-2 col-sm-4 col-md-5 col-lg-5">
 
             <!-- due date -->
             <div class="application-list-date hidden-xs hidden-sm hidden-md col-lg-4">
-                <div class="input-group-container">
+
                     <?php
+
+                    $html = '';
+
                     if(strtotime($application->due) < strtotime(date("Y-m-d"))) {
-                        echo '<div class="input-group">' . "\n";
-                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
+                        $html .= '<p class="entry-value">' . "\n";
+                        $html .= '<span class="overdue-date glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' . "\n";
+                        $html .= '<span>' . $application->due . '</span>' . "\n";
+                        $html .= '</p>' . "\n";
                     } else {
-                        echo '<div>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
+                        $html .= '<p class="entry-value">' . "\n";
+                        $html .= '<span>' . $application->due . '</span>' . "\n";
+                        $html .= '</p>' . "\n";
                     }
+
+                    echo $html;
+
                     ?>
-                </div>
+
             </div>
 
             <!-- applied -->
             <div class="application-list-date hidden-xs hidden-sm col-md-6 col-lg-4">
-                <div class="input-group-container">
+
                     <?php
+
+                    $html = '';
+
                     if(strtotime($application->applied) < strtotime(date("Y-m-d"))) {
-                        echo '<div class="input-group">' . "\n";
-                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
+                        $html .= '<p class="entry-value">' . "\n";
+                        $html .= '<span class="overdue-date glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' . "\n";
+                        $html .= '<span>' . $application->applied . '</span>' . "\n";
+                        $html .= '</p>' . "\n";
                     } else {
-                        echo '<div>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
+                        $html .= '<p class="entry-value">' . "\n";
+                        $html .= '<span>' . $application->applied . '</span>' . "\n";
+                        $html .= '</p>' . "\n";
                     }
+
+                    echo $html;
+
                     ?>
-                </div>
+
             </div>
 
             <!-- follow-up > xs -->
             <div class="application-list-date hidden-xs col-sm-12 col-md-6 col-lg-4">
-                <div class="input-group-container">
+
                     <?php
+
+                    $html = '';
+
                     if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
-                        echo '<div class="input-group">' . "\n";
-                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
+                        $html .= '<p class="entry-value">' . "\n";
+                        $html .= '<span class="overdue-date glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' . "\n";
+                        $html .= '<span>' . $application->follow_up . '</span>' . "\n";
+                        $html .= '</p>' . "\n";
                     } else {
-                        echo '<div>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
+                        $html .= '<p class="entry-value">' . "\n";
+                        $html .= '<span>' . $application->follow_up . '</span>' . "\n";
+                        $html .= '</p>' . "\n";
                     }
+
+                    echo $html;
+
                     ?>
-                </div>
+
             </div>
 
             <!-- follow-up = xs -->
             <div class="application-list-date col-xs-12 hidden-sm hidden-md hidden-lg">
 
                 <?php
+
                 $html = '';
+
                 if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
-                    $html .= '<div class="overdue-date">' . "\n";
+                    $html .= '<div class="list-overdue-date">' . "\n";
+                    $html .= '<p>' . date("M", strtotime($application->follow_up)) . '</p>' . "\n";
+                    $html .= '<p>' . date("d", strtotime($application->follow_up)) . '</p>' . "\n";
+                    $html .= '</div>' . "\n";
                 } else {
-                    $html .= '<div>' . "\n";
+                    $html .= '<div class="entry-value">' . "\n";
+                    $html .= '<p>' . date("M", strtotime($application->follow_up)) . '</p>' . "\n";
+                    $html .= '<p>' . date("d", strtotime($application->follow_up)) . '</p>' . "\n";
+                    $html .= '</div>' . "\n";
                 }
 
-                $html .= '<p>' . date("M", strtotime($application->follow_up)) . '</p>' . "\n";
-                $html .= '<p>' . date("d", strtotime($application->follow_up)) . '</p>' . "\n";
-                $html .= '</div>' . "\n";
-
                 echo $html;
+
                 ?>
             </div>
 
         </div> <!-- end .application-list-dates -->
 
         <!-- company; and position (specific element for position on xs) -->
-        <div class="application-list-company col-xs-7 col-sm-3 col-md-2 col-lg-2">
+        <div class="application-list-company col-xs-7 col-sm-3 col-md-2 col-lg-3">
             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <?php echo $application->company . "\n"; ?>
             </div>

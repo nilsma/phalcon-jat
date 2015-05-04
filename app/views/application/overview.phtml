@@ -15,25 +15,47 @@
 
             if(count($applications) > 0) {
 
-                if($user->view_type == "LIST") {
-                    echo '<div class="container">' . "\n";
-                    echo $this->partial('partials/overview-application-list-headers') . "\n";
-                }
+                if($user->view_type == "OVERVIEW") {
 
-                foreach($applications as $application) {
+                    $counter = 0;
 
-                    $form = new OverviewApplicationForm($application);
+                    foreach($applications as $application) {
 
-                    if($user->view_type == "OVERVIEW") {
-                        echo $this->partial('partials/overview-application-details-template') . "\n";
-                    } else {
-                        echo $this->partial('partials/overview-application-list-template') . "\n";
+                        if($counter % 2 == 0) {
+                            echo '<div class="application-row row">' . "\n";
+                        }
+
+                        if($user->view_type == "OVERVIEW") {
+                            echo $this->partial('partials/overview-application-details-template') . "\n";
+                        } else {
+                            echo $this->partial('partials/overview-application-list-template') . "\n";
+                        }
+
+                        if($counter % 2 == 1 || $counter + 1 == count($applications)) {
+                            echo '</div> <!-- end .application-row -->' . "\n";
+                        }
+
+                        $counter++;
+
                     }
 
-                }
+                } else {
 
-                if($user->view_type == "LIST") {
+                    echo '<div class="container">' . "\n";
+                    echo $this->partial('partials/overview-application-list-headers') . "\n";
+
+                    foreach($applications as $application) {
+
+                        if($user->view_type == "OVERVIEW") {
+                            echo $this->partial('partials/application-template') . "\n";
+                        } else {
+                            echo $this->partial('partials/overview-application-list-template') . "\n";
+                        }
+
+                    }
+
                     echo '</div>' . "\n";
+
                 }
 
             } else {

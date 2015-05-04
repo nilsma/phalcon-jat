@@ -1,157 +1,183 @@
+<div class="application-container col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
-<div class="application col-xs-12 col-sm-6 col-md-6 col-lg-6">
+    <div class="application">
 
-    <?php echo Phalcon\Tag::form(array("application/edit", "method" => "get", "name" => "application-form", "role" => "form")) . "\n"; ?>
+        <div class="application-top">
 
-    <div class="application-top">
+            <div class="form-controls">
 
-        <div class="form-controls">
-            <div>
-                <button type="submit" class="btn btn-sm btn-default edit-item"><span class="glyphicon glyphicon-pencil"></span> </button>
-                <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span> </button>
-            </div>
-        </div>
+                <input type="hidden" id="app_id" name="app_id" value="<?php echo $application->id; ?>" />
 
-    </div>
-
-    <div class="application-bottom row">
-
-        <div class="application-left col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-            <div class="application-company form-group">
-                <?php echo $form->label('company') . "\n"; ?>
-                <?php echo $form->render('company') . "\n"; ?>
-            </div>
-
-            <div class="application-position form-group">
-                <?php echo $form->label('position') . "\n"; ?>
-                <?php echo $form->render('position') . "\n"; ?>
-            </div>
-
-            <div class="application-notes form-group">
-                <?php echo $form->label('notes') . "\n"; ?>
-                <?php echo $form->render('notes') . "\n"; ?>
-            </div>
-
-            <div class="application-recruitment form-group">
-                <?php echo $form->label('recruitment') . "\n"; ?>
-                <?php echo $form->render('recruitment') . "\n"; ?>
-            </div>
-
-            <?php echo $form->render('app_id') . "\n"; ?>
-
-        </div> <!-- end .application-left -->
-
-        <div class="application-right col-xs-12 col-sm-6 col-md-6 col-lg-6">
-
-            <div class="application-applied form-group">
-                <label for="due_date">Applied: </label>
-                <div class="input-group-container">
-
-                    <?php
-                    if(strtotime($application->applied) < strtotime(date("Y-m-d"))) {
-                        echo '<div class="input-group">' . "\n";
-                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
-                    } else {
-                        echo '<div>' . "\n";
-                        echo '<input type="text" name="applied" value="' . $application->applied . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
-                    }
-                    ?>
-
+                <div>
+                    <a class="btn btn-sm btn-default edit-item" href="edit?app_id=<?php echo $application->id; ?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                    <button type="button" class="btn btn-sm btn-default application-overview-delete delete-item"><span class="glyphicon glyphicon-remove"></span> </button>
                 </div>
-            </div>
+            </div> <!-- end .form-controls -->
 
-            <div class="application-due-date form-group">
-                <label for="due_date">Due Date: </label>
-                <div class="input-group-container">
+        </div> <!-- end .application-top -->
 
-                    <?php
-                    if(strtotime($application->due) < strtotime(date("Y-m-d"))) {
-                        echo '<div class="input-group">' . "\n";
-                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                        echo '<input type="text" name="due_date" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
-                    } else {
-                        echo '<div>' . "\n";
-                        echo '<input type="text" name="due_date" value="' . $application->due . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
-                    }
-                    ?>
+        <div class="application-bottom-outer">
 
-                </div>
-            </div>
+            <div class="application-bottom row">
 
-            <div class="application-follow-up form-group">
-                <label for="follow_up">Follow-Up: </label>
-                <div class="input-group-container">
+                <div class="application-left col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
-                    <?php
-                    if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
-                        echo '<div class="input-group">' . "\n";
-                        echo '<span class="input-group-addon overdue-date">!</span>' . "\n";
-                        echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
-                    } else {
-                        echo '<div>' . "\n";
-                        echo '<input type="text" name="follow_up" value="' . $application->follow_up . '" class="form-control" placeholder="Enter a Date" disabled="disabled" />' . "\n";
-                        echo '</div>' . "\n";
-                    }
-                    ?>
+                    <div class="application-company form-group">
+                        <span class="entry-label">Company: </span>
+                        <span class="entry-value"><?php echo $application->company; ?></span>
+                    </div>
 
-                </div>
-            </div>
+                    <div class="application-position form-group">
+                        <span class="entry-label">Position: </span>
+                        <span class="entry-value"><?php echo $application->position; ?></span>
+                    </div>
 
-            <div class="application-attachments form-group">
-                <?php
+                    <div class="application-recruitment form-group">
+                        <span class="entry-label">Recruitment<span class="hidden-md hidden-lg">: </span><span class="hidden-xs hidden-sm"> Company: </span></span>
+                        <span class="entry-value">
+                            <?php
+                            if(!empty($application->recruitment)) {
+                                echo $application->recruitment;
+                            } else {
+                                echo 'Unspecified.';
+                            }
+                            ?>
+                        </span>
+                    </div>
 
-                $attachments = ContactAttachments::find(array(
-                    'conditions' => 'app_id = ?1',
-                    'bind' => array(1 => $application->id)
-                ));
+                    <div class="application-notes form-group">
+                        <span class="entry-label">Notes: </span>
+                        <span class="entry-value">
+                            <?php
+                            if(!empty($application->notes)) {
+                                echo $application->notes;
+                            } else {
+                                echo 'You haven\'t added any notes yet.';
+                            }
+                            ?>
+                    </span>
+                    </div>
 
-                $html = '';
+                </div> <!-- end .application-left -->
 
-                if(count($attachments) > 0) {
+                <div class="application-right col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
-                    $html .= '<label>Contacts:</label>' . "\n";
-                    $html .= '<ul id="contacts-list">' . "\n";
+                    <div class="application-applied application-date form-group">
+                        <span class="entry-label">Applied: </span>
 
-                    foreach($attachments as $attachment) {
+                        <?php
 
-                        $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
+                        $html = '';
 
-                        $html .= '<li class="bg-success">' . "\n";
-                        $html .= '<div>';
-                        $html .= '<input type="hidden" value="' . $contact->id . '"/>';
-                        $html .= '<span class="contact-name">';
-                        $html .= '<a class="attachment-details">' . $contact->name . '</a>';
-                        $html .= '</span>';
-                        $html .= '</div>';
-                        $html .= '</li>';
+                        if(strtotime($application->applied) < strtotime(date("Y-m-d"))) {
+                            $html .= '<span class="entry-value">' . "\n";
+                            $html .= '<span class="overdue-date glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' . "\n";
+                            $html .= $application->applied;
+                            $html .= '</span>' . "\n";
+                        } else {
+                            $html .= '<span class="entry-value">' . $application->applied . '</span>' . "\n";
+                        }
 
-                    }
+                        echo $html;
 
-                    $html .= '</ul>' . "\n";
+                        ?>
 
-                } else {
+                    </div>
 
-                    $html .= '<label>Contacts:</label>' . "\n";
-                    $html .= '<p>There are no attached contacts yet.</p>' . "\n";
+                    <div class="application-due-date application-date  form-group">
+                        <span class="entry-label">Due Date: </span>
 
-                }
+                        <?php
 
-                echo $html;
+                        $html = '';
 
-                ?>
-            </div>
+                        if(strtotime($application->due) < strtotime(date("Y-m-d"))) {
+                            $html .= '<span class="entry-value">' . "\n";
+                            $html .= '<span class="overdue-date glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' . "\n";
+                            $html .= $application->due;
+                            $html .= '</span>' . "\n";
+                        } else {
+                            $html .= '<span class="entry-value">' . $application->due . '</span>' . "\n";
+                        }
 
-        </div> <!-- end .application-right -->
+                        echo $html;
 
-    </div> <!-- end .application-bottom -->
+                        ?>
 
-    <?php echo Phalcon\Tag::endForm() . "\n"; ?>
+                    </div>
 
-</div>
+                    <div class="application-follow-up application-date form-group">
+                        <span class="entry-label">Follow-Up: </span>
+
+                        <?php
+
+                        $html = '';
+
+                        if(strtotime($application->follow_up) < strtotime(date("Y-m-d"))) {
+                            $html .= '<span class="entry-value">' . "\n";
+                            $html .= '<span class="overdue-date glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>' . "\n";
+                            $html .= $application->follow_up;
+                            $html .= '</span>' . "\n";
+                        } else {
+                            $html .= '<span class="entry-value">' . $application->follow_up . '</span>' . "\n";
+                        }
+
+                        echo $html;
+
+                        ?>
+
+                    </div>
+
+                    <div class="application-attachments form-group">
+                        <?php
+
+                        $attachments = ContactAttachments::find(array(
+                            'conditions' => 'app_id = ?1',
+                            'bind' => array(1 => $application->id)
+                        ));
+
+                        $html = '';
+
+                        if(count($attachments) > 0) {
+
+                            $html .= '<span class="entry-label">Contacts:</span>' . "\n";
+                            $html .= '<ul id="contacts-list">' . "\n";
+
+                            foreach($attachments as $attachment) {
+
+                                $contact = Contacts::findFirst('id = "' . $attachment->contact_id . '"');
+
+                                $html .= '<li class="bg-success">' . "\n";
+                                $html .= '<div>';
+                                $html .= '<input type="hidden" value="' . $contact->id . '"/>';
+                                $html .= '<span class="contact-name">';
+                                $html .= '<a class="attachment-details">' . $contact->name . '</a>';
+                                $html .= '</span>';
+                                $html .= '</div>';
+                                $html .= '</li>';
+
+                            }
+
+                            $html .= '</ul>' . "\n";
+
+                        } else {
+
+                            $html .= '<span class="entry-label">Contacts:</span>' . "\n";
+                            $html .= '<p>There are no attached contacts yet.</p>' . "\n";
+
+                        }
+
+                        echo $html;
+
+                        ?>
+                    </div>
+
+                </div> <!-- end .application-right -->
+
+            </div> <!-- end .application-bottom -->
+
+        </div> <!-- end .application-bottom-outer -->
+
+    </div> <!-- end .application -->
+
+</div> <!-- end .application-container -->

@@ -246,7 +246,7 @@ function writeApplication(contacts, callback) {
 
 function deleteOverviewApplication() {
     if(confirm('Please confirm application deletion')) {
-        var application_id = this.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[1].childNodes[9].value;
+        var application_id = this.parentNode.parentNode.childNodes[1].value;
         deleteApplicationQuery(application_id, function(result) {
             if(result) {
                 location.reload();
