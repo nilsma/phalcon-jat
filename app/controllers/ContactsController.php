@@ -140,7 +140,7 @@ class ContactsController extends ControllerBase {
         if($this->session->has('contacts_order')) {
             $order = $this->session->get('contacts_order');
         } else {
-            $order = '';
+            $order = 'name';
         }
 
         return $order;
