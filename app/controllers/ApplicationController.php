@@ -243,7 +243,7 @@ class ApplicationController extends ControllerBase {
         if($this->session->has('app_order')) {
             $order = $this->session->get('app_order');
         } else {
-            $order = '';
+            $order = 'applied';
         }
 
         return $order;
